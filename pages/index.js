@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
 import { NextSeo } from "next-seo";
+import { ScrollingProvider } from "react-scroll-section";
 
 export default function Home() {
   return (
@@ -19,9 +20,11 @@ export default function Home() {
         <title>TIG</title>
         <link rel="icon" href="/favicon.jpg" />
       </Head>
-      <Header />
-      <Main />
-      <Footer />
+      <ScrollingProvider>
+        <Header />
+        <Main />
+        <Footer />
+      </ScrollingProvider>
     </div>
   );
 }

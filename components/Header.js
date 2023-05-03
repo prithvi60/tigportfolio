@@ -1,17 +1,25 @@
 import React from "react";
-
+import {
+  ScrollingProvider,
+  useScrollSection,
+  Section,
+} from "react-scroll-section";
 export default function Header() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const [flyer, setFlyer] = React.useState(false);
   const [flyerTwo, setFlyerTwo] = React.useState(false);
+  const videoSection = useScrollSection("video");
+  const eventSection = useScrollSection("event");
+  const campaignSection = useScrollSection("campaign");
+  const contactSection = useScrollSection("contact");
 
   return (
-    <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in  w-screen">
-      <div class="max-w-5xl mx-auto flex flex-wrap p-5 flex-col md:flex-row">
-        <div className="flex flex-row items-center justify-between p-3 md:p-1">
+    <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in  w-screen border-bot">
+      <div class="max-w-2xl md:max-w-5xl mx-auto flex flex-wrap p-2 md:p-3 flex-col md:flex-row">
+        <div className="flex flex-row items-center justify-between md:p-3 md:p-1">
           <a
             href="/"
-            class="flex text-3xl text-white font-medium mb-4 md:mb-0 animate-bounce"
+            class="flex text-3xl text-white-100 font-medium mb-4 md:mb-0 md:animate-bounce"
           >
             TIG
           </a>
@@ -129,9 +137,12 @@ export default function Header() {
           }
         >
           <div class="md:ml-auto md:mr-auto font-4 pt-1 md:pl-14 pl-1 flex flex-wrap items-center md:text-base text-1xl md:justify-center justify-items-start">
-            <a class="mr-11 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04">
+            <ul
+              onClick={videoSection.onClick}
+              class="mr-11 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
+            >
               Video Production
-            </a>
+            </ul>
             <div className="relative">
               <button
                 type="button"
@@ -140,7 +151,9 @@ export default function Header() {
                   "
                 // onMouseEnter={() => (setFlyer(!flyer), setFlyerTwo(false))}
               >
-                <span className="tr04">Events</span>
+                <span className="tr04" onClick={eventSection.onClick}>
+                  Events
+                </span>
                 <svg
                   className={
                     flyer === true
@@ -212,12 +225,18 @@ export default function Header() {
                 </div>
               </div> */}
             </div>
-            <a class="mr-12 md:ml-11 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04">
+            <ul
+              onClick={campaignSection.onClick}
+              class="mr-12 md:ml-11 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
+            >
               Campaign
-            </a>
-            <a class="mr-5 cursor-pointer text-gray-300 hover:text-white font-semibold tr04">
+            </ul>
+            <ul
+              onClick={contactSection.onClick}
+              class="mr-5 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
+            >
               Contact
-            </a>
+            </ul>
           </div>
           <a
             href="https://www.instagram.com/theintgen/?hl=en"
