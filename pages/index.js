@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
 import { NextSeo } from "next-seo";
-import { ScrollingProvider } from "react-scroll-section";
 import { useRef } from "react";
 
 export default function Home() {
@@ -26,21 +25,19 @@ export default function Home() {
         <title>TIG</title>
         <link rel="icon" href="/favicon.jpg" />
       </Head>
-      <ScrollingProvider>
-        <Header
-          videoRef={videoRef}
-          eventRef={eventRef}
-          contactRef={contactRef}
-          campaignRef={campaignRef}
-        />
-        <Main
-          videoRef={videoRef}
-          eventRef={eventRef}
-          contactRef={contactRef}
-          campaignRef={campaignRef}
-        />
-        <Footer />
-      </ScrollingProvider>
+      <Header
+        videoRef={videoRef}
+        eventRef={eventRef}
+        contactRef={contactRef}
+        campaignRef={campaignRef}
+      />
+      <Main
+        videoRef={videoRef}
+        eventRef={eventRef}
+        contactRef={contactRef}
+        campaignRef={campaignRef}
+      />
+      <Footer />
     </div>
   );
 }
