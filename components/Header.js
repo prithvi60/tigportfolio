@@ -6,13 +6,14 @@ export default function Header() {
   const [flyerTwo, setFlyerTwo] = React.useState(false);
 
   return (
-    <header class="fixed top-0 w-full clearNav z-50">
+    <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in">
       <div class="max-w-5xl mx-auto flex flex-wrap p-5 flex-col md:flex-row">
         <div className="flex flex-row items-center justify-between p-3 md:p-1">
           <a
             href="/"
-            class="flex text-3xl text-white font-medium mb-4 md:mb-0"
-          >NINE4
+            class="flex text-3xl text-white font-medium mb-4 md:mb-0 animate-bounce"
+          >
+            TIG
           </a>
           <button
             className="text-white pb-4 cursor-pointer leading-none px-3 py-1 md:hidden outline-none focus:outline-none content-end ml-auto"
@@ -22,19 +23,102 @@ export default function Header() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="feather feather-menu"
+              viewBox="0,0,255.99904,255.99904"
+              width="48px"
+              height="48px"
+              fill-rule="nonzero"
             >
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
+              <g
+                fill="none"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="none"
+                stroke-linecap="none"
+                stroke-linejoin="none"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                // style="mix-blend-mode: normal"
+              >
+                <g transform="scale(5.33333,5.33333)">
+                  <path
+                    d="M43,11h-29c-1.1,0 -2,0.9 -2,2v3c0,1.1 0.9,2 2,2h29c1.1,0 2,-0.9 2,-2v-3c0,-1.1 -0.9,-2 -2,-2z"
+                    fill="#b3bce9"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linecap="butt"
+                    stroke-linejoin="miter"
+                  />
+                  <path
+                    d="M43,24h-29c-1.1,0 -2,0.9 -2,2v3c0,1.1 0.9,2 2,2h29c1.1,0 2,-0.9 2,-2v-3c0,-1.1 -0.9,-2 -2,-2z"
+                    fill="#b3bce9"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linecap="butt"
+                    stroke-linejoin="miter"
+                  />
+                  <path
+                    d="M43,37h-29c-1.1,0 -2,0.9 -2,2v3c0,1.1 0.9,2 2,2h29c1.1,0 2,-0.9 2,-2v-3c0,-1.1 -0.9,-2 -2,-2z"
+                    fill="#b3bce9"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linecap="butt"
+                    stroke-linejoin="miter"
+                  />
+                  <path
+                    d="M36.1,7.5h2.4c1.1,0 2,0.9 2,2v3c0,1.1 -0.9,2 -2,2h-20.5"
+                    fill="none"
+                    stroke="#18193f"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13,14.5h-3.5c-1.1,0 -2,-0.9 -2,-2v-3c0,-1.1 0.9,-2 2,-2h21.3"
+                    fill="none"
+                    stroke="#18193f"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13.3,27.5h-3.8c-1.1,0 -2,-0.9 -2,-2v-3c0,-1.1 0.9,-2 2,-2h20"
+                    fill="none"
+                    stroke="#18193f"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M35,20.5h3.5c1.1,0 2,0.9 2,2v3c0,1.1 -0.9,2 -2,2h-20"
+                    fill="none"
+                    stroke="#18193f"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13.5,40.5h-4c-1.1,0 -2,-0.9 -2,-2v-3c0,-1.1 0.9,-2 2,-2h19.6"
+                    fill="none"
+                    stroke="#18193f"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M34.2,33.5h4.3c1.1,0 2,0.9 2,2v3c0,1.1 -0.9,2 -2,2h-20"
+                    fill="none"
+                    stroke="#18193f"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </g>
             </svg>
           </button>
         </div>
@@ -46,7 +130,7 @@ export default function Header() {
         >
           <div class="md:ml-auto md:mr-auto font-4 pt-1 md:pl-14 pl-1 flex flex-wrap items-center md:text-base text-1xl md:justify-center justify-items-start">
             <a class="mr-11 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04">
-              Features
+              Video Production
             </a>
             <div className="relative">
               <button
@@ -54,9 +138,9 @@ export default function Header() {
                 className="
                    group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
                   "
-                onMouseEnter={() => (setFlyer(!flyer), setFlyerTwo(false))}
+                // onMouseEnter={() => (setFlyer(!flyer), setFlyerTwo(false))}
               >
-                <span className="tr04">Templates</span>
+                <span className="tr04">Events</span>
                 <svg
                   className={
                     flyer === true
@@ -75,7 +159,7 @@ export default function Header() {
                   />
                 </svg>
               </button>
-              <div
+              {/* <div
                 onMouseLeave={() => setFlyer(false)}
                 className={
                   flyer
@@ -126,60 +210,129 @@ export default function Header() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <a class="mr-12 md:ml-11 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04">
-              Pricing
+              Campaign
             </a>
             <a class="mr-5 cursor-pointer text-gray-300 hover:text-white font-semibold tr04">
-              Careers
+              Contact
             </a>
           </div>
           <a
-            href="https://twitter.com/"
+            href="https://www.instagram.com/theintgen/?hl=en"
             rel="noopener noreferrer"
             target="_blank"
             className="invisible md:visible"
           >
             <svg
-              title="Twitter"
-              width="30"
-              height="17"
-              viewBox="0 0 50 40"
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
+              viewBox="0 0 48 48"
+              width="48px"
+              height="48px"
             >
               <path
-                data-v-54e46119=""
-                d="M15.4528 40C34.0158 40 44.1732 24.6063 44.1732 11.2796C44.1732 10.8465 44.1732 10.4134 44.1536 9.98031C46.122 8.56299 47.8347 6.77166 49.1929 4.74409C47.3819 5.55118 45.4331 6.08268 43.3858 6.33858C45.4724 5.09842 47.0669 3.11023 47.8347 0.74803C45.8858 1.90944 43.7204 2.73622 41.4173 3.18898C39.5669 1.22047 36.9488 0 34.0551 0C28.4842 0 23.9567 4.52756 23.9567 10.0984C23.9567 10.8858 24.0551 11.6536 24.2126 12.4016C15.8268 11.9882 8.38582 7.95276 3.40551 1.85039C2.53937 3.34646 2.04724 5.07874 2.04724 6.92913C2.04724 10.4331 3.83859 13.5237 6.53543 15.3347C4.88189 15.2756 3.32677 14.8228 1.9685 14.0748C1.9685 14.1142 1.9685 14.1536 1.9685 14.2126C1.9685 19.0944 5.45276 23.189 10.0591 24.1142C9.2126 24.3504 8.32677 24.4686 7.40158 24.4686C6.75197 24.4686 6.12204 24.4094 5.51181 24.2913C6.79133 28.3071 10.5315 31.2204 14.9409 31.2992C11.4763 34.0158 7.12599 35.6299 2.40158 35.6299C1.59449 35.6299 0.787401 35.5906 0 35.4921C4.44882 38.3268 9.76378 40 15.4528 40Z"
-                fill="white"
-              ></path>
+                fill="#f48fb1"
+                d="M21,46h15c5.5,0,10-4.5,10-10V21c0-5.5-4.5-10-10-10H21c-5.5,0-10,4.5-10,10v15C11,41.5,15.5,46,21,46z"
+              />
+              <path
+                fill="none"
+                stroke="#18193f"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+                stroke-width="3"
+                d="M41.5,21.1v-4.6c0-5.5-4.5-10-10-10h-15c-5.5,0-10,4.5-10,10v3"
+              />
+              <path
+                fill="none"
+                stroke="#18193f"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+                stroke-width="3"
+                d="M6.5,25.6v5.9c0,5.5,4.5,10,10,10h15c5.5,0,10-4.5,10-10v-4.6"
+              />
+              <path
+                fill="none"
+                stroke="#18193f"
+                stroke-miterlimit="10"
+                stroke-width="3"
+                d="M24,15.5c-4.7,0-8.5,3.8-8.5,8.5s3.8,8.5,8.5,8.5s8.5-3.8,8.5-8.5S28.7,15.5,24,15.5z"
+              />
+              <path
+                fill="#18193f"
+                d="M34,12c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S35.1,12,34,12z"
+              />
             </svg>
           </a>
           <a
             data-v-54e46119=""
-            href="https://github.com/"
+            href="https://www.youtube.com/channel/UCVk9sWJLFs3xTEBRtLTVXkQ/videos?view=0"
             rel="noopener noreferrer"
             target="_blank"
-            className="pl-7 invisible md:visible"
+            className="pl-7 invisible md:visible animation-wiggle
+            "
           >
             <svg
-              data-v-54e46119=""
-              width="30"
-              height="20"
-              viewBox="0 0 25 24"
-              fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              title="GitHub logo"
-              class="github-link--logo"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              viewBox="0,0,255.99904,255.99904"
+              width="48px"
+              height="48px"
+              fill-rule="nonzero"
             >
-              <path
-                data-v-54e46119=""
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M12.3019 0C5.50526 0 0 5.50526 0 12.3019C0 17.7392 3.52669 22.3458 8.4127 23.977C9.0244 24.0902 9.25095 23.7126 9.25095 23.3804C9.25095 23.0858 9.2434 22.3156 9.23585 21.2885C5.81488 22.0286 5.08991 19.6422 5.08991 19.6422C4.53108 18.2225 3.72304 17.8373 3.72304 17.8373C2.60537 17.0746 3.80611 17.0897 3.80611 17.0897C5.03705 17.1803 5.69405 18.3584 5.69405 18.3584C6.78906 20.2388 8.57129 19.6951 9.27361 19.3779C9.38688 18.585 9.70406 18.0412 10.0514 17.7316C7.32524 17.4295 4.45556 16.3723 4.45556 11.66C4.45556 10.3158 4.93132 9.22074 5.72426 8.35984C5.59588 8.04266 5.17298 6.79662 5.83754 5.10501C5.83754 5.10501 6.87213 4.77274 9.22074 6.36616C10.2025 6.0943 11.2522 5.95837 12.3019 5.95082C13.344 5.95837 14.4013 6.0943 15.383 6.36616C17.7316 4.77274 18.7662 5.10501 18.7662 5.10501C19.4383 6.79662 19.0154 8.05021 18.887 8.35984C19.6724 9.22074 20.1482 10.3158 20.1482 11.66C20.1482 16.3874 17.271 17.422 14.5297 17.7316C14.9677 18.1092 15.3679 18.8644 15.3679 20.0123C15.3679 21.6586 15.3528 22.9801 15.3528 23.3879C15.3528 23.7202 15.5718 24.0978 16.1986 23.977C21.0846 22.3458 24.6038 17.7392 24.6038 12.3094C24.6038 5.50526 19.0985 0 12.3019 0Z"
-                fill="white"
-              ></path>
+              <g
+                fill="none"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="none"
+                stroke-linecap="none"
+                stroke-linejoin="none"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                // style="mix-blend-mode: normal"
+              >
+                <g transform="scale(5.33333,5.33333)">
+                  <path
+                    d="M27.86,14c-6.144,0 -11.916,0.469 -14.989,1.125c-2.048,0.469 -3.817,1.875 -4.19,4.031c-0.371,2.25 -0.744,5.125 -0.744,9.344c0,4.219 0.373,7 0.838,9.344c0.373,2.063 2.141,3.563 4.19,4.031c3.258,0.656 8.844,1.125 14.988,1.125c6.144,0 11.73,-0.469 14.989,-1.125c2.048,-0.469 3.817,-1.875 4.19,-4.031c0.373,-2.344 0.838,-5.219 0.931,-9.438c0,-4.219 -0.466,-7.094 -0.931,-9.438c-0.373,-2.063 -2.141,-3.563 -4.19,-4.031c-3.258,-0.468 -8.937,-0.937 -15.082,-0.937z"
+                    fill="#f54610"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linecap="butt"
+                    stroke-linejoin="miter"
+                  />
+                  <path
+                    d="M28.79,10.093c-1.584,-0.059 -3.241,-0.093 -4.933,-0.093v0c-6.278,0 -12.176,0.469 -15.316,1.125c-2.093,0.469 -3.9,1.875 -4.281,4.031c-0.379,2.25 -0.76,5.125 -0.76,9.344c0,4.219 0.381,7 0.856,9.344c0.381,2.063 2.188,3.563 4.281,4.031c1.085,0.214 2.423,0.408 3.951,0.572"
+                    fill="none"
+                    stroke="#18193f"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18.5,38.881c1.733,0.077 3.567,0.119 5.452,0.119c6.278,0 11.986,-0.469 15.316,-1.125c2.093,-0.469 3.9,-1.875 4.281,-4.031c0.381,-2.344 0.856,-5.219 0.951,-9.438c0,-4.219 -0.476,-7.094 -0.951,-9.438c-0.381,-2.063 -2.188,-3.563 -4.281,-4.031c-0.888,-0.125 -1.952,-0.25 -3.154,-0.366"
+                    fill="none"
+                    stroke="#18193f"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18.5,24v4.514c0,1.522 1.663,2.476 3,1.721l7.99,-4.514c1.347,-0.761 1.347,-2.682 0,-3.443l-7.99,-4.514c-1.337,-0.755 -3,0.199 -3,1.721"
+                    fill="none"
+                    stroke="#18193f"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </g>
             </svg>
           </a>
         </div>

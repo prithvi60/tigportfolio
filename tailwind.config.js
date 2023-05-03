@@ -3,6 +3,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'eczar': ['Eczar', 'sans-serif']
+      },
       colors: {
         gray: {
           100: "#FBFBFB",
@@ -14,6 +18,72 @@ module.exports = {
           700: "#4C4C4C",
           800: "#121212",
           900: "#191919",
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 3s ease-in-out forwards",
+        title: "title 3s ease-out forwards",
+        "fade-left": "fade-left 3s ease-in-out forwards",
+        "fade-right": "fade-right 3s ease-in-out forwards",
+      },
+      keyframes: {
+        "fade-in": {
+          "0%": {
+            opacity: "0%",
+          },
+          "75%": {
+            opacity: "0%",
+          },
+          "100%": {
+            opacity: "100%",
+          },
+        },
+        "fade-left": {
+          "0%": {
+            transform: "translateX(100%)",
+            opacity: "0%",
+          },
+
+          "30%": {
+            transform: "translateX(0%)",
+            opacity: "100%",
+          },
+          "100%": {
+            opacity: "0%",
+          },
+        },
+        "fade-right": {
+          "0%": {
+            transform: "translateX(-100%)",
+            opacity: "0%",
+          },
+
+          "30%": {
+            transform: "translateX(0%)",
+            opacity: "100%",
+          },
+          "100%": {
+            opacity: "0%",
+          },
+        },
+        title: {
+          "0%": {
+            "line-height": "0%",
+            "letter-spacing": "0.25em",
+            opacity: "0",
+          },
+          "25%": {
+            "line-height": "0%",
+            opacity: "0%",
+          },
+          "80%": {
+            opacity: "100%",
+          },
+
+          "100%": {
+            "line-height": "100%",
+            opacity: "100%",
+          },
         },
       },
     },
