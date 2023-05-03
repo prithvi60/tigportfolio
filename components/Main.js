@@ -1,5 +1,4 @@
-import { Section } from "react-scroll-section";
-export default function Main() {
+export default function Main({ videoRef, eventRef, campaignRef, contactRef }) {
   return (
     <section class="text-gray-600 body-font ">
       <div class="relative max-w-5xl pt-8 pb-4 mx-auto">
@@ -33,7 +32,7 @@ export default function Main() {
           </video>
         </div>
       </div>
-      <Section id="video">
+      <section id="video" ref={videoRef}>
         <h2 className="pt-40 mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
           Video Production.
         </h2>
@@ -88,8 +87,8 @@ export default function Main() {
             </p>
           </div>
         </div>
-      </Section>
-      <Section id="event">
+      </section>
+      <section id="event" ref={eventRef}>
         <h2 className="pt-40 mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
           Events
         </h2>
@@ -144,8 +143,8 @@ export default function Main() {
             </p>
           </div>
         </div>
-      </Section>
-      <Section id="campaign">
+      </section>
+      <section id="campaign" ref={campaignRef}>
         <h2 className="pt-40 mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
           Campaign
         </h2>
@@ -200,7 +199,7 @@ export default function Main() {
             </p>
           </div>
         </div>
-      </Section>
+      </section>
       {/* <section class="relative pb-24">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           <div class="py-24 md:py-36">
@@ -226,7 +225,7 @@ export default function Main() {
           </div>
         </div>
       </section> */}
-      <Section id="contact">
+      <section id="contact" ref={contactRef}>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           <div class="py-24 md:py-36">
             <h1 class="mb-5 text-white-100 text-6xl font-bold ">Contact Us</h1>
@@ -243,7 +242,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </Section>
+      </section>
     </section>
   );
 }
