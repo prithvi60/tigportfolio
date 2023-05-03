@@ -136,7 +136,10 @@ export default function Header({
           <div class="md:ml-auto md:mr-auto font-4 pt-1 md:pl-14 pl-1 flex flex-wrap items-center md:text-base text-1xl md:justify-center justify-items-start">
             <ul
               onClick={() =>
-                videoRef.current.scrollIntoView({ behaviour: "smooth" })
+                videoRef.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                })
               }
               class="mr-11 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
             >
@@ -153,7 +156,10 @@ export default function Header({
                 <span
                   className="tr04"
                   onClick={() =>
-                    eventRef.current.scrollIntoView({ behaviour: "smooth" })
+                    eventRef.current.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    })
                   }
                 >
                   Events
@@ -231,7 +237,10 @@ export default function Header({
             </div>
             <ul
               onClick={() =>
-                campaignRef.current.scrollIntoView({ behaviour: "smooth" })
+                campaignRef.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                })
               }
               class="mr-12 md:ml-11 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
             >
@@ -239,7 +248,10 @@ export default function Header({
             </ul>
             <ul
               onClick={() =>
-                contactRef.current.scrollIntoView({ behaviour: "smooth" })
+                contactRef.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                })
               }
               class="mr-5 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
             >
