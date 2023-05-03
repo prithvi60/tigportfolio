@@ -135,7 +135,9 @@ export default function Header({
         >
           <div class="md:ml-auto md:mr-auto font-4 pt-1 md:pl-14 pl-1 flex flex-wrap items-center md:text-base text-1xl md:justify-center justify-items-start">
             <ul
-              onClick={() => videoRef.current.scrollIntoView()}
+              onClick={() =>
+                videoRef.current.scrollIntoView({ behaviour: "smooth" })
+              }
               class="mr-11 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
             >
               Video Production
@@ -150,7 +152,9 @@ export default function Header({
               >
                 <span
                   className="tr04"
-                  onClick={() => eventRef.current.scrollIntoView()}
+                  onClick={() =>
+                    eventRef.current.scrollIntoView({ behaviour: "smooth" })
+                  }
                 >
                   Events
                 </span>
@@ -226,13 +230,17 @@ export default function Header({
               </div> */}
             </div>
             <ul
-              onClick={() => campaignRef.current.scrollIntoView()}
+              onClick={() =>
+                campaignRef.current.scrollIntoView({ behaviour: "smooth" })
+              }
               class="mr-12 md:ml-11 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
             >
               Campaign
             </ul>
             <ul
-              onClick={() => contactRef.current.scrollIntoView()}
+              onClick={() =>
+                contactRef.current.scrollIntoView({ behaviour: "smooth" })
+              }
               class="mr-5 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
             >
               Contact

@@ -16,7 +16,6 @@
     "react": "^18.2.0",
     "react-countup": "^4.3.3",
     "react-dom": "^18.2.0",
-    "react-scroll-section": "^3.2.5",
     "react-visibility-sensor": "^5.1.1",
     "tailwindcss": "^2.0.2"
   }
