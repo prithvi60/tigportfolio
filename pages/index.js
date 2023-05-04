@@ -9,6 +9,7 @@ export default function Home() {
   const videoRef = useRef(null);
   const eventRef = useRef(null);
   const campaignRef = useRef(null);
+  const storyRef = useRef(null);
   const contactRef = useRef(null);
 
   return (
@@ -30,12 +31,14 @@ export default function Home() {
         eventRef={eventRef}
         contactRef={contactRef}
         campaignRef={campaignRef}
+        storyRef={storyRef}
       />
       <Main
         videoRef={videoRef}
         eventRef={eventRef}
         contactRef={contactRef}
         campaignRef={campaignRef}
+        storyRef={storyRef}
       />
       <Footer />
     </div>

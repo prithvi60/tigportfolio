@@ -1,4 +1,11 @@
-export default function Main({ videoRef, eventRef, campaignRef, contactRef }) {
+import Carousal from "./Carousal";
+export default function Main({
+  videoRef,
+  eventRef,
+  campaignRef,
+  contactRef,
+  storyRef,
+}) {
   return (
     <section class="text-gray-600 body-font ">
       <div class="relative max-w-5xl pt-8 pb-4 mx-auto">
@@ -34,119 +41,87 @@ export default function Main({ videoRef, eventRef, campaignRef, contactRef }) {
       </div>
       <section id="video" ref={videoRef}>
         <h2 className="pt-40 mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
-          Video Production.
+          In The Press
         </h2>
         <br></br>
         <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
           Here is our collection of free to use templates made with Next.js &
           styled with Tailwind CSS.
         </p>
-        <div className="pt-12 pb-24 max-w-4xl mx-auto fsac4 md:px-1 px-3">
-          <div class="ktq4">
-            <img className="w-10" src="https://nine4.app/favicon.png"></img>
-            <h3 class="pt-3 font-semibold text-lg ">
-              Lorem ipsum dolor sit amet
-            </h3>
-            <p class="pt-2 value-text text-md  fkrr1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
-              porttitor.
-            </p>
-          </div>
-          <div class="ktq4">
-            <img className="w-10" src="https://nine4.app/favicon.png"></img>
-            <h3 class="pt-3 font-semibold text-lg ">
-              Lorem ipsum dolor sit amet
-            </h3>
-            <p class="pt-2 value-text text-md  fkrr1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
-              porttitor.
-            </p>
-          </div>
-          <div class="ktq4">
-            <img className="w-10" src="https://nine4.app/favicon.png"></img>
-            <h3 class="pt-3 font-semibold text-lg ">
-              Lorem ipsum dolor sit amet
-            </h3>
-            <p class="pt-2 value-text text-md  fkrr1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
-              porttitor.
-            </p>
-          </div>
-          <div class="ktq4">
-            {/* <img className="w-10" src="https://nine4.app/favicon.png"></img> */}
-            <h3 class="pt-3 font-semibold text-lg ">
-              Lorem ipsum dolor sit amet
-            </h3>
-            <p class="pt-2 value-text text-md  fkrr1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
-              porttitor.
-            </p>
-          </div>
+        {/* <div className="flex flex-column justify-items-center"> */}
+        <div className="mx-auto  text-center  leading-relaxed fs521">
+          <Carousal />
         </div>
+        {/* </div> */}
       </section>
       <section id="event" ref={eventRef}>
         <h2 className="pt-40 mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
-          Events
+          Experiences Curated
         </h2>
         <br></br>
-        <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
-          Here is our collection of free to use templates made with Next.js &
-          styled with Tailwind CSS.
-        </p>
-        <div className="pt-12 pb-24 max-w-4xl mx-auto fsac4 md:px-1 px-3">
-          <div class="ktq4">
-            <img className="w-10" src="https://nine4.app/favicon.png"></img>
-            <h3 class="pt-3 font-semibold text-lg ">
-              Lorem ipsum dolor sit amet
-            </h3>
-            <p class="pt-2 value-text text-md  fkrr1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
-              porttitor.
-            </p>
-          </div>
-          <div class="ktq4">
-            <img className="w-10" src="https://nine4.app/favicon.png"></img>
-            <h3 class="pt-3 font-semibold text-lg ">
-              Lorem ipsum dolor sit amet
-            </h3>
-            <p class="pt-2 value-text text-md  fkrr1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
-              porttitor.
-            </p>
-          </div>
-          <div class="ktq4">
-            <img className="w-10" src="https://nine4.app/favicon.png"></img>
-            <h3 class="pt-3 font-semibold text-lg ">
-              Lorem ipsum dolor sit amet
-            </h3>
-            <p class="pt-2 value-text text-md  fkrr1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
-              porttitor.
-            </p>
-          </div>
-          <div class="ktq4">
-            {/* <img className="w-10" src="https://nine4.app/favicon.png"></img> */}
-            <h3 class="pt-3 font-semibold text-lg ">
-              Lorem ipsum dolor sit amet
-            </h3>
-            <p class="pt-2 value-text text-md  fkrr1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
-              porttitor.
-            </p>
-          </div>
+        <div className="mx-auto  text-center  leading-relaxed fs521">
+          <Carousal />
         </div>
       </section>
       <section id="campaign" ref={campaignRef}>
         <h2 className="pt-40 mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
-          Campaign
+          Brands we have worked with
+        </h2>
+        <br></br>
+        <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
+          Here is our collection of free to use templates made with Next.js &
+          styled with Tailwind CSS.
+        </p>
+        <div className="pt-12 pb-24 max-w-4xl mx-auto fsac4 md:px-1 px-3">
+          <div class="ktq4">
+            <img className="w-10" src="https://nine4.app/favicon.png"></img>
+            <h3 class="pt-3 font-semibold text-lg ">
+              Lorem ipsum dolor sit amet
+            </h3>
+            <p class="pt-2 value-text text-md  fkrr1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
+              porttitor.
+            </p>
+          </div>
+          <div class="ktq4">
+            <img className="w-10" src="https://nine4.app/favicon.png"></img>
+            <h3 class="pt-3 font-semibold text-lg ">
+              Lorem ipsum dolor sit amet
+            </h3>
+            <p class="pt-2 value-text text-md  fkrr1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
+              porttitor.
+            </p>
+          </div>
+          <div class="ktq4">
+            <img className="w-10" src="https://nine4.app/favicon.png"></img>
+            <h3 class="pt-3 font-semibold text-lg ">
+              Lorem ipsum dolor sit amet
+            </h3>
+            <p class="pt-2 value-text text-md  fkrr1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
+              porttitor.
+            </p>
+          </div>
+          <div class="ktq4">
+            {/* <img className="w-10" src="https://nine4.app/favicon.png"></img> */}
+            <h3 class="pt-3 font-semibold text-lg ">
+              Lorem ipsum dolor sit amet
+            </h3>
+            <p class="pt-2 value-text text-md  fkrr1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
+              porttitor.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="campaign" ref={storyRef}>
+        <h2 className="pt-40 mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+          Brand Story
         </h2>
         <br></br>
         <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">

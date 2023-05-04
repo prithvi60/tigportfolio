@@ -95,5 +95,6 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  content: ["./pages/**/*.{js,ts,jsx,tsx}"],
+  plugins: [require("daisyui")],
 };
