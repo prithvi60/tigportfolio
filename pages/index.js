@@ -13,9 +13,9 @@ export default function Home() {
   const contactRef = useRef(null);
 
   return (
-    <div className="text-black font-eczar">
+    <div className="text-black font-ultra">
       <NextSeo
-        title="Home: nine4"
+        title="TIG"
         description="Welcome to The Internet Generation!"
         canonical="https://nine4-3.vercel.app/"
         openGraph={{
@@ -23,7 +23,7 @@ export default function Home() {
         }}
       />
       <Head>
-        <title>TIG</title>
+        <title>The Internet Generation</title>
         <link rel="icon" href="/favicon.jpg" />
       </Head>
       <Header

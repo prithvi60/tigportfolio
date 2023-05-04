@@ -12,7 +12,7 @@ export default function Header({
   const [flyerTwo, setFlyerTwo] = React.useState(false);
 
   return (
-    <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in  w-screen border-bot">
+    <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in  w-screen border-bot font-ultra">
       <div class="max-w-2xl md:max-w-5xl mx-auto flex flex-wrap p-1 md:p-2  md:flex-row">
         <div className="flex flex-row items-center justify-between md:p-3 md:p-1">
           <img src="/favicon.jpg" class=" md:animate-bounce w-8" />
@@ -126,11 +126,11 @@ export default function Header({
         </div>
         <div
           className={
-            "md:flex flex-grow items-center" +
+            "md:flex flex-grow items-center justify-center mr-24" +
             (navbarOpen ? " flex" : " hidden")
           }
         >
-          <div class="md:ml-auto md:mr-auto font-4 pt-1 md:pl-14 pl-1 flex flex-wrap items-center md:text-base text-1xl md:justify-center justify-items-start absolute top-5">
+          <div class="font-4 pt-1  pl-1 flex flex-wrap items-center md:text-base text-1xl md:justify-center justify-items-start absolute top-5">
             <ul
               onClick={() =>
                 videoRef.current.scrollIntoView({
@@ -161,7 +161,7 @@ export default function Header({
                 >
                   Experience Curated
                 </span>
-                <svg
+                {/* <svg
                   className={
                     flyer === true
                       ? "transform rotate-180 ml-3 h-5 w-5 transition ease-out duration-200"
@@ -177,7 +177,7 @@ export default function Header({
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                     clipRule="evenodd"
                   />
-                </svg>
+                </svg> */}
               </button>
               {/* <div
                 onMouseLeave={() => setFlyer(false)}

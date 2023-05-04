@@ -4,8 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        eczar: ["Eczar", "sans-serif"],
+        sans: ["Ultra", "sans-serif"],
+        poppins: ["Poppins","sans-serif"],
+        eczar: ["Eczar"],
+        ultra: ["Ultra"],
       },
       colors: {
         white: {

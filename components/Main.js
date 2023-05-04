@@ -7,12 +7,12 @@ export default function Main({
   storyRef,
 }) {
   return (
-    <section class="text-gray-600 body-font ">
+    <section class="text-gray-600">
       <div class="relative max-w-5xl pt-8 pb-4 mx-auto">
         <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
           <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
-          <h1 className="z-10 text-5xl text-white-100 duration-1000 bg-white cursor-default text-edge-outline animate-title font-poppins font-bold md:text-9xl whitespace-nowrap bg-clip-text ">
+          <h1 className="z-10 text-5xl text-white-100 duration-1000 bg-white cursor-default text-edge-outline animate-title font-sans font-bold md:text-9xl whitespace-nowrap bg-clip-text ">
             <span className="text-red-600 ">T</span>HE{" "}
             <span className="text-red-600 ">I</span>NT{" "}
             <span className="text-red-600 ">G</span>EN
@@ -40,7 +40,7 @@ export default function Main({
         </div>
       </div>
       <section id="video" ref={videoRef}>
-        <h2 className="pt-40 mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+        <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
           In The Press
         </h2>
         <br></br>
@@ -55,7 +55,7 @@ export default function Main({
         {/* </div> */}
       </section>
       <section id="event" ref={eventRef}>
-        <h2 className="pt-40 mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+        <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
           Experiences Curated
         </h2>
         <br></br>
@@ -64,7 +64,7 @@ export default function Main({
         </div>
       </section>
       <section id="campaign" ref={campaignRef}>
-        <h2 className="pt-40 mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+        <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
           Brands we have worked with
         </h2>
         <br></br>
@@ -120,7 +120,7 @@ export default function Main({
         </div>
       </section>
       <section id="campaign" ref={storyRef}>
-        <h2 className="pt-40 mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+        <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
           Brand Story
         </h2>
         <br></br>
@@ -202,7 +202,7 @@ export default function Main({
       </section> */}
       <section id="contact" ref={contactRef}>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <div class="py-24 md:py-36">
+          <div class="pb-56">
             <h1 class="mb-5 text-white-100 text-6xl font-bold ">Contact Us</h1>
             <div className="text-white-200">
               The Internet Generation
