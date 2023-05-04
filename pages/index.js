@@ -40,7 +40,7 @@ export default function Home() {
         campaignRef={campaignRef}
         storyRef={storyRef}
       />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
