@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Carousal from "./Carousal";
 export default function Main({
   videoRef,
@@ -6,29 +7,66 @@ export default function Main({
   contactRef,
   storyRef,
 }) {
-  return (
-    <section class="text-gray-600">
-      <div class="relative max-w-5xl pt-8 pb-4 mx-auto">
-        <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
-          <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+  const [MousePosition, setMousePosition] = React.useState({
+    left: 0,
+    top: 0,
+  });
+  const cursor = React.useRef(null);
+  // useEffect(() => {
+  //   first;
 
-          <h1 className="z-10 text-5xl text-white-100 duration-1000 bg-white cursor-default text-edge-outline animate-title font-sans font-bold md:text-9xl whitespace-nowrap bg-clip-text ">
-            <span className="text-red-600 ">T</span>HE{" "}
-            <span className="text-red-600 ">I</span>NT{" "}
-            <span className="text-red-600 ">G</span>EN
-          </h1>
-          <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-          <div className="my-16 text-center animate-fade-in z-10">
-            <h2 className="text-sm text-white-100 mx-10 ">
-              We started off with a humble YouTube channel which ushered in a
-              new generation of disruptive thinking: Paracetamol Paniyaram. We
-              ventured further in our dreams of quality content production by
-              producing multiple web-series. We offer our technical and creative
-              knowledge to clients for their outreach purposes.
-            </h2>
+  //   return () => {
+  //     second;
+  //   };
+  // }, []);
+
+  // const cursor = document.querySelector(".cursor");
+  React.useEffect(() => {
+    if (cursor.current !== null) {
+      cursor.current.onmousemove = function (event) {
+        setMousePosition({
+          left: event.pageX,
+          top: event.pageY,
+        });
+      };
+      cursor.current.ontouchmove = function (event) {
+        setMousePosition({
+          left: event.pageX,
+          top: event.pageY,
+        });
+      };
+    }
+  }, []);
+
+  return (
+    // width and based on mouse positon left add class color
+    <section class="text-gray-600">
+      <div
+        id="cool-wrapper"
+        ref={cursor}
+        style={{ background: "orange", width: MousePosition.left }}
+      >
+        <div class="relative max-w-5xl pt-8 pb-4 mx-auto">
+          <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
+            <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+
+            <h1 className="z-10 text-5xl text-white-100 duration-1000 bg-white cursor-default text-edge-outline animate-title font-sans font-bold md:text-9xl whitespace-nowrap bg-clip-text ">
+              <span className="text-red-600 ">T</span>HE{" "}
+              <span className="text-red-600 ">I</span>NT{" "}
+              <span className="text-red-600 ">G</span>EN
+            </h1>
+            <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+            <div className="my-16 text-center animate-fade-in z-10">
+              <h2 className="text-sm text-white-100 mx-10 ">
+                We started off with a humble YouTube channel which ushered in a
+                new generation of disruptive thinking: Paracetamol Paniyaram. We
+                ventured further in our dreams of quality content production by
+                producing multiple web-series. We offer our technical and
+                creative knowledge to clients for their outreach purposes.
+              </h2>
+            </div>
           </div>
-        </div>
-        <div className="absolute mx-auto top-0 h-screen  w-screen animate-fade-in">
+          {/* <div className="absolute mx-auto top-0 h-screen  w-screen animate-fade-in">
           <video
             autoPlay
             loop
@@ -37,8 +75,10 @@ export default function Main({
           >
             <source src="https://video.wixstatic.com/video/06a7ff_0b63936f02f04baf99c2803ce89823b8/1080p/mp4/file.mp4" />
           </video>
+        </div> */}
         </div>
       </div>
+
       <section id="video" ref={videoRef}>
         <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
           In The Press
