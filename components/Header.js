@@ -8,26 +8,29 @@ export default function Header({
   storyRef,
 }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const [flyer, setFlyer] = React.useState(false);
-  const [flyerTwo, setFlyerTwo] = React.useState(false);
+  // const [flyer, setFlyer] = React.useState(false);
+  // const [flyerTwo, setFlyerTwo] = React.useState(false);
 
   return (
     <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in  w-screen border-bot font-ultra">
       <div class="max-w-2xl md:max-w-5xl mx-auto flex flex-wrap p-1 md:p-2  md:flex-row">
-        <div className="flex flex-row items-center justify-between md:p-3 md:p-1">
-          <img src="/favicon.jpg" class=" md:animate-bounce w-8" />
+        <div className="flex flex-row items-center justify-between md:p-3 md:p-1 w-screen">
+          <a href="/">
+            <img src="/favicon.jpg" class=" md:animate-bounce w-8" />
+          </a>
 
           <button
-            className="text-white pb-4 cursor-pointer leading-none px-3 py-1 md:hidden outline-none focus:outline-none content-end ml-auto"
+            className="text-white pb-4 cursor-pointer leading-none px-3 py-2 md:hidden outline-none focus:outline-none content-end justify-end relative"
             type="button"
             aria-label="button"
+            style={{ zIndex: "100" }}
             onClick={() => setNavbarOpen(!navbarOpen)}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0,0,255.99904,255.99904"
-              width="48px"
-              height="48px"
+              width="36px"
+              height="36px"
               fill-rule="nonzero"
             >
               <g
@@ -130,14 +133,15 @@ export default function Header({
             (navbarOpen ? " flex" : " hidden")
           }
         >
-          <div class="font-4 pt-1  pl-1 flex flex-wrap items-center md:text-base text-1xl md:justify-center justify-items-start absolute top-5">
+          <div class="bg-indigo-900 pl-3 md:pl-1 md:bg-transparent right-0 md:right-auto rounded-bl-md md:rounded-none top-0 font-4 pt-12 pb-4 px-2 md:pt-1  flex  flex-col md:flex-row text-left md:items-center md:text-base text-1xl md:justify-center justify-items-start absolute md:top-5">
             <ul
-              onClick={() =>
+              onClick={() => {
                 videoRef.current.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
-                })
-              }
+                });
+                setNavbarOpen(!navbarOpen);
+              }}
               class="mr-4 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
             >
               In The Press
@@ -233,34 +237,37 @@ export default function Header({
               </div> */}
             </div>
             <ul
-              onClick={() =>
+              onClick={() => {
                 campaignRef.current.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
-                })
-              }
+                });
+                setNavbarOpen(!navbarOpen);
+              }}
               class="mr-4 md:ml-4 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
             >
               Worked Brands
             </ul>
             <ul
-              onClick={() =>
+              onClick={() => {
                 storyRef.current.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
-                })
-              }
+                });
+                setNavbarOpen(!navbarOpen);
+              }}
               class="mr-4 md:ml-4 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
             >
               Brand Story
             </ul>
             <ul
-              onClick={() =>
+              onClick={() => {
                 contactRef.current.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
-                })
-              }
+                });
+                setNavbarOpen(!navbarOpen);
+              }}
               class="mr-4 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
             >
               Contact

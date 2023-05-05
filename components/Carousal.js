@@ -48,20 +48,20 @@ export default function Carousal() {
   return (
     <Slider {...settings}>
       {[...Array(6)].map(() => (
-        <div class="carousel-img">
+        <div class="carousel-img" style={{borderRadius:"20px"}}>
           <img
             className=""
             style={{
               width: "100%",
               height: "100%",
-              borderRadius: "15px",
+              // borderRadius: "15px",
               aspectRatio: "auto",
             }}
             src={Img1.src}
           ></img>
-          <h3 class="pt-3 font-semibold text-lg absolute bottom-8 text-blue text-center">
+          {/* <h3 class="pt-3 font-semibold text-lg absolute bottom-8 text-blue text-center">
             Lorem ipsum dolor sit amet
-          </h3>
+          </h3> */}
         </div>
       ))}
     </Slider>

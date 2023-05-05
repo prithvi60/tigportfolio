@@ -98,5 +98,5 @@ module.exports = {
     extend: {},
   },
   content: ["./pages/**/*.{js,ts,jsx,tsx}"],
-  plugins: [require("daisyui")],
+  plugins: [],
 };
