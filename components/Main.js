@@ -7,45 +7,47 @@ export default function Main({
   contactRef,
   storyRef,
 }) {
-  const [MousePosition, setMousePosition] = React.useState({
-    left: 0,
-    top: 0,
-  });
+  const [MousePosition, setMousePosition] = React.useState(300);
   const cursor = React.useRef(null);
-  // useEffect(() => {
-  //   first;
 
-  //   return () => {
-  //     second;
-  //   };
-  // }, []);
-
-  // const cursor = document.querySelector(".cursor");
   React.useEffect(() => {
-    if (cursor.current !== null) {
-      cursor.current.onmousemove = function (event) {
-        setMousePosition({
-          left: event.pageX,
-          top: event.pageY,
-        });
-      };
-      cursor.current.ontouchmove = function (event) {
-        setMousePosition({
-          left: event.pageX,
-          top: event.pageY,
-        });
-      };
-    }
+    setTimeout(() => {
+      if (cursor.current !== null) {
+        cursor.current.onmousemove = function (event) {
+          setMousePosition(event.pageX);
+        };
+      }
+    }, 2000);
   }, []);
 
   return (
-    // width and based on mouse positon left add class color
     <section class="text-gray-600">
       <div
         id="cool-wrapper"
         ref={cursor}
-        style={{ background: "orange", width: MousePosition.left }}
+        onTouchStart={(event) => {
+          setMousePosition(event.touches[0].clientX);
+        }}
+        onTouchMove={(event) => {
+          setMousePosition(event.touches[0].clientX);
+        }}
+        style={{ background: "#dd73c6", color: "blue", width: MousePosition }}
       >
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: MousePosition - 15,
+            color: "red",
+          }}
+          className="md:invisible"
+        >
+          <img
+            src="https://global-uploads.webflow.com/625593a881b8ebd169835ca5/6272dd170459e2734bd53502_handlebar.svg"
+            loading="lazy"
+            alt="mobile-handle"
+          ></img>
+        </div>
         <div class="relative max-w-5xl pt-8 pb-4 mx-auto">
           <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
             <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
