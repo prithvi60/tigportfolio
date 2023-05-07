@@ -13,7 +13,7 @@ export default function Home() {
   const contactRef = useRef(null);
 
   return (
-    <div className="text-black font-ultra">
+    <div className="text-black">
       <NextSeo
         title="TIG"
         description="Welcome to The Internet Generation!"

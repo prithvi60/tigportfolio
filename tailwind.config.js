@@ -3,7 +3,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ["Ultra", "sans-serif"],
       poppins: ["Poppins", "sans-serif"],
       eczar: ["Eczar"],
       ultra: ["Ultra", "sans-serif"],

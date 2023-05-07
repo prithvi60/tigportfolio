@@ -154,15 +154,15 @@ export default function Main({
             }}
           >
             {/* put your hidden elements here */}
-            {/* <div className="pl-60 absolute bottom-40">item </div> */}
+            <div className="pl-60 absolute bottom-40">item </div>
             {/* <div className="pl-80 absolute bottom-40"> */}
             {/* <Carousal images={[Img1, Img2, Img1, Img2, Img1, Img2]} /> */}
-            {/* <img
+            <img
               src={Img2.src}
               alt="logo-1"
               className="pl-80 absolute bottom-40"
               // style={{ width: "100px", height: "100px" }}
-            ></img> */}
+            ></img>
             {/* </div> */}
           </div>
         </div>

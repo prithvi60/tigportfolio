@@ -12,7 +12,7 @@ export default function Header({
   // const [flyerTwo, setFlyerTwo] = React.useState(false);
 
   return (
-    <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in  w-screen border-bot font-ultra">
+    <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in  w-screen border-bot">
       <div class="max-w-2xl md:max-w-5xl mx-auto flex flex-wrap p-1 md:p-2  md:flex-row">
         <div className="flex flex-row items-center justify-between md:p-3 md:p-1 w-screen">
           <a href="/">
