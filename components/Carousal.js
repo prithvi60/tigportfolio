@@ -1,8 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import Img1 from "../img/tig-paperclip.webp";
 
-export default function Carousal() {
+export default function Carousal({images}) {
   var settings = {
     className: "center",
     centerMode: true,
@@ -17,38 +16,38 @@ export default function Carousal() {
     autoplaySpeed: 2000,
     pauseOnHover: true,
     lazyLoad: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 1024,
+    //     settings: {
+    //       slidesToShow: 3,
+    //       slidesToScroll: 3,
+    //       infinite: true,
+    //       dots: true,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 600,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 2,
+    //       initialSlide: 2,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 480,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
+    // ],
   };
   const imgLinks = ["", "", ""];
   return (
     <Slider {...settings}>
-      {[...Array(6)].map(() => (
-        <div class="carousel-img" style={{borderRadius:"20px"}}>
+      {images.map((item,idx) => (
+        <div class="carousel-img" style={{borderRadius:"20px",width:"100%"}} key={idx}>
           <img
             className=""
             style={{
@@ -57,7 +56,7 @@ export default function Carousal() {
               // borderRadius: "15px",
               aspectRatio: "auto",
             }}
-            src={Img1.src}
+            src={item.src}
           ></img>
           {/* <h3 class="pt-3 font-semibold text-lg absolute bottom-8 text-blue text-center">
             Lorem ipsum dolor sit amet

@@ -2,13 +2,13 @@ module.exports = {
   purge: ["./components/**/*.js", "./pages/**/*.js"],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      sans: ["Ultra", "sans-serif"],
+      poppins: ["Poppins", "sans-serif"],
+      eczar: ["Eczar"],
+      ultra: ["Ultra", "sans-serif"],
+    },
     extend: {
-      fontFamily: {
-        sans: ["Ultra", "sans-serif"],
-        poppins: ["Poppins","sans-serif"],
-        eczar: ["Eczar"],
-        ultra: ["Ultra"],
-      },
       colors: {
         white: {
           100: "#FFFFFF",

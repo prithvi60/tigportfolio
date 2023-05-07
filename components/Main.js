@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import Carousal from "./Carousal";
+import Img2 from "../img/tigvid-logo.jpg";
+import Img1 from "../img/tig-paperclip.webp";
+
 export default function Main({
   videoRef,
   eventRef,
@@ -32,6 +35,7 @@ export default function Main({
     const timer5 = setTimeout(() => {
       if (cursor.current !== null) {
         cursor.current.onmousemove = function (event) {
+          console.log(cursor);
           setMousePosition(event.pageX);
         };
         setBg("#dd73c6");
@@ -50,21 +54,12 @@ export default function Main({
 
   return (
     <section class="text-gray-600">
-      <div
-        id="cool-wrapper"
-        ref={cursor}
-        onTouchStart={(event) => {
-          setMousePosition(event.touches[0].clientX);
-        }}
-        onTouchMove={(event) => {
-          setMousePosition(event.touches[0].clientX);
-        }}
+      <section
+        id="hero"
         style={{
-          background: colorbg,
-          borderBottomLeftRadius: "15px",
-          // color: "blue !important",
-          width: MousePosition,
-          // transition: "width ease-out 15s",
+          position: "relative",
+          height: "100vh",
+          overflow: "hidden",
         }}
       >
         <div
@@ -84,12 +79,23 @@ export default function Main({
             ></img>
           ) : null}
         </div>
-        <div class="relative max-w-5xl pt-8 pb-4 mx-auto">
+        <div
+          class="relative max-w-5xl pt-8 pb-4 mx-auto"
+          style={{
+            position: "absolute",
+            top: "0",
+            left: "0",
+            bottom: "0",
+            right: "0",
+            height: "100vh",
+          }}
+          ref={cursor}
+        >
           <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
             <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
             <h1
-              className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-sans font-bold md:text-9xl whitespace-nowrap bg-clip-text "
+              className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-ultra  md:text-9xl whitespace-nowrap bg-clip-text "
               style={{ color: textColor }}
             >
               <span style={{ color: "#ea3328" }}>T</span>HE{" "}
@@ -114,7 +120,53 @@ export default function Main({
           </video>
         </div> */}
         </div>
-      </div>
+        {/* fix interaction */}
+        <div
+          id="cool-wrapper"
+          // ref={cursor}
+          onTouchStart={(event) => {
+            setMousePosition(event.touches[0].clientX);
+          }}
+          onTouchMove={(event) => {
+            setMousePosition(event.touches[0].clientX);
+          }}
+          style={{
+            background: colorbg,
+            borderBottomLeftRadius: "15px",
+            width: MousePosition,
+            position: "absolute",
+            overflow: "hidden",
+            top: "0",
+            left: "0",
+            bottom: "0",
+            right: "0",
+            height: "100vh",
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              top: "0",
+              left: "0",
+              bottom: "0",
+              right: "0",
+              height: "100vh",
+            }}
+          >
+            {/* put your hidden elements here */}
+            {/* <div className="pl-60 absolute bottom-40">item </div> */}
+            {/* <div className="pl-80 absolute bottom-40"> */}
+            {/* <Carousal images={[Img1, Img2, Img1, Img2, Img1, Img2]} /> */}
+            {/* <img
+              src={Img2.src}
+              alt="logo-1"
+              className="pl-80 absolute bottom-40"
+              // style={{ width: "100px", height: "100px" }}
+            ></img> */}
+            {/* </div> */}
+          </div>
+        </div>
+      </section>
 
       <section id="video" ref={videoRef}>
         <div
@@ -142,7 +194,7 @@ export default function Main({
           </p>
           {/* <div className="flex flex-column justify-items-center"> */}
           <div className="mx-auto  text-center  leading-relaxed fs521">
-            <Carousal />
+            <Carousal images={[Img1, Img2, Img1, Img2, Img1, Img2]} />
           </div>
         </div>
       </section>
@@ -167,7 +219,7 @@ export default function Main({
           </h2>
           <br></br>
           <div className="mx-auto  text-center  leading-relaxed fs521">
-            <Carousal />
+            <Carousal images={[Img1, Img2, Img1, Img2, Img1, Img2]} />
           </div>
         </div>
       </section>
