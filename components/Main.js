@@ -38,7 +38,7 @@ export default function Main({
           console.log(cursor);
           setMousePosition(event.pageX);
         };
-        setBg("#dd73c6");
+        setBg("#e55c45");
         setCur(true);
         settextColor("white");
       }
@@ -68,6 +68,7 @@ export default function Main({
             top: "50%",
             left: MousePosition - 15,
             color: "red",
+            zIndex:"100"
           }}
           className="md:invisible"
         >
@@ -80,7 +81,7 @@ export default function Main({
           ) : null}
         </div>
         <div
-          class="relative max-w-5xl pt-8 pb-4 mx-auto"
+          class="relative max-w-5xl mx-auto"
           style={{
             position: "absolute",
             top: "0",
@@ -90,6 +91,12 @@ export default function Main({
             height: "100vh",
           }}
           ref={cursor}
+          onTouchStart={(event) => {
+            setMousePosition(event.touches[0].clientX);
+          }}
+          onTouchMove={(event) => {
+            setMousePosition(event.touches[0].clientX);
+          }}
         >
           <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
             <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
@@ -108,6 +115,12 @@ export default function Main({
                 Creating the largest creator-based community in TamilNadu.
               </h2>
             </div>
+            <div
+              className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0"
+              style={{ width: "100vw", height: "30vh" }}
+            >
+              <Carousal images={[Img1, Img1, Img1, Img1, Img1, Img1]} />
+            </div>
           </div>
           {/* <div className="absolute mx-auto top-0 h-screen  w-screen animate-fade-in">
           <video
@@ -124,12 +137,7 @@ export default function Main({
         <div
           id="cool-wrapper"
           // ref={cursor}
-          onTouchStart={(event) => {
-            setMousePosition(event.touches[0].clientX);
-          }}
-          onTouchMove={(event) => {
-            setMousePosition(event.touches[0].clientX);
-          }}
+
           style={{
             background: colorbg,
             borderBottomLeftRadius: "15px",
@@ -141,29 +149,51 @@ export default function Main({
             bottom: "0",
             right: "0",
             height: "100vh",
+            pointerEvents: "none",
           }}
         >
           <div
             style={{
-              position: "absolute",
-              top: "0",
-              left: "0",
-              bottom: "0",
-              right: "0",
+              // position: "absolute",
+              // top: "0",
+              // left: "0",
+              // bottom: "0",
+              // right: "0",
               height: "100vh",
             }}
           >
             {/* put your hidden elements here */}
-            <div className="pl-60 absolute bottom-40">item </div>
-            {/* <div className="pl-80 absolute bottom-40"> */}
-            {/* <Carousal images={[Img1, Img2, Img1, Img2, Img1, Img2]} /> */}
-            <img
-              src={Img2.src}
-              alt="logo-1"
-              className="pl-80 absolute bottom-40"
-              // style={{ width: "100px", height: "100px" }}
-            ></img>
-            {/* </div> */}
+            <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
+              <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+
+              <h1
+                className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-ultra  md:text-9xl whitespace-nowrap bg-clip-text "
+                style={{ color: "black" }}
+              >
+                <span style={{ color: "#ea3328" }}>T</span>HE{" "}
+                <span style={{ color: "#ea3328" }}>I</span>NT{" "}
+                <span style={{ color: "#ea3328" }}>G</span>EN
+              </h1>
+              <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+              <div className="my-16 text-center animate-fade-in z-10">
+                <h2 className="text-md text-black mx-10 ">
+                  Creating the largest creator-based community in TamilNadu.
+                </h2>
+              </div>
+              <div
+                className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0"
+                style={{ width: "100vw", height: "30vh" }}
+              >
+                <Carousal images={[Img2, Img2, Img2, Img2, Img2, Img2]} />
+              </div>
+              {/* <div className="absolute text-center animate-fade-in z-10">
+                <img
+                  src={Img2.src}
+                  alt=""
+                  style={{ width: "100px", height: "100px" }}
+                />
+              </div> */}
+            </div>
           </div>
         </div>
       </section>
