@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Carousal from "./Carousal";
-import Img2 from "../img/tigvid-logo.jpg";
-import Img1 from "../img/tig-paperclip.webp";
+
 import HeroCarousal from "./Hero-Carousal";
 import ContactForm from "./ContactForm";
 // hero images
@@ -28,7 +27,7 @@ import Press6 from "../img/press/press-6.webp";
 import Press7 from "../img/press/press-7.jpg";
 import Press8 from "../img/press/press-8.webp";
 // Brands
-import Brands from "../img/brands.webp";
+import Brands from "../img/brands.png";
 // Curated
 import Curated1 from "../img/curated/curated-1.webp";
 import Curated2 from "../img/curated/curated-2.webp";
@@ -391,6 +390,7 @@ export default function Main({
           <br></br>
           <div className="flex justify-center mb-14 mx-2">
             <img
+              loading="lazy"
               src={Brands.src}
               alt="brands"
               style={{ borderRadius: "10px" }}

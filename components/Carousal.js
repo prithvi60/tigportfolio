@@ -52,6 +52,7 @@ export default function Carousal({ images }) {
         >
           <img
             className=""
+            loading="lazy"
             style={{
               width: "100%",
               height: "60vh",

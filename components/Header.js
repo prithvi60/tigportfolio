@@ -16,7 +16,11 @@ export default function Header({
       <div class="max-w-2xl md:max-w-5xl mx-auto flex flex-wrap p-1 md:p-2  md:flex-row">
         <div className="flex flex-row items-center justify-between md:p-3 md:p-1 w-screen">
           <a href="/">
-            <img src="/favicon.jpg" class=" md:animate-bounce w-8" />
+            <img
+              src="/favicon.jpg"
+              class=" md:animate-bounce w-8"
+              loading="lazy"
+            />
           </a>
 
           <button
