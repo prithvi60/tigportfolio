@@ -1,21 +1,18 @@
 import React from "react";
 import Slider from "react-slick";
+import "../styles/herocarousal.module.css";
 
-export default function Carousal({ images }) {
+export default function HeroCarousal({ images }) {
   var settings = {
-    className: "center",
-    centerMode: true,
+    dots: true,
     infinite: true,
-    centerPadding: "60px",
-    dots: false,
-    speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
-    swipeToSlide: true,
+    slidesToScroll: 1,
     autoplay: true,
+    speed: 2000,
     autoplaySpeed: 2000,
-    pauseOnHover: true,
-    lazyLoad: true,
+    cssEase: "linear",
+    // lazyLoad: true,
   };
   return (
     <Slider {...settings}>

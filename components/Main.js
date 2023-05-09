@@ -2,6 +2,17 @@ import React, { useEffect } from "react";
 import Carousal from "./Carousal";
 import Img2 from "../img/tigvid-logo.jpg";
 import Img1 from "../img/tig-paperclip.webp";
+import HeroCarousal from "./Hero-Carousal";
+
+const serviceImgs = [
+  "https://media-private.canva.com/gceOk/MAE2qHgceOk/…res=Tue%2C%2009%20May%202023%2011%3A15%3A36%20GMT",
+  "https://media-public.canva.com/EcpsE/MAEr8OEcpsE/1/s.png",
+  "	https://media-private.canva.com/k9_j4/MAEqmNk9_j4/…res=Tue%2C%2009%20May%202023%2010%3A52%3A38%20GMT",
+  "https://media-public.canva.com/yBa3c/MAFOyYyBa3c/1/s.png",
+  "https://media-private.canva.com/veLOE/MAEaTDveLOE/…res=Tue%2C%2009%20May%202023%2010%3A46%3A06%20GMT",
+  "	blob:https://www.canva.com/1dd935a7-457b-44bf-9a38-d65635577625",
+  "blob:https://www.canva.com/de194687-68aa-44fa-87fa-c690de9c53b6",
+];
 
 export default function Main({
   videoRef,
@@ -68,9 +79,9 @@ export default function Main({
             top: "50%",
             left: MousePosition - 15,
             color: "red",
-            zIndex:"100"
+            zIndex: "100",
           }}
-          className="md:invisible"
+          // className="md:invisible"
         >
           {cur ? (
             <img
@@ -116,10 +127,10 @@ export default function Main({
               </h2>
             </div>
             <div
-              className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0"
+              className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in"
               style={{ width: "100vw", height: "30vh" }}
             >
-              <Carousal images={[Img1, Img1, Img1, Img1, Img1, Img1]} />
+              <HeroCarousal images={[Img1, Img1, Img1, Img1, Img1, Img1]} />
             </div>
           </div>
           {/* <div className="absolute mx-auto top-0 h-screen  w-screen animate-fade-in">
@@ -181,10 +192,10 @@ export default function Main({
                 </h2>
               </div>
               <div
-                className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0"
+                className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in"
                 style={{ width: "100vw", height: "30vh" }}
               >
-                <Carousal images={[Img2, Img2, Img2, Img2, Img2, Img2]} />
+                <HeroCarousal images={[Img2, Img2, Img2, Img2, Img2, Img2]} />
               </div>
               {/* <div className="absolute text-center animate-fade-in z-10">
                 <img
