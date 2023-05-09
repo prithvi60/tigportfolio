@@ -3,17 +3,121 @@ import Carousal from "./Carousal";
 import Img2 from "../img/tigvid-logo.jpg";
 import Img1 from "../img/tig-paperclip.webp";
 import HeroCarousal from "./Hero-Carousal";
+import ContactForm from "./ContactForm";
+// hero images
+import Event1 from "../img/reels/tig-event1.webp";
+import Event2 from "../img/reels/tig-event-2.webp";
+import Event3 from "../img/reels/tig-event-3.webp";
+import Event4 from "../img/reels/tig-event-4.webp";
+import Event5 from "../img/reels/tig-event-5.webp";
+import Event6 from "../img/reels/tig-open-1.webp";
 
-const serviceImgs = [
-  "https://media-private.canva.com/gceOk/MAE2qHgceOk/…res=Tue%2C%2009%20May%202023%2011%3A15%3A36%20GMT",
-  "https://media-public.canva.com/EcpsE/MAEr8OEcpsE/1/s.png",
-  "	https://media-private.canva.com/k9_j4/MAEqmNk9_j4/…res=Tue%2C%2009%20May%202023%2010%3A52%3A38%20GMT",
-  "https://media-public.canva.com/yBa3c/MAFOyYyBa3c/1/s.png",
-  "https://media-private.canva.com/veLOE/MAEaTDveLOE/…res=Tue%2C%2009%20May%202023%2010%3A46%3A06%20GMT",
-  "	blob:https://www.canva.com/1dd935a7-457b-44bf-9a38-d65635577625",
-  "blob:https://www.canva.com/de194687-68aa-44fa-87fa-c690de9c53b6",
+import Pro1 from "../img/reels/tig-ad-1.webp";
+import Pro2 from "../img/reels/tig-ad-2.webp";
+import Pro3 from "../img/reels/tig-gov-1.webp";
+import Pro4 from "../img/reels/tig-gov-2.webp";
+import Pro5 from "../img/reels/tig-gov-3.webp";
+import Pro6 from "../img/reels/tig-series-1.webp";
+// in the press imgs
+import Press1 from "../img/press/press-1.webp";
+import Press2 from "../img/press/press-2.webp";
+import Press3 from "../img/press/press-3.webp";
+import Press4 from "../img/press/press-4.jpg";
+import Press5 from "../img/press/press-5.webp";
+import Press6 from "../img/press/press-6.webp";
+import Press7 from "../img/press/press-7.jpg";
+import Press8 from "../img/press/press-8.webp";
+// Brands
+import Brands from "../img/brands.webp";
+// Curated
+import Curated1 from "../img/curated/curated-1.webp";
+import Curated2 from "../img/curated/curated-2.webp";
+import Curated3 from "../img/curated/curated-3.webp";
+import Curated4 from "../img/curated/curated-4.webp";
+import Curated5 from "../img/curated/curated-5.webp";
+import Curated6 from "../img/curated/curated-6.webp";
+import Curated7 from "../img/curated/curated-7.webp";
+import Curated8 from "../img/curated/curated-8.webp";
+import Curated9 from "../img/curated/curated-9.webp";
+import Curated10 from "../img/curated/curated-10.webp";
+import Curated11 from "../img/curated/curated-11.webp";
+import Curated12 from "../img/curated/curated-12.webp";
+
+const press = [
+  {
+    pic: Press1,
+    des: "Our Webseries highlighted on the first page of Chennai times",
+  },
+  {
+    pic: Press2,
+    des: "Our video production content featured in The Deccan Chronicle",
+  },
+  {
+    pic: Press3,
+    des: "Our Vote Podu campaign in association with Dunzo as featured in The Hindu",
+  },
+  {
+    pic: Press4,
+    des: "TIGITAL's work for the Enforcement Bureau featured in the Chennai Express",
+  },
+  { pic: Press5, des: "TIGOM, our Open Mic event featured in Metroplus" },
+  {
+    pic: Press6,
+    des: "Singalaalaah an event by TIG at Elliot's Beach featured on The Hindu",
+  },
+  { pic: Press7, des: "TIGOM, our Open Mic event featured in Chennai Times" },
+  { pic: Press8, des: "" },
 ];
-
+const curated = [
+  {
+    pic: Curated1,
+    des: "TIG partnered with LiveAlive in marketing Pradeep Kumar‘s concert at Music Academy ",
+  },
+  {
+    pic: Curated2,
+    des: "Chennai day‘22 was hosted at the Besant Nagar Beach as a part of Government of TamilNadu's Chennai Day Celebrations. TIG provided artists for the event and programmed the entire two days on stage. ",
+  },
+  {
+    pic: Curated3,
+    des: "NIBCID & TNGOV jointly organized the 'World's Largest Pledge' against drugs at Kalaivanar Arangam, Chennai.  TIG was associated in this events for videography, photography and digital presence.",
+  },
+  {
+    pic: Curated4,
+    des: "TIG hosted and provided artists for the Loka fest that took place in Auroville in 2021. TIG was a partner for both the versions of the hugely succesful fest in 21 and 19",
+  },
+  {
+    pic: Curated5,
+    des: "We took over the Mainstage at the outer courtyard of Phoenix Marketcity over their Madras Week celebrations and organised an entire event for them. ",
+  },
+  {
+    pic: Curated6,
+    des: "We strongly believe in the fact that art needs an audience’. With that being our guiding force, we have hosted 31 open mics across Chennai to let artists take their art to the masses.We hosted TIGOM PRO ACTS as a part of the holiday season at The Outer Courtyard, The Phoenix Market City, Velacherry.",
+  },
+  {
+    pic: Curated7,
+    des: "TIG is a space where we empower artists to showcase their talents and skills. Started humbly in our OG MottaMaadi, we have hosted 31 editions of TIGOM and two special pro editions to support independent artists in their artistic journey.",
+  },
+  {
+    pic: Curated8,
+    des: "We host 2 kinds of cyphers- for dance and for rap & beatbox at our OG Mottamaadi. Cyphers are dance offs and rap battles. A great opportunity for freestyle artists to network and present their art to their audience.",
+  },
+  {
+    pic: Curated9,
+    des: "The jam session is an opportunity for people to get in touch with their musical friends and make new music together. Every Friday night at 5:30, we'll be gathering at the OG MottaMaadi, where anyone can come and play music with other musicians.",
+  },
+  {
+    pic: Curated10,
+    des: "Wednesdays at Leather Bar is an amazing Karaoke Night powered by TIG.",
+  },
+  {
+    pic: Curated11,
+    des: "We were associated with SDAT & NIBCID for the setting up of a live stall for Drive against Drugs. Conducted Contests, Awareness Campaigns, Video Coverage and Promotions at the Women's Tennis Open, SDAT, Nungambakkam",
+  },
+  {
+    pic: Curated12,
+    des: "An initiative by the Government of Tamil Nadu to celebrate the women and launch of emergency helpline for women - 182. Team TIG was associated with TNGOV for photography, videography,artist and event management",
+  },
+];
 export default function Main({
   videoRef,
   eventRef,
@@ -23,7 +127,7 @@ export default function Main({
 }) {
   const [MousePosition, setMousePosition] = React.useState(200);
   const [colorbg, setBg] = React.useState("transparent");
-  const [textColor, settextColor] = React.useState("black");
+  const [textColor, settextColor] = React.useState("white");
 
   const [cur, setCur] = React.useState(false);
 
@@ -49,7 +153,7 @@ export default function Main({
           console.log(cursor);
           setMousePosition(event.pageX);
         };
-        setBg("#e55c45");
+        setBg("#d74535");
         setCur(true);
         settextColor("white");
       }
@@ -122,15 +226,15 @@ export default function Main({
             </h1>
             <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
             <div className="my-16 text-center animate-fade-in z-10">
-              <h2 className="text-md text-white-100 mx-10 ">
+              <h2 className="text-md text-white-100 mx-10 font-bold">
                 Creating the largest creator-based community in TamilNadu.
               </h2>
             </div>
             <div
-              className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in"
+              className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in-slide"
               style={{ width: "100vw", height: "30vh" }}
             >
-              <HeroCarousal images={[Img1, Img1, Img1, Img1, Img1, Img1]} />
+              <HeroCarousal images={[Pro1, Pro2, Pro3, Pro4, Pro5, Pro6]} />
             </div>
           </div>
           {/* <div className="absolute mx-auto top-0 h-screen  w-screen animate-fade-in">
@@ -181,21 +285,23 @@ export default function Main({
                 className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-ultra  md:text-9xl whitespace-nowrap bg-clip-text "
                 style={{ color: "black" }}
               >
-                <span style={{ color: "#ea3328" }}>T</span>HE{" "}
-                <span style={{ color: "#ea3328" }}>I</span>NT{" "}
-                <span style={{ color: "#ea3328" }}>G</span>EN
+                <span style={{ color: "#23508b" }}>T</span>HE{" "}
+                <span style={{ color: "#23508b" }}>I</span>NT{" "}
+                <span style={{ color: "#23508b" }}>G</span>EN
               </h1>
               <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
               <div className="my-16 text-center animate-fade-in z-10">
-                <h2 className="text-md text-black mx-10 ">
+                <h2 className="text-md text-black mx-10 font-bold ">
                   Creating the largest creator-based community in TamilNadu.
                 </h2>
               </div>
               <div
-                className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in"
+                className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in-slide"
                 style={{ width: "100vw", height: "30vh" }}
               >
-                <HeroCarousal images={[Img2, Img2, Img2, Img2, Img2, Img2]} />
+                <HeroCarousal
+                  images={[Event1, Event2, Event3, Event4, Event5, Event6]}
+                />
               </div>
               {/* <div className="absolute text-center animate-fade-in z-10">
                 <img
@@ -222,20 +328,20 @@ export default function Main({
             borderTopRightRadius: "15px",
           }}
         />
-        <div style={{ zIndex: 1, position: "relative" }}>
+        <div style={{ zIndex: 1, position: "relative" }} className="mb-12">
           <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
             In The Press
           </h2>
           <br></br>
-          <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
+          {/* <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
             We believe that content at its source, in its rawest form will never
             die. The platforms of distribution will metamorphose innumerably but
             an idea as a little seed in a creator's head will stay potent and
             constant.
-          </p>
+          </p> */}
           {/* <div className="flex flex-column justify-items-center"> */}
           <div className="mx-auto  text-center  leading-relaxed fs521">
-            <Carousal images={[Img1, Img2, Img1, Img2, Img1, Img2]} />
+            <Carousal images={press} />
           </div>
         </div>
       </section>
@@ -259,8 +365,8 @@ export default function Main({
             Experiences Curated
           </h2>
           <br></br>
-          <div className="mx-auto  text-center  leading-relaxed fs521">
-            <Carousal images={[Img1, Img2, Img1, Img2, Img1, Img2]} />
+          <div className="mx-auto  text-center  leading-relaxed fs521 ">
+            <Carousal images={curated} />
           </div>
         </div>
       </section>
@@ -283,7 +389,14 @@ export default function Main({
             Brands we have worked with
           </h2>
           <br></br>
-          <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
+          <div className="flex justify-center mb-14 mx-2">
+            <img
+              src={Brands.src}
+              alt="brands"
+              style={{ borderRadius: "10px" }}
+            ></img>
+          </div>
+          {/* <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
             We believe that content at its source, in its rawest form will never
             die. The platforms of distribution will metamorphose innumerably but
             an idea as a little seed in a creator's head will stay potent and
@@ -321,7 +434,6 @@ export default function Main({
               </p>
             </div>
             <div class="ktq4">
-              {/* <img className="w-10" src="https://nine4.app/favicon.png"></img> */}
               <h3 class="pt-3 font-semibold text-lg ">
                 Lorem ipsum dolor sit amet
               </h3>
@@ -331,7 +443,7 @@ export default function Main({
                 ante rutrum porttitor.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       <section id="story" ref={storyRef}>
@@ -360,48 +472,29 @@ export default function Main({
             producing multiple web-series. We offer our technical and creative
             knowledge to clients for their outreach purposes.
           </p>
-          <div className="pt-12 pb-24 max-w-4xl mx-auto fsac4 md:px-1 px-3">
+          <div className="pt-12 pb-4 max-w-4xl mx-auto fsac4 md:px-1 px-3">
             <div class="ktq4">
-              <h3 class="pt-3 font-semibold text-lg ">
-                Lorem ipsum dolor sit amet
-              </h3>
+              <h3 class="pt-3 font-semibold text-lg ">Our Mission</h3>
               <p class="pt-2 value-text text-md  fkrr1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas tincidunt a libero in finibus. Maecenas a nisl vitae
-                ante rutrum porttitor.
+                To empower creators by augmenting their brand building process.
               </p>
             </div>
             <div class="ktq4">
-              <h3 class="pt-3 font-semibold text-lg ">
-                Lorem ipsum dolor sit amet
-              </h3>
+              <h3 class="pt-3 font-semibold text-lg ">Our Vision</h3>
               <p class="pt-2 value-text text-md  fkrr1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas tincidunt a libero in finibus. Maecenas a nisl vitae
-                ante rutrum porttitor.
+                To create exciting content on a consistent basis.
               </p>
             </div>
-            <div class="ktq4">
-              <h3 class="pt-3 font-semibold text-lg ">
-                Lorem ipsum dolor sit amet
-              </h3>
-              <p class="pt-2 value-text text-md  fkrr1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas tincidunt a libero in finibus. Maecenas a nisl vitae
-                ante rutrum porttitor.
-              </p>
-            </div>
-            <div class="ktq4">
-              {/* <img className="w-10" src="https://nine4.app/favicon.png"></img> */}
-              <h3 class="pt-3 font-semibold text-lg ">
-                Lorem ipsum dolor sit amet
-              </h3>
-              <p class="pt-2 value-text text-md  fkrr1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas tincidunt a libero in finibus. Maecenas a nisl vitae
-                ante rutrum porttitor.
-              </p>
-            </div>
+          </div>
+          <div class="ktq4 max-w-xl mb-4  mx-3 px-1 px-3 text-center md:mx-auto">
+            <h3 class="pt-3 font-semibold text-lg ">Our Values</h3>
+            <ul class="pt-2 value-text text-md  fkrr1">
+              <li>Move with urgency and focus </li>
+              <li> Learning trumps all </li>
+              <li> Trust and Integrity</li>
+              <li> Digital optimization </li>
+              <li>Optimism</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -450,7 +543,7 @@ export default function Main({
               <h1 class="mb-5 text-white-100 pt-2 text-2xl md:text-6xl font-bold ">
                 Contact Us
               </h1>
-              <div className="text-white-200">
+              <div className="pt-12 text-white-200">
                 The Internet Generation
                 <br />
                 27/11 Sounderajan Street
@@ -460,6 +553,9 @@ export default function Main({
                 contact@theintgen.com
                 <br />
                 Tel: 9940237330
+              </div>
+              <div className="pt-20 mx-auto ">
+                <ContactForm />
               </div>
             </div>
           </div>
