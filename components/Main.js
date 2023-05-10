@@ -220,16 +220,16 @@ export default function Main({
 
   React.useEffect(() => {
     const timer1 = setTimeout(() => {
-      setBg("#97b857");
+      setBg("#41436A");
     }, 500);
     const timer2 = setTimeout(() => {
-      setBg("#d74535");
+      setBg("#984063");
     }, 1000);
     const timer3 = setTimeout(() => {
-      setBg("#edcae2");
+      setBg("#F64668");
     }, 1500);
     const timer4 = setTimeout(() => {
-      setBg("#f2d763");
+      setBg("#41436A");
     }, 2000);
 
     const timer5 = setTimeout(() => {
@@ -238,7 +238,7 @@ export default function Main({
           console.log(cursor);
           setMousePosition(event.pageX);
         };
-        setBg("#d74535");
+        setBg("#FE9677");
         setCur(true);
         settextColor("white");
       }
@@ -305,9 +305,9 @@ export default function Main({
               className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-secular  md:text-9xl whitespace-nowrap bg-clip-text "
               style={{ color: textColor }}
             >
-              <span style={{ color: "#ea3328" }}>T</span>HE{" "}
-              <span style={{ color: "#ea3328" }}>I</span>NT{" "}
-              <span style={{ color: "#ea3328" }}>G</span>EN
+              <span style={{ color: "#F64668" }}>T</span>HE{" "}
+              <span style={{ color: "#F64668" }}>I</span>NT{" "}
+              <span style={{ color: "#F64668" }}>G</span>EN
             </h1>
             <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
             <div className="my-16 text-center animate-fade-in z-10">
@@ -370,9 +370,9 @@ export default function Main({
                 className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-secular  md:text-9xl whitespace-nowrap bg-clip-text "
                 style={{ color: "black" }}
               >
-                <span style={{ color: "#23508b" }}>T</span>HE{" "}
-                <span style={{ color: "#23508b" }}>I</span>NT{" "}
-                <span style={{ color: "#23508b" }}>G</span>EN
+                <span style={{ color: "#41436A" }}>T</span>HE{" "}
+                <span style={{ color: "#41436A" }}>I</span>NT{" "}
+                <span style={{ color: "#41436A" }}>G</span>EN
               </h1>
               <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
               <div className="my-16 text-center animate-fade-in z-10">
@@ -407,7 +407,7 @@ export default function Main({
           <div
             id="cool-wrapper"
             style={{
-              background: "#dd73c6",
+              background: "#41436A",
               width: "20%",
               position: "absolute",
               left: "0",
@@ -430,7 +430,7 @@ export default function Main({
         <div
           id="cool-wrapper"
           style={{
-            background: "#8eb946",
+            background: "#984063",
             width: "20%",
             position: "absolute",
             right: "0",
@@ -461,11 +461,11 @@ export default function Main({
           <div
             id="cool-wrapper"
             style={{
-              background: "#ea3328",
+              background: "#F64668",
               width: "20%",
               position: "absolute",
-              right: "0",
-              borderTopRightRadius: "15px",
+              left: "0",
+              borderTopLeftRadius: "15px",
 
               height: "100%",
               zIndex: -1,
@@ -485,7 +485,7 @@ export default function Main({
           <div
             id="cool-wrapper"
             style={{
-              background: "#ea3328",
+              background: "#FE9677",
               width: "20%",
               position: "absolute",
               right: "0",
@@ -565,7 +565,7 @@ export default function Main({
           <div
             id="cool-wrapper"
             style={{
-              background: "#3d7ff7",
+              background: "#41436A",
               width: "20%",
               position: "absolute",
               left: "0",
@@ -642,7 +642,7 @@ export default function Main({
           <div
             id="cool-wrapper"
             style={{
-              background: "#f8d648",
+              background: "#F64668",
               width: "20%",
               position: "absolute",
               right: "0",
