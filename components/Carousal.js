@@ -55,7 +55,7 @@ export default function Carousal({ images, size }) {
             loading="lazy"
             style={{
               width: size ? size : "100%",
-              height: size ? size : "60vh",
+              height: size ? size : window.innerWidth <= 600 ? "40vh" : "60vh",
               backgroundSize: "cover",
               objectFit: "cover",
               // borderRadius: "15px",
