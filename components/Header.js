@@ -136,17 +136,18 @@ export default function Header({
             "md:flex flex-grow items-center justify-center mr-24" +
             (navbarOpen ? " flex" : " hidden")
           }
+          style={{ transition: "500ms ease" }}
         >
-          <div class="bg-indigo-900 pl-3 md:pl-1 md:bg-transparent right-0 md:right-auto rounded-bl-md md:rounded-none top-0 font-4 pt-12 pb-4 px-2 md:pt-1  flex  flex-col md:flex-row text-left md:items-center md:text-base text-1xl md:justify-center justify-items-start absolute md:top-5">
+          <div class="bg-indigo-900 pl-3 md:pl-1 md:bg-transparent right-0 md:right-auto rounded-bl-md md:rounded-none top-0 font-4 pt-12 pb-4 px-2 md:pt-1  flex  flex-col md:flex-row text-left md:items-center md:text-base text-1xl md:justify-center justify-items-start absolute md:top-5 h-screen md:h-auto">
             <ul
               onClick={() => {
                 videoRef.current.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
                 });
-                setNavbarOpen(!navbarOpen);
+                setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
               }}
-              class="mr-4 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
+              class="mr-4 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
             >
               In The Press
             </ul>
@@ -154,18 +155,19 @@ export default function Header({
               <button
                 type="button"
                 className="
-                   group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
+                   group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none md:pb-8 mb-4 md:mb-12'
                   "
                 // onMouseEnter={() => (setFlyer(!flyer), setFlyerTwo(false))}
               >
                 <span
                   className="tr04"
-                  onClick={() =>
+                  onClick={() => {
                     eventRef.current.scrollIntoView({
                       behavior: "smooth",
                       block: "start",
-                    })
-                  }
+                    });
+                    setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
+                  }}
                 >
                   Experience Curated
                 </span>
@@ -246,9 +248,9 @@ export default function Header({
                   behavior: "smooth",
                   block: "start",
                 });
-                setNavbarOpen(!navbarOpen);
+                setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
               }}
-              class="mr-4 md:ml-4 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
+              class="mr-4 md:ml-4 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
             >
               Worked Brands
             </ul>
@@ -258,9 +260,9 @@ export default function Header({
                   behavior: "smooth",
                   block: "start",
                 });
-                setNavbarOpen(!navbarOpen);
+                setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
               }}
-              class="mr-4 md:ml-4 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
+              class="mr-4 md:ml-4 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
             >
               Brand Story
             </ul>
@@ -270,14 +272,14 @@ export default function Header({
                   behavior: "smooth",
                   block: "start",
                 });
-                setNavbarOpen(!navbarOpen);
+                setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
               }}
-              class="mr-4 cursor-pointer text-gray-300 hover:text-white font-semibold tr04"
+              class="mr-4 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
             >
               Contact
             </ul>
           </div>
-          <div class="absolute right-4 flex flex-row top-3">
+          <div class="absolute right-4 flex flex-row top-4">
             <a
               href="https://www.instagram.com/theintgen/?hl=en"
               rel="noopener noreferrer"
@@ -287,41 +289,51 @@ export default function Header({
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
-                width="48px"
-                height="48px"
+                width="46px"
+                height="46px"
               >
+                <radialGradient
+                  id="yOrnnhliCrdS2gy~4tD8ma"
+                  cx="19.38"
+                  cy="42.035"
+                  r="44.899"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#fd5" />
+                  <stop offset=".328" stop-color="#ff543f" />
+                  <stop offset=".348" stop-color="#fc5245" />
+                  <stop offset=".504" stop-color="#e64771" />
+                  <stop offset=".643" stop-color="#d53e91" />
+                  <stop offset=".761" stop-color="#cc39a4" />
+                  <stop offset=".841" stop-color="#c837ab" />
+                </radialGradient>
                 <path
-                  fill="#f48fb1"
-                  d="M21,46h15c5.5,0,10-4.5,10-10V21c0-5.5-4.5-10-10-10H21c-5.5,0-10,4.5-10,10v15C11,41.5,15.5,46,21,46z"
+                  fill="url(#yOrnnhliCrdS2gy~4tD8ma)"
+                  d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20 c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20 C42.014,38.383,38.417,41.986,34.017,41.99z"
+                />
+                <radialGradient
+                  id="yOrnnhliCrdS2gy~4tD8mb"
+                  cx="11.786"
+                  cy="5.54"
+                  r="29.813"
+                  gradientTransform="matrix(1 0 0 .6663 0 1.849)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#4168c9" />
+                  <stop offset=".999" stop-color="#4168c9" stop-opacity="0" />
+                </radialGradient>
+                <path
+                  fill="url(#yOrnnhliCrdS2gy~4tD8mb)"
+                  d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20 c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20 C42.014,38.383,38.417,41.986,34.017,41.99z"
                 />
                 <path
-                  fill="none"
-                  stroke="#18193f"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  stroke-width="3"
-                  d="M41.5,21.1v-4.6c0-5.5-4.5-10-10-10h-15c-5.5,0-10,4.5-10,10v3"
+                  fill="#fff"
+                  d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5 s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"
                 />
+                <circle cx="31.5" cy="16.5" r="1.5" fill="#fff" />
                 <path
-                  fill="none"
-                  stroke="#18193f"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  stroke-width="3"
-                  d="M6.5,25.6v5.9c0,5.5,4.5,10,10,10h15c5.5,0,10-4.5,10-10v-4.6"
-                />
-                <path
-                  fill="none"
-                  stroke="#18193f"
-                  stroke-miterlimit="10"
-                  stroke-width="3"
-                  d="M24,15.5c-4.7,0-8.5,3.8-8.5,8.5s3.8,8.5,8.5,8.5s8.5-3.8,8.5-8.5S28.7,15.5,24,15.5z"
-                />
-                <path
-                  fill="#18193f"
-                  d="M34,12c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S35.1,12,34,12z"
+                  fill="#fff"
+                  d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12 C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"
                 />
               </svg>
             </a>
@@ -330,68 +342,20 @@ export default function Header({
               href="https://www.youtube.com/channel/UCVk9sWJLFs3xTEBRtLTVXkQ/videos?view=0"
               rel="noopener noreferrer"
               target="_blank"
-              className="pl-7 invisible md:visible animation-wiggle
+              className="pl-4 invisible md:visible animation-wiggle mb-2
             "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                viewBox="0,0,255.99904,255.99904"
+                viewBox="0 0 48 48"
                 width="48px"
                 height="48px"
-                fill-rule="nonzero"
               >
-                <g
-                  fill="none"
-                  fill-rule="nonzero"
-                  stroke="none"
-                  stroke-width="none"
-                  stroke-linecap="none"
-                  stroke-linejoin="none"
-                  stroke-miterlimit="10"
-                  stroke-dasharray=""
-                  stroke-dashoffset="0"
-                  font-family="none"
-                  font-weight="none"
-                  font-size="none"
-                  text-anchor="none"
-                  // style="mix-blend-mode: normal"
-                >
-                  <g transform="scale(5.33333,5.33333)">
-                    <path
-                      d="M27.86,14c-6.144,0 -11.916,0.469 -14.989,1.125c-2.048,0.469 -3.817,1.875 -4.19,4.031c-0.371,2.25 -0.744,5.125 -0.744,9.344c0,4.219 0.373,7 0.838,9.344c0.373,2.063 2.141,3.563 4.19,4.031c3.258,0.656 8.844,1.125 14.988,1.125c6.144,0 11.73,-0.469 14.989,-1.125c2.048,-0.469 3.817,-1.875 4.19,-4.031c0.373,-2.344 0.838,-5.219 0.931,-9.438c0,-4.219 -0.466,-7.094 -0.931,-9.438c-0.373,-2.063 -2.141,-3.563 -4.19,-4.031c-3.258,-0.468 -8.937,-0.937 -15.082,-0.937z"
-                      fill="#f54610"
-                      stroke="none"
-                      stroke-width="1"
-                      stroke-linecap="butt"
-                      stroke-linejoin="miter"
-                    />
-                    <path
-                      d="M28.79,10.093c-1.584,-0.059 -3.241,-0.093 -4.933,-0.093v0c-6.278,0 -12.176,0.469 -15.316,1.125c-2.093,0.469 -3.9,1.875 -4.281,4.031c-0.379,2.25 -0.76,5.125 -0.76,9.344c0,4.219 0.381,7 0.856,9.344c0.381,2.063 2.188,3.563 4.281,4.031c1.085,0.214 2.423,0.408 3.951,0.572"
-                      fill="none"
-                      stroke="#18193f"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M18.5,38.881c1.733,0.077 3.567,0.119 5.452,0.119c6.278,0 11.986,-0.469 15.316,-1.125c2.093,-0.469 3.9,-1.875 4.281,-4.031c0.381,-2.344 0.856,-5.219 0.951,-9.438c0,-4.219 -0.476,-7.094 -0.951,-9.438c-0.381,-2.063 -2.188,-3.563 -4.281,-4.031c-0.888,-0.125 -1.952,-0.25 -3.154,-0.366"
-                      fill="none"
-                      stroke="#18193f"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M18.5,24v4.514c0,1.522 1.663,2.476 3,1.721l7.99,-4.514c1.347,-0.761 1.347,-2.682 0,-3.443l-7.99,-4.514c-1.337,-0.755 -3,0.199 -3,1.721"
-                      fill="none"
-                      stroke="#18193f"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </g>
+                <path
+                  fill="#FF3D00"
+                  d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"
+                />
+                <path fill="#FFF" d="M20 31L20 17 32 24z" />
               </svg>
             </a>
           </div>

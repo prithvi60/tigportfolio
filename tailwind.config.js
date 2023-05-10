@@ -6,6 +6,7 @@ module.exports = {
       poppins: ["Poppins", "sans-serif"],
       eczar: ["Eczar"],
       ultra: ["Ultra", "sans-serif"],
+      secular: ["Secular", "sans-serif"],
     },
     extend: {
       colors: {

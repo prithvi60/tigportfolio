@@ -1,3 +1,12 @@
+/* Pallete */
+/*
+#41436A
+#984063
+#F64668
+#FE9677
+#ffffff
+#000000
+*/
 @tailwind base;
 /* @tailwind components; */
 @tailwind utilities;
@@ -11,6 +20,11 @@
   font-family: "Ultra";
   src: url("/font/Ultra-Regular.ttf");
 }
+@font-face {
+  font-family: "Secular";
+  src: url("/font/SecularOne-Regular.ttf");
+}
+
 html,
 body {
   padding: 0;

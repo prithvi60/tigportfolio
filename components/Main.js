@@ -41,6 +41,92 @@ import Curated9 from "../img/curated/curated-9.webp";
 import Curated10 from "../img/curated/curated-10.webp";
 import Curated11 from "../img/curated/curated-11.webp";
 import Curated12 from "../img/curated/curated-12.webp";
+// Brands
+import Brand1 from "../img/brands/1.png";
+import Brand2 from "../img/brands/2.png";
+import Brand3 from "../img/brands/3.png";
+import Brand4 from "../img/brands/4.png";
+import Brand5 from "../img/brands/5.png";
+import Brand6 from "../img/brands/6.png";
+import Brand7 from "../img/brands/7.png";
+import Brand8 from "../img/brands/8.png";
+import Brand9 from "../img/brands/9.png";
+import Brand10 from "../img/brands/10.png";
+import Brand11 from "../img/brands/11.png";
+import Brand12 from "../img/brands/12.png";
+import Brand13 from "../img/brands/13.png";
+import Brand14 from "../img/brands/14.png";
+import Brand15 from "../img/brands/15.png";
+import Brand16 from "../img/brands/16.png";
+import Brand17 from "../img/brands/17.png";
+import Brand18 from "../img/brands/18.png";
+import Brand19 from "../img/brands/19.png";
+import Brand20 from "../img/brands/20.png";
+import Brand21 from "../img/brands/21.png";
+import Brand22 from "../img/brands/22.png";
+import Brand23 from "../img/brands/23.png";
+import Brand24 from "../img/brands/24.png";
+import Brand25 from "../img/brands/25.png";
+import Brand26 from "../img/brands/26.png";
+import Brand27 from "../img/brands/27.png";
+import Brand28 from "../img/brands/28.png";
+import Brand29 from "../img/brands/29.png";
+import Brand30 from "../img/brands/30.png";
+import Brand31 from "../img/brands/31.jpg";
+import Brand32 from "../img/brands/32.png";
+import BrandCarousal from "./BrandCarousal";
+// Services
+import Service1 from "../img/services/1.webp";
+import Service2 from "../img/services/2.webp";
+import Service3 from "../img/services/3.webp";
+import Service4 from "../img/services/4.webp";
+import Service5 from "../img/services/5.webp";
+import Service6 from "../img/services/6.webp";
+import Service7 from "../img/services/7.webp";
+
+const services = [
+  { pic: Service1, des: "TIGVID" },
+  { pic: Service2, des: "Digital Marketing" },
+  { pic: Service3, des: "Events" },
+  { pic: Service4, des: "Subtitles" },
+  { pic: Service5, des: "Content Marketing" },
+  { pic: Service6, des: "Artist Management" },
+  { pic: Service7, des: "TIG Terrance" },
+];
+const brands = [
+  { pic: Brand1 },
+  { pic: Brand2 },
+  { pic: Brand3 },
+  { pic: Brand4 },
+  { pic: Brand5 },
+  { pic: Brand6 },
+  { pic: Brand7 },
+  { pic: Brand8 },
+  { pic: Brand9 },
+  { pic: Brand10 },
+  { pic: Brand11 },
+  { pic: Brand12 },
+  { pic: Brand13 },
+  { pic: Brand14 },
+  { pic: Brand15 },
+  { pic: Brand16 },
+  { pic: Brand17 },
+  { pic: Brand18 },
+  { pic: Brand19 },
+  { pic: Brand20 },
+  { pic: Brand21 },
+  { pic: Brand22 },
+  { pic: Brand23 },
+  { pic: Brand24 },
+  { pic: Brand25 },
+  { pic: Brand26 },
+  { pic: Brand27 },
+  { pic: Brand28 },
+  { pic: Brand29 },
+  { pic: Brand30 },
+  { pic: Brand31 },
+  { pic: Brand32 },
+];
 
 const press = [
   {
@@ -167,7 +253,7 @@ export default function Main({
   }, []);
 
   return (
-    <section class="text-gray-600">
+    <section class="text-gray-600 ">
       <section
         id="hero"
         style={{
@@ -195,7 +281,7 @@ export default function Main({
           ) : null}
         </div>
         <div
-          class="relative max-w-5xl mx-auto"
+          class="relative  mx-auto"
           style={{
             position: "absolute",
             top: "0",
@@ -216,7 +302,7 @@ export default function Main({
             <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
             <h1
-              className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-ultra  md:text-9xl whitespace-nowrap bg-clip-text "
+              className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-secular  md:text-9xl whitespace-nowrap bg-clip-text "
               style={{ color: textColor }}
             >
               <span style={{ color: "#ea3328" }}>T</span>HE{" "}
@@ -281,7 +367,7 @@ export default function Main({
               <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
               <h1
-                className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-ultra  md:text-9xl whitespace-nowrap bg-clip-text "
+                className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-secular  md:text-9xl whitespace-nowrap bg-clip-text "
                 style={{ color: "black" }}
               >
                 <span style={{ color: "#23508b" }}>T</span>HE{" "}
@@ -290,7 +376,10 @@ export default function Main({
               </h1>
               <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
               <div className="my-16 text-center animate-fade-in z-10">
-                <h2 className="text-md text-black mx-10 font-bold ">
+                <h2
+                  className="text-md  mx-10 font-bold "
+                  style={{ color: "#000000", textShadow: "0.8px 0px #000000" }}
+                >
                   Creating the largest creator-based community in TamilNadu.
                 </h2>
               </div>
@@ -313,7 +402,30 @@ export default function Main({
           </div>
         </div>
       </section>
+      <section id="event" ref={eventRef}>
+        <div style={{ zIndex: 1, position: "relative" }}>
+          <div
+            id="cool-wrapper"
+            style={{
+              background: "#dd73c6",
+              width: "20%",
+              position: "absolute",
+              left: "0",
+              height: "100%",
+              borderTopLeftRadius: "15px",
 
+              zIndex: -1,
+            }}
+          />
+          <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+            Experiences Curated
+          </h2>
+          <br></br>
+          <div className="mx-auto  text-center  leading-relaxed fs521 ">
+            <Carousal images={curated} />
+          </div>
+        </div>
+      </section>
       <section id="video" ref={videoRef}>
         <div
           id="cool-wrapper"
@@ -344,28 +456,27 @@ export default function Main({
           </div>
         </div>
       </section>
-
-      <section id="event" ref={eventRef}>
+      <section id="campaign" ref={campaignRef}>
         <div style={{ zIndex: 1, position: "relative" }}>
           <div
             id="cool-wrapper"
             style={{
-              background: "#dd73c6",
+              background: "#ea3328",
               width: "20%",
               position: "absolute",
-              left: "0",
-              height: "100%",
-              borderTopLeftRadius: "15px",
+              right: "0",
+              borderTopRightRadius: "15px",
 
+              height: "100%",
               zIndex: -1,
             }}
           />
           <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
-            Experiences Curated
+            Services we offer
           </h2>
           <br></br>
-          <div className="mx-auto  text-center  leading-relaxed fs521 ">
-            <Carousal images={curated} />
+          <div className="mx-auto  text-center  leading-relaxed fs521 pb-24">
+            <Carousal images={services} size={"100px"} />
           </div>
         </div>
       </section>
@@ -388,14 +499,17 @@ export default function Main({
             Brands we have worked with
           </h2>
           <br></br>
-          <div className="flex justify-center mb-14 mx-2">
+          <div className="mx-auto  text-center  leading-relaxed fs521 pb-24">
+            <BrandCarousal images={brands} />
+          </div>
+          {/* <div className="flex justify-center mb-14 mx-2">
             <img
               loading="lazy"
               src={Brands.src}
               alt="brands"
               style={{ borderRadius: "10px" }}
             ></img>
-          </div>
+          </div> */}
           {/* <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
             We believe that content at its source, in its rawest form will never
             die. The platforms of distribution will metamorphose innumerably but

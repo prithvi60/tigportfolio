@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 
-export default function Carousal({ images }) {
+export default function Carousal({ images, size }) {
   var settings = {
     className: "center",
     centerMode: true,
@@ -54,8 +54,8 @@ export default function Carousal({ images }) {
             className=""
             loading="lazy"
             style={{
-              width: "100%",
-              height: "60vh",
+              width: size ? size : "100%",
+              height: size ? size : "60vh",
               backgroundSize: "cover",
               objectFit: "cover",
               // borderRadius: "15px",
