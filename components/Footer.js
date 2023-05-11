@@ -181,17 +181,11 @@ export default function Footer() {
           </ul> */}
           <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
             <a
-              href="/"
+              href="https://www.linkedin.com/in/prithvi-n/"
+              target="blank"
               className="text-sm text-gray-200 hover:text-white transition-colors duration-300 hover:text-deep-purple-accent-400 font-semibold tracking-tight"
             >
-              Made by{" "}
-              <a
-                href="https://www.linkedin.com/in/prithvi-n/"
-                target="blank"
-                style={{ color: "#F64668" }}
-              >
-                Prithvi
-              </a>
+              Made by <span style={{ color: "#F64668" }}>Prithvi</span>
             </a>
           </ul>
         </div>

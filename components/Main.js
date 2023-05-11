@@ -26,8 +26,6 @@ import Press5 from "../img/press/press-5.webp";
 import Press6 from "../img/press/press-6.webp";
 import Press7 from "../img/press/press-7.jpg";
 import Press8 from "../img/press/press-8.webp";
-// Brands
-import Brands from "../img/brands.png";
 // Curated
 import Curated1 from "../img/curated/curated-1.webp";
 import Curated2 from "../img/curated/curated-2.webp";
@@ -83,6 +81,7 @@ import Service4 from "../img/services/4.webp";
 import Service5 from "../img/services/5.webp";
 import Service6 from "../img/services/6.webp";
 import Service7 from "../img/services/7.webp";
+import { ModalView } from "./ModalView";
 
 const services = [
   { pic: Service1, des: "TIGVID" },
@@ -213,6 +212,7 @@ export default function Main({
   const [MousePosition, setMousePosition] = React.useState(200);
   const [colorbg, setBg] = React.useState("transparent");
   const [textColor, settextColor] = React.useState("white");
+  const [isOpen, setIsOpen] = React.useState(false);
 
   const [cur, setCur] = React.useState(false);
 
@@ -243,86 +243,95 @@ export default function Main({
         settextColor("white");
       }
     }, 2500);
+
+    const timer6 = setTimeout(() => {
+      setIsOpen(true);
+    }, 8000);
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
       clearTimeout(timer3);
       clearTimeout(timer4);
       clearTimeout(timer5);
+      clearTimeout(timer6);
     };
   }, []);
 
   return (
-    <section class="text-gray-600 ">
+    <>
       <section
-        id="hero"
-        style={{
-          position: "relative",
-          height: "100vh",
-          overflow: "hidden",
-        }}
+        class="text-gray-600 "
+        style={{ pointerEvents: isOpen ? "none" : "all" }}
       >
-        <div
+        <section
+          id="hero"
           style={{
-            position: "absolute",
-            top: "50%",
-            left: MousePosition - 15,
-            color: "red",
-            zIndex: "100",
-          }}
-          // className="md:invisible"
-        >
-          {cur ? (
-            <img
-              src="https://global-uploads.webflow.com/625593a881b8ebd169835ca5/6272dd170459e2734bd53502_handlebar.svg"
-              loading="lazy"
-              alt="mobile-handle"
-            ></img>
-          ) : null}
-        </div>
-        <div
-          class="relative  mx-auto"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            bottom: "0",
-            right: "0",
+            position: "relative",
             height: "100vh",
-          }}
-          ref={cursor}
-          onTouchStart={(event) => {
-            setMousePosition(event.touches[0].clientX);
-          }}
-          onTouchMove={(event) => {
-            setMousePosition(event.touches[0].clientX);
+            overflow: "hidden",
           }}
         >
-          <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
-            <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-
-            <h1
-              className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-secular  md:text-9xl whitespace-nowrap bg-clip-text "
-              style={{ color: textColor }}
-            >
-              <span style={{ color: "#F64668" }}>T</span>HE{" "}
-              <span style={{ color: "#F64668" }}>I</span>NT{" "}
-              <span style={{ color: "#F64668" }}>G</span>EN
-            </h1>
-            <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-            <div className="my-16 text-center animate-fade-in z-10">
-              <h2 className="text-md text-white-100 mx-10 font-bold">
-                Creating the largest creator-based community in TamilNadu.
-              </h2>
-            </div>
-            <div
-              className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in-slide"
-              style={{ width: "100vw", height: "30vh" }}
-            >
-              <HeroCarousal images={[Pro1, Pro2, Pro3, Pro4, Pro5, Pro6]} />
-            </div>
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: MousePosition - 15,
+              color: "red",
+              zIndex: "100",
+            }}
+            // className="md:invisible"
+          >
+            {cur ? (
+              <img
+                src="https://global-uploads.webflow.com/625593a881b8ebd169835ca5/6272dd170459e2734bd53502_handlebar.svg"
+                loading="lazy"
+                alt="mobile-handle"
+              ></img>
+            ) : null}
           </div>
-          {/* <div className="absolute mx-auto top-0 h-screen  w-screen animate-fade-in">
+          <div
+            class="relative  mx-auto"
+            style={{
+              position: "absolute",
+              top: "0",
+              left: "0",
+              bottom: "0",
+              right: "0",
+              height: "100vh",
+            }}
+            ref={cursor}
+            onTouchStart={(event) => {
+              setMousePosition(event.touches[0].clientX);
+            }}
+            onTouchMove={(event) => {
+              setMousePosition(event.touches[0].clientX);
+            }}
+          >
+            <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
+              <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+
+              <h1
+                className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-secular  md:text-9xl whitespace-nowrap bg-clip-text "
+                style={{ color: textColor }}
+              >
+                <span style={{ color: "#F64668" }}>T</span>HE{" "}
+                <span style={{ color: "#F64668" }}>I</span>NT{" "}
+                <span style={{ color: "#F64668" }}>G</span>EN
+              </h1>
+              <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+              <div className="my-16 text-center animate-fade-in z-10">
+                <h2 className="text-md text-white-100 mx-10 font-bold">
+                  Creating the largest creator-based community in TamilNadu.
+                </h2>
+              </div>
+              <div
+                className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in-slide"
+                style={{ width: "100vw", height: "30vh" }}
+              >
+                <HeroCarousal images={[Pro1, Pro2, Pro3, Pro4, Pro5, Pro6]} />
+              </div>
+            </div>
+            {/* <div className="absolute mx-auto top-0 h-screen  w-screen animate-fade-in">
           <video
             autoPlay
             loop
@@ -332,177 +341,378 @@ export default function Main({
             <source src="https://video.wixstatic.com/video/06a7ff_0b63936f02f04baf99c2803ce89823b8/1080p/mp4/file.mp4" />
           </video>
         </div> */}
-        </div>
-        {/* fix interaction */}
-        <div
-          id="cool-wrapper"
-          // ref={cursor}
-
-          style={{
-            background: colorbg,
-            borderBottomLeftRadius: "15px",
-            width: MousePosition,
-            position: "absolute",
-            overflow: "hidden",
-            top: "0",
-            left: "0",
-            bottom: "0",
-            right: "0",
-            height: "100vh",
-            pointerEvents: "none",
-          }}
-        >
+          </div>
+          {/* fix interaction */}
           <div
+            id="cool-wrapper"
+            // ref={cursor}
+
             style={{
-              // position: "absolute",
-              // top: "0",
-              // left: "0",
-              // bottom: "0",
-              // right: "0",
+              background: colorbg,
+              borderBottomLeftRadius: "15px",
+              width: MousePosition,
+              position: "absolute",
+              overflow: "hidden",
+              top: "0",
+              left: "0",
+              bottom: "0",
+              right: "0",
               height: "100vh",
+              pointerEvents: "none",
             }}
           >
-            {/* put your hidden elements here */}
-            <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
-              <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+            <div
+              style={{
+                // position: "absolute",
+                // top: "0",
+                // left: "0",
+                // bottom: "0",
+                // right: "0",
+                height: "100vh",
+              }}
+            >
+              {/* put your hidden elements here */}
+              <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
+                <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
-              <h1
-                className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-secular  md:text-9xl whitespace-nowrap bg-clip-text "
-                style={{ color: "black" }}
-              >
-                <span style={{ color: "#41436A" }}>T</span>HE{" "}
-                <span style={{ color: "#41436A" }}>I</span>NT{" "}
-                <span style={{ color: "#41436A" }}>G</span>EN
-              </h1>
-              <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-              <div className="my-16 text-center animate-fade-in z-10">
-                <h2
-                  className="text-md  mx-10 font-bold "
-                  style={{ color: "#000000", textShadow: "0.8px 0px #000000" }}
+                <h1
+                  className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-secular  md:text-9xl whitespace-nowrap bg-clip-text "
+                  style={{ color: "black" }}
                 >
-                  Creating the largest creator-based community in TamilNadu.
-                </h2>
-              </div>
-              <div
-                className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in-slide"
-                style={{ width: "100vw", height: "30vh" }}
-              >
-                <HeroCarousal
-                  images={[Event1, Event2, Event3, Event4, Event5, Event6]}
-                />
-              </div>
-              {/* <div className="absolute text-center animate-fade-in z-10">
+                  <span style={{ color: "#41436A" }}>T</span>HE{" "}
+                  <span style={{ color: "#41436A" }}>I</span>NT{" "}
+                  <span style={{ color: "#41436A" }}>G</span>EN
+                </h1>
+                <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+                <div className="my-16 text-center animate-fade-in z-10">
+                  <h2
+                    className="text-md  mx-10 font-bold "
+                    style={{
+                      color: "#000000",
+                      textShadow: "0.8px 0px #000000",
+                    }}
+                  >
+                    Creating the largest creator-based community in TamilNadu.
+                  </h2>
+                </div>
+                <div
+                  className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in-slide"
+                  style={{ width: "100vw", height: "30vh" }}
+                >
+                  <HeroCarousal
+                    images={[Event1, Event2, Event3, Event4, Event5, Event6]}
+                  />
+                </div>
+                {/* <div className="absolute text-center animate-fade-in z-10">
                 <img
                   src={Img2.src}
                   alt=""
                   style={{ width: "100px", height: "100px" }}
                 />
               </div> */}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section id="event" ref={eventRef}>
-        <div style={{ zIndex: 1, position: "relative" }}>
+        </section>
+        <section id="event" ref={eventRef}>
+          <div style={{ zIndex: 1, position: "relative" }}>
+            <div
+              id="cool-wrapper"
+              style={{
+                background: "#41436A",
+                width: "20%",
+                position: "absolute",
+                left: "0",
+                height: "100%",
+                borderTopLeftRadius: "15px",
+
+                zIndex: -1,
+              }}
+            />
+            <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+              Experiences Curated
+            </h2>
+            <br></br>
+            {/* <button
+            className="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full"
+            onClick={() => setIsOpen((o) => !o)}
+          >
+            Open Modal
+          </button> */}
+            <div className="mx-auto  text-center  leading-relaxed fs521 relative">
+              <Carousal images={curated} />
+              <div
+                style={{
+                  position: "absolute",
+                  left: "0",
+                  top: "40%",
+                  width: "5%",
+                  height: "5%",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  id="left-arrow"
+                >
+                  <path
+                    fill="#6563ff"
+                    d="m11.293 7.293-4 4a1.004 1.004 0 0 0 0 1.414l4 4a1 1 0 0 0 1.414-1.414L10.414 13H16a1 1 0 0 0 0-2h-5.586l2.293-2.293a1 1 0 0 0-1.414-1.414Z"
+                  ></path>
+                  <path
+                    fill="#b2b1ff"
+                    d="M2 12A10 10 0 1 0 12 2 10.011 10.011 0 0 0 2 12Zm10.707-4.707a1 1 0 0 1 0 1.414L10.414 11H16a1 1 0 0 1 0 2h-5.586l2.293 2.293a1 1 0 0 1-1.414 1.414l-4-4a1.004 1.004 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  right: "0",
+                  top: "40%",
+                  width: "5%",
+                  height: "5%",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  id="right-arrow"
+                >
+                  <path
+                    fill="#6563ff"
+                    d="m12.707 16.707 4-4a1.004 1.004 0 0 0 0-1.414l-4-4a1 1 0 0 0-1.414 1.414L13.586 11H8a1 1 0 0 0 0 2h5.586l-2.293 2.293a1 1 0 0 0 1.414 1.414Z"
+                  ></path>
+                  <path
+                    fill="#b2b1ff"
+                    d="M22 12a10 10 0 1 0-10 10 10.011 10.011 0 0 0 10-10Zm-10.707 4.707a1 1 0 0 1 0-1.414L13.586 13H8a1 1 0 0 1 0-2h5.586l-2.293-2.293a1 1 0 0 1 1.414-1.414l4 4a1.004 1.004 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414 0Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="video" ref={videoRef}>
           <div
             id="cool-wrapper"
             style={{
-              background: "#41436A",
+              background: "#984063",
               width: "20%",
               position: "absolute",
-              left: "0",
+              right: "0",
               height: "100%",
-              borderTopLeftRadius: "15px",
-
-              zIndex: -1,
+              zIndex: 0,
+              borderTopRightRadius: "15px",
             }}
           />
-          <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
-            Experiences Curated
-          </h2>
-          <br></br>
-          <div className="mx-auto  text-center  leading-relaxed fs521 ">
-            <Carousal images={curated} />
-          </div>
-        </div>
-      </section>
-      <section id="video" ref={videoRef}>
-        <div
-          id="cool-wrapper"
-          style={{
-            background: "#984063",
-            width: "20%",
-            position: "absolute",
-            right: "0",
-            height: "100%",
-            zIndex: 0,
-            borderTopRightRadius: "15px",
-          }}
-        />
-        <div style={{ zIndex: 1, position: "relative" }} className="mb-12">
-          <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
-            In The Press
-          </h2>
-          <br></br>
-          {/* <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
+          <div style={{ zIndex: 1, position: "relative" }} className="mb-12">
+            <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+              In The Press
+            </h2>
+            <br></br>
+            {/* <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
             We believe that content at its source, in its rawest form will never
             die. The platforms of distribution will metamorphose innumerably but
             an idea as a little seed in a creator's head will stay potent and
             constant.
           </p> */}
-          {/* <div className="flex flex-column justify-items-center"> */}
-          <div className="mx-auto  text-center  leading-relaxed fs521">
-            <Carousal images={press} />
+            {/* <div className="flex flex-column justify-items-center"> */}
+            <div className="mx-auto  text-center  leading-relaxed fs521 relative">
+              <Carousal images={press} />
+              <div
+                style={{
+                  position: "absolute",
+                  left: "0",
+                  top: "40%",
+                  width: "5%",
+                  height: "5%",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  id="left-arrow"
+                >
+                  <path
+                    fill="#6563ff"
+                    d="m11.293 7.293-4 4a1.004 1.004 0 0 0 0 1.414l4 4a1 1 0 0 0 1.414-1.414L10.414 13H16a1 1 0 0 0 0-2h-5.586l2.293-2.293a1 1 0 0 0-1.414-1.414Z"
+                  ></path>
+                  <path
+                    fill="#b2b1ff"
+                    d="M2 12A10 10 0 1 0 12 2 10.011 10.011 0 0 0 2 12Zm10.707-4.707a1 1 0 0 1 0 1.414L10.414 11H16a1 1 0 0 1 0 2h-5.586l2.293 2.293a1 1 0 0 1-1.414 1.414l-4-4a1.004 1.004 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  right: "0",
+                  top: "40%",
+                  width: "5%",
+                  height: "5%",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  id="right-arrow"
+                >
+                  <path
+                    fill="#6563ff"
+                    d="m12.707 16.707 4-4a1.004 1.004 0 0 0 0-1.414l-4-4a1 1 0 0 0-1.414 1.414L13.586 11H8a1 1 0 0 0 0 2h5.586l-2.293 2.293a1 1 0 0 0 1.414 1.414Z"
+                  ></path>
+                  <path
+                    fill="#b2b1ff"
+                    d="M22 12a10 10 0 1 0-10 10 10.011 10.011 0 0 0 10-10Zm-10.707 4.707a1 1 0 0 1 0-1.414L13.586 13H8a1 1 0 0 1 0-2h5.586l-2.293-2.293a1 1 0 0 1 1.414-1.414l4 4a1.004 1.004 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414 0Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      <section id="campaign" ref={campaignRef}>
-        <div style={{ zIndex: 1, position: "relative" }}>
-          <div
-            id="cool-wrapper"
-            style={{
-              background: "#F64668",
-              width: "20%",
-              position: "absolute",
-              left: "0",
-              borderTopLeftRadius: "15px",
+        </section>
+        <section id="campaign" ref={campaignRef}>
+          <div style={{ zIndex: 1, position: "relative" }}>
+            <div
+              id="cool-wrapper"
+              style={{
+                background: "#F64668",
+                width: "20%",
+                position: "absolute",
+                left: "0",
+                borderTopLeftRadius: "15px",
 
-              height: "100%",
-              zIndex: -1,
-            }}
-          />
-          <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
-            Services we offer
-          </h2>
-          <br></br>
-          <div className="mx-auto  text-center  leading-relaxed fs521 pb-24">
-            <Carousal images={services} size={"100px"} />
+                height: "100%",
+                zIndex: -1,
+              }}
+            />
+            <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+              Services we offer
+            </h2>
+            <br></br>
+            <div className="mx-auto  text-center  leading-relaxed fs521 pb-24 relative">
+              <Carousal images={services} size={"100px"} />
+              {/* <div
+                style={{
+                  position: "absolute",
+                  left: "0",
+                  top: "40%",
+                  width: "5%",
+                  height: "5%",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  id="left-arrow"
+                >
+                  <path
+                    fill="#6563ff"
+                    d="m11.293 7.293-4 4a1.004 1.004 0 0 0 0 1.414l4 4a1 1 0 0 0 1.414-1.414L10.414 13H16a1 1 0 0 0 0-2h-5.586l2.293-2.293a1 1 0 0 0-1.414-1.414Z"
+                  ></path>
+                  <path
+                    fill="#b2b1ff"
+                    d="M2 12A10 10 0 1 0 12 2 10.011 10.011 0 0 0 2 12Zm10.707-4.707a1 1 0 0 1 0 1.414L10.414 11H16a1 1 0 0 1 0 2h-5.586l2.293 2.293a1 1 0 0 1-1.414 1.414l-4-4a1.004 1.004 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  right: "0",
+                  top: "40%",
+                  width: "5%",
+                  height: "5%",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  id="right-arrow"
+                >
+                  <path
+                    fill="#6563ff"
+                    d="m12.707 16.707 4-4a1.004 1.004 0 0 0 0-1.414l-4-4a1 1 0 0 0-1.414 1.414L13.586 11H8a1 1 0 0 0 0 2h5.586l-2.293 2.293a1 1 0 0 0 1.414 1.414Z"
+                  ></path>
+                  <path
+                    fill="#b2b1ff"
+                    d="M22 12a10 10 0 1 0-10 10 10.011 10.011 0 0 0 10-10Zm-10.707 4.707a1 1 0 0 1 0-1.414L13.586 13H8a1 1 0 0 1 0-2h5.586l-2.293-2.293a1 1 0 0 1 1.414-1.414l4 4a1.004 1.004 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414 0Z"
+                  ></path>
+                </svg>
+              </div> */}
+            </div>
           </div>
-        </div>
-      </section>
-      <section id="campaign" ref={campaignRef}>
-        <div style={{ zIndex: 1, position: "relative" }}>
-          <div
-            id="cool-wrapper"
-            style={{
-              background: "#FE9677",
-              width: "20%",
-              position: "absolute",
-              right: "0",
-              borderTopRightRadius: "15px",
+        </section>
+        <section id="campaign" ref={campaignRef}>
+          <div style={{ zIndex: 1, position: "relative" }}>
+            <div
+              id="cool-wrapper"
+              style={{
+                background: "#FE9677",
+                width: "20%",
+                position: "absolute",
+                right: "0",
+                borderTopRightRadius: "15px",
 
-              height: "100%",
-              zIndex: -1,
-            }}
-          />
-          <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
-            Brands we have worked with
-          </h2>
-          <br></br>
-          <div className="mx-auto  text-center  leading-relaxed fs521 pb-24">
-            <BrandCarousal images={brands} />
-          </div>
-          {/* <div className="flex justify-center mb-14 mx-2">
+                height: "100%",
+                zIndex: -1,
+              }}
+            />
+            <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+              Brands we have worked with
+            </h2>
+            <br></br>
+            <div className="mx-auto  text-center  leading-relaxed fs521 pb-24 relative">
+              <BrandCarousal images={brands} />
+              {/* <div
+                style={{
+                  position: "absolute",
+                  left: "0",
+                  top: "40%",
+                  width: "5%",
+                  height: "5%",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  id="left-arrow"
+                >
+                  <path
+                    fill="#6563ff"
+                    d="m11.293 7.293-4 4a1.004 1.004 0 0 0 0 1.414l4 4a1 1 0 0 0 1.414-1.414L10.414 13H16a1 1 0 0 0 0-2h-5.586l2.293-2.293a1 1 0 0 0-1.414-1.414Z"
+                  ></path>
+                  <path
+                    fill="#b2b1ff"
+                    d="M2 12A10 10 0 1 0 12 2 10.011 10.011 0 0 0 2 12Zm10.707-4.707a1 1 0 0 1 0 1.414L10.414 11H16a1 1 0 0 1 0 2h-5.586l2.293 2.293a1 1 0 0 1-1.414 1.414l-4-4a1.004 1.004 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  right: "0",
+                  top: "40%",
+                  width: "5%",
+                  height: "5%",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  id="right-arrow"
+                >
+                  <path
+                    fill="#6563ff"
+                    d="m12.707 16.707 4-4a1.004 1.004 0 0 0 0-1.414l-4-4a1 1 0 0 0-1.414 1.414L13.586 11H8a1 1 0 0 0 0 2h5.586l-2.293 2.293a1 1 0 0 0 1.414 1.414Z"
+                  ></path>
+                  <path
+                    fill="#b2b1ff"
+                    d="M22 12a10 10 0 1 0-10 10 10.011 10.011 0 0 0 10-10Zm-10.707 4.707a1 1 0 0 1 0-1.414L13.586 13H8a1 1 0 0 1 0-2h5.586l-2.293-2.293a1 1 0 0 1 1.414-1.414l4 4a1.004 1.004 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414 0Z"
+                  ></path>
+                </svg>
+              </div> */}
+            </div>
+            {/* <div className="flex justify-center mb-14 mx-2">
             <img
               loading="lazy"
               src={Brands.src}
@@ -510,7 +720,7 @@ export default function Main({
               style={{ borderRadius: "10px" }}
             ></img>
           </div> */}
-          {/* <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
+            {/* <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
             We believe that content at its source, in its rawest form will never
             die. The platforms of distribution will metamorphose innumerably but
             an idea as a little seed in a creator's head will stay potent and
@@ -558,61 +768,62 @@ export default function Main({
               </p>
             </div>
           </div> */}
-        </div>
-      </section>
-      <section id="story" ref={storyRef}>
-        <div style={{ zIndex: 1, position: "relative" }}>
-          <div
-            id="cool-wrapper"
-            style={{
-              background: "#41436A",
-              width: "20%",
-              position: "absolute",
-              left: "0",
-              borderTopLeftRadius: "15px",
+          </div>
+        </section>
+        <section id="story" ref={storyRef}>
+          <div style={{ zIndex: 1, position: "relative" }}>
+            <div
+              id="cool-wrapper"
+              style={{
+                background: "#41436A",
+                width: "20%",
+                position: "absolute",
+                left: "0",
+                borderTopLeftRadius: "15px",
 
-              height: "100%",
-              zIndex: -1,
-            }}
-          />
-          <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
-            Brand Story
-          </h2>
-          <br></br>
-          <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
-            We started off with a humble YouTube channel which ushered in a new
-            generation of disruptive thinking: Paracetamol Paniyaram. We
-            ventured further in our dreams of quality content production by
-            producing multiple web-series. We offer our technical and creative
-            knowledge to clients for their outreach purposes.
-          </p>
-          <div className="pt-12 pb-4 max-w-4xl mx-auto fsac4 md:px-1 px-3">
-            <div class="ktq4">
-              <h3 class="pt-3 font-semibold text-lg ">Our Mission</h3>
-              <p class="pt-2 value-text text-md  fkrr1">
-                To empower creators by augmenting their brand building process.
-              </p>
+                height: "100%",
+                zIndex: -1,
+              }}
+            />
+            <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+              Brand Story
+            </h2>
+            <br></br>
+            <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
+              We started off with a humble YouTube channel which ushered in a
+              new generation of disruptive thinking: Paracetamol Paniyaram. We
+              ventured further in our dreams of quality content production by
+              producing multiple web-series. We offer our technical and creative
+              knowledge to clients for their outreach purposes.
+            </p>
+            <div className="pt-12 pb-4 max-w-4xl mx-auto fsac4 md:px-1 px-3">
+              <div class="ktq4">
+                <h3 class="pt-3 font-semibold text-lg ">Our Mission</h3>
+                <p class="pt-2 value-text text-md  fkrr1">
+                  To empower creators by augmenting their brand building
+                  process.
+                </p>
+              </div>
+              <div class="ktq4">
+                <h3 class="pt-3 font-semibold text-lg ">Our Vision</h3>
+                <p class="pt-2 value-text text-md  fkrr1">
+                  To create exciting content on a consistent basis.
+                </p>
+              </div>
             </div>
-            <div class="ktq4">
-              <h3 class="pt-3 font-semibold text-lg ">Our Vision</h3>
-              <p class="pt-2 value-text text-md  fkrr1">
-                To create exciting content on a consistent basis.
-              </p>
+            <div class="ktq4 max-w-xl mb-4  mx-3 px-1 px-3 text-center md:mx-auto">
+              <h3 class="pt-3 font-semibold text-lg ">Our Values</h3>
+              <ul class="pt-2 value-text text-md  fkrr1">
+                <li>Move with urgency and focus </li>
+                <li> Learning trumps all </li>
+                <li> Trust and Integrity</li>
+                <li> Digital optimization </li>
+                <li>Optimism</li>
+              </ul>
             </div>
           </div>
-          <div class="ktq4 max-w-xl mb-4  mx-3 px-1 px-3 text-center md:mx-auto">
-            <h3 class="pt-3 font-semibold text-lg ">Our Values</h3>
-            <ul class="pt-2 value-text text-md  fkrr1">
-              <li>Move with urgency and focus </li>
-              <li> Learning trumps all </li>
-              <li> Trust and Integrity</li>
-              <li> Digital optimization </li>
-              <li>Optimism</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      {/* <section class="relative pb-24">
+        </section>
+        {/* <section class="relative pb-24">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           <div class="py-24 md:py-36">
             <h1 class="mb-5 text-6xl font-bold ">
@@ -637,44 +848,46 @@ export default function Main({
           </div>
         </div>
       </section> */}
-      <section id="contact" ref={contactRef}>
-        <div style={{ zIndex: 1, position: "relative" }}>
-          <div
-            id="cool-wrapper"
-            style={{
-              background: "#F64668",
-              width: "20%",
-              position: "absolute",
-              right: "0",
-              height: "100%",
-              borderTopRightRadius: "15px",
+        <section id="contact" ref={contactRef}>
+          <div style={{ zIndex: 1, position: "relative" }}>
+            <div
+              id="cool-wrapper"
+              style={{
+                background: "#F64668",
+                width: "20%",
+                position: "absolute",
+                right: "0",
+                height: "100%",
+                borderTopRightRadius: "15px",
 
-              zIndex: -1,
-            }}
-          />
-          <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-            <div class="pb-56">
-              <h1 class="mb-5 text-white-100 pt-2 text-2xl md:text-6xl font-bold ">
-                Contact Us
-              </h1>
-              <div className="pt-12 text-white-200">
-                The Internet Generation
-                <br />
-                27/11 Sounderajan Street
-                <br />
-                Tnagar, Chennai - 17
-                <br />
-                contact@theintgen.com
-                <br />
-                Tel: 9940237330
-              </div>
-              <div className="pt-20 mx-auto ">
-                <ContactForm />
+                zIndex: -1,
+              }}
+            />
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+              <div class="pb-56">
+                <h1 class="mb-5 text-white-100 pt-2 text-2xl md:text-6xl font-bold ">
+                  Contact Us
+                </h1>
+                <div className="pt-12 text-white-200">
+                  The Internet Generation
+                  <br />
+                  27/11 Sounderajan Street
+                  <br />
+                  Tnagar, Chennai - 17
+                  <br />
+                  contact@theintgen.com
+                  <br />
+                  Tel: 9940237330
+                </div>
+                <div className="pt-20 mx-auto ">
+                  <ContactForm />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </section>
-    </section>
+      <ModalView isOpen={isOpen} setIsOpen={setIsOpen} content={""} />
+    </>
   );
 }
