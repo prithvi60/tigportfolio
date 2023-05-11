@@ -42,6 +42,11 @@ export default function Carousal({ images, size }) {
       },
     ],
   };
+  const [width, setWidth] = React.useState(null);
+  React.useEffect(() => {
+    // window is accessible here.
+    setWidth(window.innerHeight);
+  }, []);
   return (
     <Slider {...settings}>
       {images.map((item, idx) => (
@@ -55,7 +60,7 @@ export default function Carousal({ images, size }) {
             loading="lazy"
             style={{
               width: size ? size : "100%",
-              height: size ? size : window.innerWidth <= 600 ? "40vh" : "60vh",
+              height: size ? size : width <= 600 ? "40vh" : "60vh",
               backgroundSize: "cover",
               objectFit: "cover",
               // borderRadius: "15px",
