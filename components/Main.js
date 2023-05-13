@@ -789,14 +789,14 @@ export default function Main({
               Brand Story
             </h2>
             <br></br>
-            <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
+            <p className="mx-auto text-sm text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
               We started off with a humble YouTube channel which ushered in a
               new generation of disruptive thinking: Paracetamol Paniyaram. We
               ventured further in our dreams of quality content production by
               producing multiple web-series. We offer our technical and creative
               knowledge to clients for their outreach purposes.
             </p>
-            <div className="pt-12 pb-4 max-w-4xl mx-auto fsac4 md:px-1 px-3">
+            <div className="pt-2 pb-12 max-w-2xl gap-2.5 mx-auto flex flex-col md:px-1 px-3 md:flex-row">
               <div class="ktq4">
                 <h3 class="pt-3 font-semibold text-lg ">Our Mission</h3>
                 <p class="pt-2 value-text text-md  fkrr1">
@@ -810,8 +810,14 @@ export default function Main({
                   To create exciting content on a consistent basis.
                 </p>
               </div>
+              <div class="ktq4">
+                <h3 class="pt-3 font-semibold text-lg ">Our Vision</h3>
+                <p class="pt-2 value-text text-md  fkrr1">
+                  To create exciting content on a consistent basis.
+                </p>
+              </div>
             </div>
-            <div class="ktq4 max-w-xl mb-4  mx-3 px-1 px-3 text-center md:mx-auto">
+            {/* <div class="ktq4 max-w-xl mb-4  mx-3 px-1 px-3 text-center md:mx-auto">
               <h3 class="pt-3 font-semibold text-lg ">Our Values</h3>
               <ul class="pt-2 value-text text-md  fkrr1">
                 <li>Move with urgency and focus </li>
@@ -820,7 +826,7 @@ export default function Main({
                 <li> Digital optimization </li>
                 <li>Optimism</li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </section>
         {/* <section class="relative pb-24">

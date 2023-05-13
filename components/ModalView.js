@@ -37,11 +37,11 @@ export function ModalView({ isOpen, setIsOpen, content }) {
               style={{ zIndex: "999999" }}
             >
               <div
-                className="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"
+                className="modal-overlay absolute w-full h-full bg-gray-900 opacity-50 top-0"
                 onClick={toggleModal}
               ></div>
 
-              <div className="modal-container bg-white-200 w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto ">
+              <div className="modal-container bg-white-200 max-h-max w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
                 <div
                   className="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm "
                   onClick={toggleModal}
@@ -59,7 +59,7 @@ export function ModalView({ isOpen, setIsOpen, content }) {
                   <span className="text-sm">(Esc)</span>
                 </div>
 
-                <div className="modal-content py-4 text-left px-6 ">
+                <div className="modal-content py-4 text-left px-6 max-h-max">
                   <div className="flex justify-between items-center pb-3">
                     {/* <p className="text-2xl font-bold">Simple Modal!</p> */}
                     <div
@@ -79,7 +79,7 @@ export function ModalView({ isOpen, setIsOpen, content }) {
                   </div>
                   {content === "" ? (
                     <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center  text-black ">
-                      <div class="py-24 md:py-36">
+                      <div class="">
                         <h1 class="mb-5 text-6xl font-bold ">
                           Subscribe to our newsletter
                         </h1>
