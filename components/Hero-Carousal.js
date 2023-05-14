@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 
-export default function HeroCarousal({ images }) {
+export default function HeroCarousal({ images, nav, setNav }) {
   var settings = {
     dots: false,
     infinite: true,
@@ -11,7 +11,7 @@ export default function HeroCarousal({ images }) {
     speed: 5000,
     autoplaySpeed: 5000,
     cssEase: "linear",
-    lazyLoad: true,
+    // lazyLoad: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -40,7 +40,7 @@ export default function HeroCarousal({ images }) {
   };
   return (
     <div className="hero">
-      <Slider {...settings}>
+      <Slider {...settings} asNavFor={nav} ref={(slider1) => setNav(slider1)}>
         {images.map((item, idx) => (
           <div key={idx}>
             <img

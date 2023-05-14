@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Carousal from "./Carousal";
+import ModalCarousal from "./ModalCarousal";
 
 import HeroCarousal from "./Hero-Carousal";
 import ContactForm from "./ContactForm";
@@ -82,6 +82,7 @@ import Service5 from "../img/services/5.webp";
 import Service6 from "../img/services/6.webp";
 import Service7 from "../img/services/7.webp";
 import { ModalView } from "./ModalView";
+import Carousal from "./Carousal";
 
 const services = [
   { pic: Service1, des: "TIGVID" },
@@ -92,7 +93,7 @@ const services = [
   { pic: Service6, des: "Artist Management" },
   { pic: Service7, des: "TIG Terrance" },
 ];
-const brands = [
+const brands1 = [
   { pic: Brand1 },
   { pic: Brand2 },
   { pic: Brand3 },
@@ -109,6 +110,8 @@ const brands = [
   { pic: Brand14 },
   { pic: Brand15 },
   { pic: Brand16 },
+];
+const brands2 = [
   { pic: Brand17 },
   { pic: Brand18 },
   { pic: Brand19 },
@@ -256,7 +259,8 @@ export default function Main({
       clearTimeout(timer6);
     };
   }, []);
-
+  const [nav1, setNav1] = React.useState();
+  const [nav2, setNav2] = React.useState();
   return (
     <>
       <section
@@ -328,7 +332,11 @@ export default function Main({
                 className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in-slide"
                 style={{ width: "100vw", height: "30vh" }}
               >
-                <HeroCarousal images={[Pro1, Pro2, Pro3, Pro4, Pro5, Pro6]} />
+                <HeroCarousal
+                  images={[Pro1, Pro2, Pro3, Pro4, Pro5, Pro6]}
+                  nav={nav2}
+                  setNav={setNav1}
+                />
               </div>
             </div>
             {/* <div className="absolute mx-auto top-0 h-screen  w-screen animate-fade-in">
@@ -401,6 +409,8 @@ export default function Main({
                 >
                   <HeroCarousal
                     images={[Event1, Event2, Event3, Event4, Event5, Event6]}
+                    nav={nav1}
+                    setNav={setNav2}
                   />
                 </div>
                 {/* <div className="absolute text-center animate-fade-in z-10">
@@ -590,7 +600,7 @@ export default function Main({
             </h2>
             <br></br>
             <div className="mx-auto  text-center  leading-relaxed fs521 pb-24 relative">
-              <Carousal images={services} size={"100px"} />
+              <ModalCarousal images={services} size={"100px"} />
               {/* <div
                 style={{
                   position: "absolute",
@@ -662,7 +672,11 @@ export default function Main({
             </h2>
             <br></br>
             <div className="mx-auto  text-center  leading-relaxed fs521 pb-24 relative">
-              <BrandCarousal images={brands} />
+              <BrandCarousal images={brands2} />
+              <div className="pt-8">
+                <BrandCarousal images={brands1} />
+              </div>
+
               {/* <div
                 style={{
                   position: "absolute",
