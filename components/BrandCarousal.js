@@ -16,6 +16,7 @@ export default function BrandCarousal({ images }) {
     autoplaySpeed: 2000,
     pauseOnHover: true,
     lazyLoad: true,
+    rtl: true,
     // responsive: [
     //   {
     //     breakpoint: 1024,

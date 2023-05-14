@@ -7,11 +7,12 @@ export default function HeroCarousal({ images, nav, setNav }) {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    adaptiveHeight: true,
     autoplay: true,
+    pauseOnHover: false,
     speed: 5000,
     autoplaySpeed: 5000,
     cssEase: "linear",
-    // lazyLoad: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -27,6 +28,7 @@ export default function HeroCarousal({ images, nav, setNav }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: true,
         },
       },
       {
@@ -34,19 +36,20 @@ export default function HeroCarousal({ images, nav, setNav }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: true,
         },
       },
     ],
   };
   return (
-    <div className="hero">
+    <div className="hero" style={{ pointerEvents: "none" }}>
       <Slider {...settings} asNavFor={nav} ref={(slider1) => setNav(slider1)}>
         {images.map((item, idx) => (
-          <div key={idx}>
+          <div key={idx} style={{ height: "100%" }}>
             <img
               style={{
                 width: "100%",
-                // height: "100%",
+                height: "36vh",
                 backgroundSize: "cover",
                 objectFit: "cover",
 
