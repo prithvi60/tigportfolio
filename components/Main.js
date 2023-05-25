@@ -241,7 +241,7 @@ export default function Main({
           console.log(cursor);
           setMousePosition(event.pageX);
         };
-        setBg("#FE9677");
+        setBg("#c85241");
         setCur(true);
         settextColor("white");
       }
@@ -315,19 +315,20 @@ export default function Main({
               <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
               <h1
-                className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-secular  md:text-9xl whitespace-nowrap bg-clip-text "
+                className="z-10 text-3xl text-center duration-1000 bg-white cursor-default text-edge-outline animate-title font-inter  md:text-6xl  bg-clip-text "
                 style={{ color: textColor }}
               >
-                <span style={{ color: "#F64668" }}>T</span>HE{" "}
-                <span style={{ color: "#F64668" }}>I</span>NT{" "}
-                <span style={{ color: "#F64668" }}>G</span>EN
+                Building South India's Largest{" "}
+                <span className="font-satisfy" style={{ color: "#c85341 " }}>
+                  Creator Ecosystem
+                </span>
               </h1>
               <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-              <div className="my-16 text-center animate-fade-in z-10">
+              {/* <div className="my-16 text-center animate-fade-in z-10">
                 <h2 className="text-md text-white-100 mx-10 font-bold">
                   Creating the largest creator-based community in TamilNadu.
                 </h2>
-              </div>
+              </div> */}
               <div
                 className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in-slide"
                 style={{ width: "100vw", height: "30vh" }}
@@ -384,15 +385,16 @@ export default function Main({
                 <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
                 <h1
-                  className="z-10 text-5xl duration-1000 bg-white cursor-default text-edge-outline animate-title font-secular  md:text-9xl whitespace-nowrap bg-clip-text "
-                  style={{ color: "black" }}
+                  className="z-10 text-3xl mx-auto text-center duration-1000 bg-white cursor-default text-edge-outline animate-title font-inter  md:text-6xl  bg-clip-text "
+                  style={{ color: "white" }}
                 >
-                  <span style={{ color: "#41436A" }}>T</span>HE{" "}
-                  <span style={{ color: "#41436A" }}>I</span>NT{" "}
-                  <span style={{ color: "#41436A" }}>G</span>EN
+                  Building South India's Largest{" "}
+                  <span className="font-satisfy" style={{ color: "#0c0c0c" }}>
+                    Creator Ecosystem
+                  </span>
                 </h1>
                 <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-                <div className="my-16 text-center animate-fade-in z-10">
+                {/* <div className="my-16 text-center animate-fade-in z-10">
                   <h2
                     className="text-md  mx-10 font-bold "
                     style={{
@@ -402,7 +404,7 @@ export default function Main({
                   >
                     Creating the largest creator-based community in TamilNadu.
                   </h2>
-                </div>
+                </div> */}
                 <div
                   className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in-slide"
                   style={{ width: "100vw", height: "30vh" }}
@@ -426,7 +428,7 @@ export default function Main({
         </section>
         <section id="event" ref={eventRef}>
           <div style={{ zIndex: 1, position: "relative" }}>
-            <div
+            {/* <div
               id="cool-wrapper"
               style={{
                 background: "#41436A",
@@ -438,9 +440,12 @@ export default function Main({
 
                 zIndex: -1,
               }}
-            />
+            /> */}
             <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
-              Experiences Curated
+              Elevating Artistic{" "}
+              <span className="font-satisfy" style={{ color: "yellow" }}>
+                Experiences
+              </span>
             </h2>
             <br></br>
             {/* <button
@@ -502,8 +507,8 @@ export default function Main({
             </div>
           </div>
         </section>
-        <section id="video" ref={videoRef}>
-          <div
+        <section id="video" ref={videoRef} style={{ background: "#c85241" }}>
+          {/* <div
             id="cool-wrapper"
             style={{
               background: "#984063",
@@ -514,9 +519,9 @@ export default function Main({
               zIndex: 0,
               borderTopRightRadius: "15px",
             }}
-          />
+          /> */}
           <div style={{ zIndex: 1, position: "relative" }} className="mb-12">
-            <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+            <h2 className="pt-24   mb-1 text-2xl font-semibold text-black tracking-tighter text-center  lg:text-7xl md:text-6xl">
               In The Press
             </h2>
             <br></br>
@@ -582,7 +587,7 @@ export default function Main({
         </section>
         <section id="campaign" ref={campaignRef}>
           <div style={{ zIndex: 1, position: "relative" }}>
-            <div
+            {/* <div
               id="cool-wrapper"
               style={{
                 background: "#F64668",
@@ -594,9 +599,12 @@ export default function Main({
                 height: "100%",
                 zIndex: -1,
               }}
-            />
-            <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
-              Services we offer
+            /> */}
+            <h2
+              className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl"
+              style={{ color: "#c85241" }}
+            >
+              What we do
             </h2>
             <br></br>
             <div className="mx-auto  text-center  leading-relaxed fs521 pb-24 relative">
@@ -652,9 +660,13 @@ export default function Main({
             </div>
           </div>
         </section>
-        <section id="campaign" ref={campaignRef}>
+        <section
+          id="campaign"
+          ref={campaignRef}
+          style={{ background: "#c85241" }}
+        >
           <div style={{ zIndex: 1, position: "relative" }}>
-            <div
+            {/* <div
               id="cool-wrapper"
               style={{
                 background: "#FE9677",
@@ -666,8 +678,8 @@ export default function Main({
                 height: "100%",
                 zIndex: -1,
               }}
-            />
-            <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+            /> */}
+            <h2 className="pt-24   mb-1 text-2xl text-black font-semibold  tracking-tighter text-center  lg:text-7xl md:text-6xl">
               Brands we have worked with
             </h2>
             <br></br>
@@ -786,7 +798,7 @@ export default function Main({
         </section>
         <section id="story" ref={storyRef}>
           <div style={{ zIndex: 1, position: "relative" }}>
-            <div
+            {/* <div
               id="cool-wrapper"
               style={{
                 background: "#41436A",
@@ -798,8 +810,11 @@ export default function Main({
                 height: "100%",
                 zIndex: -1,
               }}
-            />
-            <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+            /> */}
+            <h2
+              className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl"
+              style={{ color: "#c85241" }}
+            >
               Brand Story
             </h2>
             <br></br>
@@ -868,9 +883,13 @@ export default function Main({
           </div>
         </div>
       </section> */}
-        <section id="contact" ref={contactRef}>
+        <section
+          id="contact"
+          ref={contactRef}
+          style={{ background: "#c85241" }}
+        >
           <div style={{ zIndex: 1, position: "relative" }}>
-            <div
+            {/* <div
               id="cool-wrapper"
               style={{
                 background: "#F64668",
@@ -882,10 +901,10 @@ export default function Main({
 
                 zIndex: -1,
               }}
-            />
+            /> */}
             <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
               <div class="pb-56">
-                <h1 class="mb-5 text-white-100 pt-2 text-2xl md:text-6xl font-bold ">
+                <h1 class="mb-5 pt-2 text-2xl md:text-6xl font-bold text-black">
                   Contact Us
                 </h1>
                 <div className="pt-12 text-white-200">

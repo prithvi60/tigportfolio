@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
-      eczar: ["Eczar"],
-      ultra: ["Ultra", "sans-serif"],
       secular: ["Secular", "sans-serif"],
+      satisfy: ["Satisfy", "sans-serif"],
+      inter: ["Inter", "sans-serif"],
     },
     extend: {
       colors: {

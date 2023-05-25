@@ -12,9 +12,9 @@ export default function Header({
   // const [flyerTwo, setFlyerTwo] = React.useState(false);
 
   return (
-    <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in  w-screen border-bot">
-      <div class="max-w-2xl md:max-w-5xl mx-auto flex flex-wrap p-1 md:p-2  md:flex-row">
-        <div className="flex flex-row items-center justify-between md:p-3 md:p-1 w-screen">
+    <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in  w-screen">
+      <div class="max-w-2xl md:max-w-5xl mx-auto flex flex-wrap p-1 md:p-1  md:flex-row">
+        <div className="flex flex-row items-center md:p-3 md:p-1 w-screen">
           <a href="/">
             <img
               src="/favicon.jpg"
@@ -22,15 +22,32 @@ export default function Header({
               loading="lazy"
             />
           </a>
-
+          <h2 className="text-white-100 font-bold ml-2 hidden md:flex">The Internet Generation</h2>
+          <div className="absolute right-2">
           <button
-            className="text-white pb-4 cursor-pointer leading-none px-3 py-2 md:hidden outline-none focus:outline-none content-end justify-end relative"
+            className="text-white-100  cursor-pointer leading-none px-2 py-2 mr-4"
             type="button"
             aria-label="button"
-            style={{ zIndex: "100" }}
+            style={{
+              zIndex: "100",
+              background: "#6d6a57",
+              borderRadius: "30%",
+            }}
+          >
+            Join the revolution
+          </button>
+          <button
+            className="text-white-100  cursor-pointer leading-none px-2 py-2  outline-none focus:outline-none content-end justify-end relative"
+            type="button"
+            aria-label="button"
+            style={{
+              zIndex: "100",
+              background: "#6d6a57",
+              borderRadius: "30%",
+            }}
             onClick={() => setNavbarOpen(!navbarOpen)}
           >
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0,0,255.99904,255.99904"
               width="36px"
@@ -128,17 +145,23 @@ export default function Header({
                   />
                 </g>
               </g>
-            </svg>
+            </svg> */}
+            menu
           </button>
+          </div>
         </div>
         <div
-          className={
-            "md:flex flex-grow items-center justify-center mr-24" +
-            (navbarOpen ? " flex" : " hidden")
-          }
-          style={{ transition: "500ms ease" }}
+          // className={
+          //   "flex-grow items-center justify-center mr-24" +
+          //   (navbarOpen ? "flex" : "hidden")
+          // }
+          style={{
+            transition: "500ms ease",
+            display: navbarOpen ? "none" : "block",
+          }}
         >
-          <div class="bg-indigo-900 pl-3 md:pl-1 md:bg-transparent right-0 md:right-auto rounded-bl-md md:rounded-none top-0 font-4 pt-12 pb-4 px-2 md:pt-1  flex  flex-col md:flex-row text-left md:items-center md:text-base text-1xl md:justify-center justify-items-start absolute md:top-5 h-screen md:h-auto">
+          {/* <div class="bg-indigo-900 pl-3 md:pl-1 md:bg-transparent right-0 md:right-auto rounded-bl-md md:rounded-none top-0 font-4 pt-12 pb-4 px-2 md:pt-1  flex  flex-col md:flex-row text-left md:items-center md:text-base text-1xl md:justify-center justify-items-start absolute md:top-5 h-screen md:h-auto"> */}
+          <div class="bg-indigo-900 pl-3  right-0  rounded-bl-md  top-0 font-4 pt-12 pb-4 px-2   flex  flex-col  text-left text-1xl  justify-items-start absolute h-screen ">
             <ul
               onClick={() => {
                 videoRef.current.scrollIntoView({
@@ -279,7 +302,7 @@ export default function Header({
               Contact
             </ul>
           </div>
-          <div class="absolute right-4 flex flex-row top-4">
+          {/* <div class="absolute right-4 flex flex-row top-4">
             <a
               href="https://www.instagram.com/theintgen/?hl=en"
               rel="noopener noreferrer"
@@ -358,7 +381,7 @@ export default function Header({
                 <path fill="#FFF" d="M20 31L20 17 32 24z" />
               </svg>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

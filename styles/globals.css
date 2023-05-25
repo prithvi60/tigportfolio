@@ -24,6 +24,10 @@
   font-family: "Secular";
   src: url("/font/SecularOne-Regular.ttf");
 }
+@font-face {
+  font-family: "Satisfy";
+  src: url("/font/Satisfy-Regular.ttf");
+}
 
 html,
 body {

@@ -12,8 +12,8 @@ export default function Home() {
   const storyRef = useRef(null);
   const contactRef = useRef(null);
 
-  return (
-    <div className="text-black">
+  return ( 
+    <div className="text-black font-inter">
       <NextSeo
         title="TIG"
         description="Welcome to The Internet Generation!"
@@ -40,7 +40,7 @@ export default function Home() {
         campaignRef={campaignRef}
         storyRef={storyRef}
       />
-      <Footer />  
+      {/* <Footer />   */}
     </div>
   );
 }
