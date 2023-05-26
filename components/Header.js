@@ -1,4 +1,5 @@
 import React from "react";
+import { ModalView } from "./ModalView";
 
 export default function Header({
   videoRef,
@@ -8,46 +9,49 @@ export default function Header({
   storyRef,
 }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  // const [flyer, setFlyer] = React.useState(false);
-  // const [flyerTwo, setFlyerTwo] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in  w-screen">
-      <div class="max-w-2xl md:max-w-5xl mx-auto flex flex-wrap p-1 md:p-1  md:flex-row">
-        <div className="flex flex-row items-center md:p-3 md:p-1 w-screen">
-          <a href="/">
-            <img
-              src="/favicon.jpg"
-              class=" md:animate-bounce w-8"
-              loading="lazy"
-            />
-          </a>
-          <h2 className="text-white-100 font-bold ml-2 hidden md:flex">The Internet Generation</h2>
-          <div className="absolute right-2">
-          <button
-            className="text-white-100  cursor-pointer leading-none px-2 py-2 mr-4"
-            type="button"
-            aria-label="button"
-            style={{
-              zIndex: "100",
-              background: "#6d6a57",
-              borderRadius: "30%",
-            }}
-          >
-            Join the revolution
-          </button>
-          <button
-            className="text-white-100  cursor-pointer leading-none px-2 py-2  outline-none focus:outline-none content-end justify-end relative"
-            type="button"
-            aria-label="button"
-            style={{
-              zIndex: "100",
-              background: "#6d6a57",
-              borderRadius: "30%",
-            }}
-            onClick={() => setNavbarOpen(!navbarOpen)}
-          >
-            {/* <svg
+    <>
+      <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in  w-screen">
+        <div class="max-w-2xl md:max-w-5xl mx-auto flex flex-wrap p-1 md:p-1  md:flex-row">
+          <div className="flex flex-row items-center md:p-3 md:p-1 w-screen">
+            <a href="/">
+              <img
+                src="/favicon.jpg"
+                class=" md:animate-bounce w-8"
+                loading="lazy"
+              />
+            </a>
+            <h2 className="text-white-100 font-bold ml-2 hidden md:flex">
+              The Internet Generation
+            </h2>
+            <div className="absolute right-2">
+              <button
+                className="text-white-100  cursor-pointer leading-none px-2 py-2 mr-4"
+                type="button"
+                aria-label="button"
+                style={{
+                  zIndex: "100",
+                  background: "#6d6a57",
+                  borderRadius: "30%",
+                }}
+                onClick={() => setIsOpen(true)}
+              >
+                Join the revolution
+              </button>
+              <button
+                className="text-white-100  cursor-pointer leading-none px-2 py-2  outline-none focus:outline-none content-end justify-end relative"
+                type="button"
+                aria-label="button"
+                style={{
+                  zIndex: "100",
+                  background: "#6d6a57",
+                  borderRadius: "30%",
+                }}
+                onClick={() => setNavbarOpen(!navbarOpen)}
+              >
+                {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0,0,255.99904,255.99904"
               width="36px"
@@ -146,55 +150,55 @@ export default function Header({
                 </g>
               </g>
             </svg> */}
-            menu
-          </button>
+                menu
+              </button>
+            </div>
           </div>
-        </div>
-        <div
-          // className={
-          //   "flex-grow items-center justify-center mr-24" +
-          //   (navbarOpen ? "flex" : "hidden")
-          // }
-          style={{
-            transition: "500ms ease",
-            display: navbarOpen ? "none" : "block",
-          }}
-        >
-          {/* <div class="bg-indigo-900 pl-3 md:pl-1 md:bg-transparent right-0 md:right-auto rounded-bl-md md:rounded-none top-0 font-4 pt-12 pb-4 px-2 md:pt-1  flex  flex-col md:flex-row text-left md:items-center md:text-base text-1xl md:justify-center justify-items-start absolute md:top-5 h-screen md:h-auto"> */}
-          <div class="bg-indigo-900 pl-3  right-0  rounded-bl-md  top-0 font-4 pt-12 pb-4 px-2   flex  flex-col  text-left text-1xl  justify-items-start absolute h-screen ">
-            <ul
-              onClick={() => {
-                videoRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-                setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
-              }}
-              class="mr-4 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
-            >
-              In The Press
-            </ul>
-            <div className="relative">
-              <button
-                type="button"
-                className="
+          <div
+            // className={
+            //   "flex-grow items-center justify-center mr-24" +
+            //   (navbarOpen ? "flex" : "hidden")
+            // }
+            style={{
+              transition: "500ms ease",
+              display: navbarOpen ? "block" : "none",
+            }}
+          >
+            {/* <div class="bg-indigo-900 pl-3 md:pl-1 md:bg-transparent right-0 md:right-auto rounded-bl-md md:rounded-none top-0 font-4 pt-12 pb-4 px-2 md:pt-1  flex  flex-col md:flex-row text-left md:items-center md:text-base text-1xl md:justify-center justify-items-start absolute md:top-5 h-screen md:h-auto"> */}
+            <div class="bg-indigo-900 pl-3  right-0  rounded-bl-md  top-0 font-4 pt-12 pb-4 px-2   flex  flex-col  text-left text-1xl  justify-items-start absolute h-screen ">
+              <ul
+                onClick={() => {
+                  videoRef.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                  setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
+                }}
+                class="mr-4 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
+              >
+                In The Press
+              </ul>
+              <div className="relative">
+                <button
+                  type="button"
+                  className="
                    group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none md:pb-8 mb-4 md:mb-12'
                   "
-                // onMouseEnter={() => (setFlyer(!flyer), setFlyerTwo(false))}
-              >
-                <span
-                  className="tr04"
-                  onClick={() => {
-                    eventRef.current.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                    setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
-                  }}
+                  // onMouseEnter={() => (setFlyer(!flyer), setFlyerTwo(false))}
                 >
-                  Experience Curated
-                </span>
-                {/* <svg
+                  <span
+                    className="tr04"
+                    onClick={() => {
+                      eventRef.current.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                      setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
+                    }}
+                  >
+                    Experience Curated
+                  </span>
+                  {/* <svg
                   className={
                     flyer === true
                       ? "transform rotate-180 ml-3 h-5 w-5 transition ease-out duration-200"
@@ -211,8 +215,8 @@ export default function Header({
                     clipRule="evenodd"
                   />
                 </svg> */}
-              </button>
-              {/* <div
+                </button>
+                {/* <div
                 onMouseLeave={() => setFlyer(false)}
                 className={
                   flyer
@@ -264,45 +268,45 @@ export default function Header({
                   </div>
                 </div>
               </div> */}
+              </div>
+              <ul
+                onClick={() => {
+                  campaignRef.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                  setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
+                }}
+                class="mr-4 md:ml-4 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
+              >
+                Worked Brands
+              </ul>
+              <ul
+                onClick={() => {
+                  storyRef.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                  setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
+                }}
+                class="mr-4 md:ml-4 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
+              >
+                Brand Story
+              </ul>
+              <ul
+                onClick={() => {
+                  contactRef.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                  setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
+                }}
+                class="mr-4 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
+              >
+                Contact
+              </ul>
             </div>
-            <ul
-              onClick={() => {
-                campaignRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-                setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
-              }}
-              class="mr-4 md:ml-4 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
-            >
-              Worked Brands
-            </ul>
-            <ul
-              onClick={() => {
-                storyRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-                setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
-              }}
-              class="mr-4 md:ml-4 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
-            >
-              Brand Story
-            </ul>
-            <ul
-              onClick={() => {
-                contactRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-                setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
-              }}
-              class="mr-4 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
-            >
-              Contact
-            </ul>
-          </div>
-          {/* <div class="absolute right-4 flex flex-row top-4">
+            {/* <div class="absolute right-4 flex flex-row top-4">
             <a
               href="https://www.instagram.com/theintgen/?hl=en"
               rel="noopener noreferrer"
@@ -382,8 +386,14 @@ export default function Header({
               </svg>
             </a>
           </div> */}
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+      <ModalView
+        content={""}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
+    </>
   );
 }

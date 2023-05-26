@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 
-export default function BrandCarousal({ images }) {
+export default function BrandCarousal({ images, rtl, nav, setNav }) {
   var settings = {
     className: "center",
     centerMode: true,
@@ -9,42 +9,42 @@ export default function BrandCarousal({ images }) {
     // centerPadding: "60px",
     dots: false,
     speed: 500,
-    slidesToShow: 16,
-    slidesToScroll: 8,
+    slidesToShow: 8,
+    slidesToScroll: 3,
     swipeToSlide: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1500,
     pauseOnHover: true,
     lazyLoad: true,
-    rtl: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       slidesToScroll: 3,
-    //       infinite: true,
-    //       dots: false,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    // ],
+    rtl: rtl,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+        },
+      },
+    ],
   };
   return (
-    <Slider {...settings}>
+    <Slider {...settings} asNavFor={nav} ref={(slider1) => setNav(slider1)}>
       {images.map((item, idx) => (
         <div
           // class="carousel-img"
@@ -57,7 +57,7 @@ export default function BrandCarousal({ images }) {
             style={{
               //   width: "100%",
               height: "100px",
-              width: "150px",
+              width: "100px",
               backgroundSize: "100%",
               margin: "0 2%",
               aspectRatio: "2/1",

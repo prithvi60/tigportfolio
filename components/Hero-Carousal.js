@@ -49,9 +49,10 @@ export default function HeroCarousal({ images, nav, setNav }) {
             <img
               style={{
                 width: "100%",
-                height: "36vh",
+                height: "38vh",
                 backgroundSize: "cover",
                 objectFit: "cover",
+                // padding: "16px",
 
                 borderRadius: "15px",
                 background: "transparent",

@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import CarousalImage from "./CarousalImage";
 
-export default function Carousal({ images, size }) {
+export default function Carousal({ images, size,type }) {
   var settings = {
     className: "center",
     accessibility: true,
@@ -48,14 +48,13 @@ export default function Carousal({ images, size }) {
   const [width, setWidth] = React.useState(null);
   React.useEffect(() => {
     // window is accessible here.
-    setWidth(window.innerHeight);
+    setWidth(window.innerWidth);
   }, []);
-
   return (
     <>
       <Slider {...settings}>
         {images.map((item, idx) => (
-          <CarousalImage item={item} idx={idx} size={size} width={width} />
+          <CarousalImage item={item} idx={idx} size={size} width={width} type={type}/>
         ))}
       </Slider>
     </>

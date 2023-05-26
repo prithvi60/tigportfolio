@@ -85,13 +85,31 @@ import { ModalView } from "./ModalView";
 import Carousal from "./Carousal";
 
 const services = [
-  { pic: Service1, des: "TIGVID" },
-  { pic: Service2, des: "Digital Marketing" },
-  { pic: Service3, des: "Events" },
-  { pic: Service4, des: "Subtitles" },
-  { pic: Service5, des: "Content Marketing" },
-  { pic: Service6, des: "Artist Management" },
-  { pic: Service7, des: "TIG Terrance" },
+  {
+    pic: Service1,
+    des: "TIGVid",
+    content:
+      "From crafting captivating content that stops thumbs mid-scroll to executing strategies that ignite conversations and drive conversions, we are the masters of the online realm. Our expertise in social media marketing is fueled by a deep understanding of the ever-evolving digital landscape.",
+  },
+  {
+    pic: Service2,
+    des: "TIGital",
+    content:
+      "From crafting captivating content that stops thumbs mid-scroll to executing strategies that ignite conversations and drive conversions, we are the masters of the online realm. Our expertise in social media marketing is fueled by a deep understanding of the ever-evolving digital landscape.",
+  },
+  {
+    pic: Service3,
+    des: "TIGvents",
+    content:
+      "From crafting captivating content that stops thumbs mid-scroll to executing strategies that ignite conversations and drive conversions, we are the masters of the online realm. Our expertise in social media marketing is fueled by a deep understanding of the ever-evolving digital landscape.",
+  },
+
+  {
+    pic: Service7,
+    des: "TIGspaces",
+    content:
+      "From crafting captivating content that stops thumbs mid-scroll to executing strategies that ignite conversations and drive conversions, we are the masters of the online realm. Our expertise in social media marketing is fueled by a deep understanding of the ever-evolving digital landscape.",
+  },
 ];
 const brands1 = [
   { pic: Brand1 },
@@ -261,6 +279,9 @@ export default function Main({
   }, []);
   const [nav1, setNav1] = React.useState();
   const [nav2, setNav2] = React.useState();
+  // barnds slider sync
+  const [nav3, setNav3] = React.useState();
+  const [nav4, setNav4] = React.useState();
   return (
     <>
       <section
@@ -315,7 +336,7 @@ export default function Main({
               <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
               <h1
-                className="z-10 text-3xl text-center duration-1000 bg-white cursor-default text-edge-outline animate-title font-inter  md:text-6xl  bg-clip-text "
+                className="z-10 text-3xl text-center duration-1000 bg-white cursor-default text-edge-outline animate-fade-in-slidefont-inter  md:text-6xl  bg-clip-text mb-24 "
                 style={{ color: textColor }}
               >
                 Building South India's Largest{" "}
@@ -331,7 +352,7 @@ export default function Main({
               </div> */}
               <div
                 className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in-slide"
-                style={{ width: "100vw", height: "30vh" }}
+                style={{ width: "100vw", height: "40vh" }}
               >
                 <HeroCarousal
                   images={[Pro1, Pro2, Pro3, Pro4, Pro5, Pro6]}
@@ -385,7 +406,7 @@ export default function Main({
                 <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
                 <h1
-                  className="z-10 text-3xl mx-auto text-center duration-1000 bg-white cursor-default text-edge-outline animate-title font-inter  md:text-6xl  bg-clip-text "
+                  className="z-10 text-3xl mx-auto text-center duration-1000 bg-white cursor-default text-edge-outline animate-fade-in-slide font-inter  md:text-6xl  bg-clip-text mb-24"
                   style={{ color: "white" }}
                 >
                   Building South India's Largest{" "}
@@ -393,7 +414,7 @@ export default function Main({
                     Creator Ecosystem
                   </span>
                 </h1>
-                <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+                {/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
                 {/* <div className="my-16 text-center animate-fade-in z-10">
                   <h2
                     className="text-md  mx-10 font-bold "
@@ -407,7 +428,7 @@ export default function Main({
                 </div> */}
                 <div
                   className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in-slide"
-                  style={{ width: "100vw", height: "30vh" }}
+                  style={{ width: "100vw", height: "40vh" }}
                 >
                   <HeroCarousal
                     images={[Event1, Event2, Event3, Event4, Event5, Event6]}
@@ -455,7 +476,7 @@ export default function Main({
             Open Modal
           </button> */}
             <div className="mx-auto  text-center  leading-relaxed fs521 relative">
-              <Carousal images={curated} />
+              <Carousal images={curated} type={"events"} />
               <div
                 style={{
                   position: "absolute",
@@ -607,7 +628,10 @@ export default function Main({
               What we do
             </h2>
             <br></br>
-            <div className="mx-auto  text-center  leading-relaxed fs521 pb-24 relative">
+            <div
+              className="mx-auto  text-center  leading-relaxed fs521 pb-24 relative"
+              style={{ width: "100vw", height: "70vh" }}
+            >
               <ModalCarousal images={services} size={"100px"} />
               {/* <div
                 style={{
@@ -684,9 +708,15 @@ export default function Main({
             </h2>
             <br></br>
             <div className="mx-auto  text-center  leading-relaxed fs521 pb-24 relative">
-              <BrandCarousal images={brands2} />
+              <BrandCarousal images={brands2} rtl={false} 
+                 nav={nav3}
+                 setNav={setNav4}
+              />
               <div className="pt-8">
-                <BrandCarousal images={brands1} />
+                <BrandCarousal images={brands1} rtl={true} 
+                   nav={nav4}
+                   setNav={setNav3}
+                />
               </div>
 
               {/* <div

@@ -18,6 +18,7 @@ export default function ModalCarousal({ images, size }) {
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
+    pauseOnFocus:true,
     lazyLoad: true,
     responsive: [
       {
@@ -58,15 +59,14 @@ export default function ModalCarousal({ images, size }) {
       <Slider {...settings}>
         {images.map((item, idx) => (
           <div
-            // class="carousel-img"
             style={{ borderRadius: "20px", width: "100%" }}
             key={idx}
             onClick={() => {
-              setcontent(item.des || "no description");
+              setcontent(item.content || "no description");
               setIsOpen(true);
             }}
           >
-            <img
+            {/* <img
               className=""
               loading="lazy"
               style={{
@@ -78,10 +78,40 @@ export default function ModalCarousal({ images, size }) {
                 aspectRatio: "16/9",
               }}
               src={item.pic.src}
-            ></img>
-            {/* <h3 class="pt-3 font-semibold text-sm text-white-200 text-center">
-              {item.des}
-            </h3> */}
+            ></img> */}
+            <div
+              style={{
+                height: "65vh",
+                paddingBottom: "16px",
+                margin: "0 8px",
+                cursor: "pointer",
+                position: "relative",
+                // background: "red",
+              }}
+            >
+              <video
+                id="video"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                autoPlay={true}
+                loop={true}
+              >
+                <source
+                  src="https://video.wixstatic.com/video/06a7ff_0b63936f02f04baf99c2803ce89823b8/1080p/mp4/file.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <h3
+                class="absolute font-bold text-lg text-white-200 text-center"
+                style={{
+                  top: "40%",
+                  display: "flex",
+                  justifyContent: "center",
+                  width: "100%",
+                }}
+              >
+                {item.des}
+              </h3>
+            </div>
           </div>
         ))}
       </Slider>

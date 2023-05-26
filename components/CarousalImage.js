@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CarousalImage({ item, idx, size, width }) {
+export default function CarousalImage({ item, idx, size, width,type }) {
   const [hover, setHover] = React.useState(false);
 
   return (
@@ -36,11 +36,12 @@ export default function CarousalImage({ item, idx, size, width }) {
         }
         style={{
           width: size ? size : "100%",
-          height: size ? size : width <= 600 ? "40vh" : "60vh",
+          height: type === "events" && width >= 600 ? "80vh" : "60vh",
           backgroundSize: "cover",
           objectFit: "cover",
           opacity: hover ? 0.3 : 1,
-          // borderRadius: "15px",
+          borderRadius:type === "events"? "8%":"0%",
+          padding: "8px",
           aspectRatio: "16/9",
         }}
         src={item.pic.src}
