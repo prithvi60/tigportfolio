@@ -333,10 +333,10 @@ export default function Main({
             }}
           >
             <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
-              <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+              <div className="hidden w-screen h-px animate-glow md:block bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
               <h1
-                className="z-10 text-3xl text-center duration-1000 bg-white cursor-default text-edge-outline animate-fade-in-slidefont-inter  md:text-6xl  bg-clip-text mb-24 "
+                className="z-10 text-3xl text-center duration-1000 bg-white cursor-default text-edge-outline animate-fade-in font-inter  md:text-6xl  bg-clip-text mb-24 "
                 style={{ color: textColor }}
               >
                 Building South India's Largest{" "}
@@ -403,10 +403,10 @@ export default function Main({
             >
               {/* put your hidden elements here */}
               <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
-                <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+                <div className="hidden w-screen h-px animate-glow md:block  bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
                 <h1
-                  className="z-10 text-3xl mx-auto text-center duration-1000 bg-white cursor-default text-edge-outline animate-fade-in-slide font-inter  md:text-6xl  bg-clip-text mb-24"
+                  className="z-10 text-3xl mx-auto text-center duration-1000 bg-white cursor-default text-edge-outline animate-fade-in font-inter  md:text-6xl  bg-clip-text mb-24"
                   style={{ color: "white" }}
                 >
                   Building South India's Largest{" "}
@@ -708,14 +708,18 @@ export default function Main({
             </h2>
             <br></br>
             <div className="mx-auto  text-center  leading-relaxed fs521 pb-24 relative">
-              <BrandCarousal images={brands2} rtl={false} 
-                 nav={nav3}
-                 setNav={setNav4}
+              <BrandCarousal
+                images={brands2}
+                rtl={false}
+                nav={nav3}
+                setNav={setNav4}
               />
               <div className="pt-8">
-                <BrandCarousal images={brands1} rtl={true} 
-                   nav={nav4}
-                   setNav={setNav3}
+                <BrandCarousal
+                  images={brands1}
+                  rtl={true}
+                  nav={nav4}
+                  setNav={setNav3}
                 />
               </div>
 

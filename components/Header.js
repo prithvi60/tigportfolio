@@ -28,26 +28,24 @@ export default function Header({
             </h2>
             <div className="absolute right-2">
               <button
-                className="text-white-100  cursor-pointer leading-none px-2 py-2 mr-4"
+                className="text-black  cursor-pointer leading-none px-4 py-2 rounded-full  mr-4 font-bold"
                 type="button"
                 aria-label="button"
                 style={{
                   zIndex: "100",
-                  background: "#6d6a57",
-                  borderRadius: "30%",
+                  background: "#ffffff",
                 }}
                 onClick={() => setIsOpen(true)}
               >
                 Join the revolution
               </button>
               <button
-                className="text-white-100  cursor-pointer leading-none px-2 py-2  outline-none focus:outline-none content-end justify-end relative"
+                className="text-black  cursor-pointer leading-none px-4 py-2 rounded-full  outline-none focus:outline-none content-end justify-end relative font-bold"
                 type="button"
                 aria-label="button"
                 style={{
                   zIndex: "100",
-                  background: "#6d6a57",
-                  borderRadius: "30%",
+                  background: "#ffffff",
                 }}
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >

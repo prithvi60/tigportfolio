@@ -9,8 +9,8 @@ export default function BrandCarousal({ images, rtl, nav, setNav }) {
     // centerPadding: "60px",
     dots: false,
     speed: 500,
-    slidesToShow: 8,
-    slidesToScroll: 3,
+    slidesToShow: 5,
+    slidesToScroll: 1,
     swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 1500,
@@ -18,27 +18,27 @@ export default function BrandCarousal({ images, rtl, nav, setNav }) {
     lazyLoad: true,
     rtl: rtl,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-        },
-      },
+      // {
+      //   breakpoint: 1024,
+      //   settings: {
+      //     slidesToShow: 3,
+      //     slidesToScroll: 3,
+      //     infinite: true,
+      //     dots: false,
+      //   },
+      // },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 1,
         },
       },
     ],
