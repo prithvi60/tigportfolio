@@ -301,8 +301,8 @@ export default function Main({
               position: "absolute",
               top: "50%",
               left: MousePosition - 15,
-              color: "red",
-              zIndex: "100",
+              // color: "red",
+              zIndex: "10",
             }}
             // className="md:invisible"
           >
