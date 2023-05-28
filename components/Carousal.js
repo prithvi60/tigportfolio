@@ -2,12 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import CarousalImage from "./CarousalImage";
 
-export default function Carousal({ images, size,type }) {
+export default function Carousal({ images, size, type }) {
   var settings = {
     className: "center",
     accessibility: true,
     // arrows:true,
-    centerMode: true,
+    centerMode: false,
     infinite: true,
     centerPadding: "60px",
     dots: false,
@@ -34,6 +34,7 @@ export default function Carousal({ images, size,type }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: true,
         },
       },
       {
@@ -41,6 +42,7 @@ export default function Carousal({ images, size,type }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: true,
         },
       },
     ],
@@ -54,7 +56,13 @@ export default function Carousal({ images, size,type }) {
     <>
       <Slider {...settings}>
         {images.map((item, idx) => (
-          <CarousalImage item={item} idx={idx} size={size} width={width} type={type}/>
+          <CarousalImage
+            item={item}
+            idx={idx}
+            size={size}
+            width={width}
+            type={type}
+          />
         ))}
       </Slider>
     </>

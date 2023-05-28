@@ -18,7 +18,7 @@ export default function ModalCarousal({ images, size }) {
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
-    pauseOnFocus:true,
+    pauseOnFocus: true,
     lazyLoad: true,
     responsive: [
       {
@@ -81,7 +81,11 @@ export default function ModalCarousal({ images, size }) {
             ></img> */}
             <div
               style={{
-                height: "65vh",
+                width: "100%",
+                maxWidth: width >= 600 ? "400px" : "300px",
+                height: width >= 600 ? "62vh" : "40vh",
+                padding: "4px 8px",
+
                 paddingBottom: "16px",
                 margin: "0 8px",
                 cursor: "pointer",

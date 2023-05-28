@@ -336,7 +336,7 @@ export default function Main({
               <div className="hidden w-screen h-px animate-glow md:block " />
 
               <h1
-                className="z-10 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl    animate-fade-in"
+                className=" z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl    animate-fade-in"
                 style={{ color: textColor }}
               >
                 Building South India's Largest{" "}
@@ -345,7 +345,7 @@ export default function Main({
                 </span> */}
               </h1>
               <h1
-                className="z-10 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl  mb-24  animate-fade-in"
+                className="mb-60 md:mb-24 z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl   animate-fade-in"
                 style={{ color: textColor }}
               >
                 <span className="font-satisfy" style={{ color: "#c85341 " }}>
@@ -410,7 +410,7 @@ export default function Main({
                 <div className="hidden w-screen h-px animate-glow md:block   " />
 
                 <h1
-                  className="z-10 text-3xl mx-auto text-center duration-2000 bg-white cursor-default text-edge-outline font-inter  md:text-6xl  bg-clip-text  animate-fade-in"
+                  className="z-9 text-3xl mx-auto text-center duration-2000 bg-white cursor-default text-edge-outline font-inter  md:text-6xl  bg-clip-text  animate-fade-in"
                   style={{ color: "white" }}
                 >
                   Building South India's Largest{" "}
@@ -419,7 +419,7 @@ export default function Main({
                   </span> */}
                 </h1>
                 <h1
-                  className="z-10 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl  mb-24  animate-fade-in"
+                  className="z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl  mb-60 md:mb-24  animate-fade-in"
                   style={{ color: textColor }}
                 >
                   <span className="font-satisfy" style={{ color: "#0c0c0c " }}>
@@ -427,7 +427,7 @@ export default function Main({
                   </span>
                 </h1>
                 {/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
-                {/* <div className="my-16 text-center z-10">
+                {/* <div className="my-16 text-center z-9">
                   <h2
                     className="text-md  mx-10 font-bold "
                     style={{
@@ -448,7 +448,7 @@ export default function Main({
                     setNav={setNav2}
                   />
                 </div>
-                {/* <div className="absolute text-center z-10">
+                {/* <div className="absolute text-center z-9">
                 <img
                   src={Img2.src}
                   alt=""
@@ -474,20 +474,14 @@ export default function Main({
                 zIndex: -1,
               }}
             /> */}
-            <h2 className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
+            <h2 className="pt-24 mb-4 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
               Elevating Artistic{" "}
               <span className="font-satisfy" style={{ color: "yellow" }}>
                 Experiences
               </span>
             </h2>
-            <br></br>
-            {/* <button
-            className="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full"
-            onClick={() => setIsOpen((o) => !o)}
-          >
-            Open Modal
-          </button> */}
-            <div className="mx-auto  text-center  leading-relaxed fs521 relative">
+
+            <div className="mx-auto  text-center  leading-relaxed fs521 relative mb-12">
               <Carousal images={curated} type={"events"} />
               <div
                 style={{
@@ -553,7 +547,7 @@ export default function Main({
               borderTopRightRadius: "15px",
             }}
           /> */}
-          <div style={{ zIndex: 1, position: "relative" }} className="mb-12">
+          <div style={{ zIndex: 1, position: "relative" }} className="pb-12">
             <h2 className="pt-24   mb-1 text-2xl font-semibold text-black tracking-tighter text-center  lg:text-7xl md:text-6xl">
               In The Press
             </h2>
@@ -565,7 +559,7 @@ export default function Main({
             constant.
           </p> */}
             {/* <div className="flex flex-column justify-items-center"> */}
-            <div className="mx-auto  text-center  leading-relaxed fs521 relative">
+            <div className="mx-auto  text-center  leading-relaxed fs521 relative mb-18">
               <Carousal images={press} />
               <div
                 style={{
@@ -950,7 +944,7 @@ export default function Main({
             /> */}
             <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
               <div class="pb-56">
-                <h1 class="mb-5 pt-2 text-2xl md:text-6xl font-bold text-black">
+                <h1 class=" pt-24 mb-5 pt-2 text-2xl md:text-6xl font-bold text-black">
                   Contact Us
                 </h1>
                 <div className="pt-12 text-white-200">
