@@ -709,7 +709,7 @@ export default function Main({
                 zIndex: -1,
               }}
             /> */}
-            <h2 className="pt-24   mb-1 text-2xl text-black font-semibold  tracking-tighter text-center  lg:text-7xl md:text-6xl">
+            <h2 className="pt-24   mb-12 text-2xl text-black font-semibold  tracking-tighter text-center  lg:text-7xl md:text-6xl">
               Brands we have worked with
             </h2>
             <br></br>
@@ -852,13 +852,13 @@ export default function Main({
               }}
             /> */}
             <h2
-              className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl"
+              className="pt-16 md:pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl"
               style={{ color: "#c85241" }}
             >
               Brand Story
             </h2>
             <br></br>
-            <p className="mx-auto text-sm text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
+            <p className=" text-xs md:text-md mx-auto text-sm text-center text-white-100  leading-relaxed lg:w-2/3">
               We started off with a humble YouTube channel which ushered in a
               new generation of disruptive thinking: Paracetamol Paniyaram. We
               ventured further in our dreams of quality content production by
@@ -944,22 +944,29 @@ export default function Main({
             /> */}
             <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
               <div class="pb-56">
-                <h1 class=" pt-24 mb-5 pt-2 text-2xl md:text-6xl font-bold text-black">
+                <h1 class="pt-16 md:pt-24  text-2xl md:text-6xl font-bold text-black mb-8 md:mb-0">
                   Contact Us
                 </h1>
-                <div className="pt-12 text-white-200">
-                  The Internet Generation
-                  <br />
-                  27/11 Sounderajan Street
-                  <br />
-                  Tnagar, Chennai - 17
-                  <br />
-                  contact@theintgen.com
-                  <br />
-                  Tel: 9940237330
-                </div>
-                <div className="pt-20 mx-auto ">
-                  <ContactForm />
+                <div className="flex flex-col md:flex-row justify-center items-center">
+                  <div className="flex flex-row md:flex-col justify-center pb-2 md:mr-4">
+                    <h2 class="md:text-4xl text-lg font-bold text-white-200  mr-4 ">
+                      Lets Connect!
+                    </h2>
+                    <div className="md:pt-12 text-white-200 text-xs md:text-md">
+                      The Internet Generation
+                      <br />
+                      27/11 Sounderajan Street
+                      <br />
+                      Tnagar, Chennai - 17
+                      <br />
+                      contact@theintgen.com
+                      <br />
+                      Tel: 9940237330
+                    </div>
+                  </div>
+                  <div className="md:pt-8 mx-auto ">
+                    <ContactForm />
+                  </div>
                 </div>
               </div>
             </div>

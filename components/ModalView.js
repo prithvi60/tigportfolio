@@ -78,22 +78,24 @@ export function ModalView({ isOpen, setIsOpen, content }) {
                     </div>
                   </div>
                   {content === "" ? (
-                    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center  text-black ">
+                    <div class="max-w-2xl md:max-w-6xl mx-auto px-4 text-center  text-black ">
                       <div class="">
-                        <h1 class="mb-5 text-6xl font-bold ">
+                        <h1 class="mb-5 text-4xl  md:text-6xl font-bold ">
                           Subscribe to our newsletter
                         </h1>
-                        <h1 class="mb-9 text-2xl font-semibold ">
+                        <h1 class="mb-9  text-xl md:text-2xl font-semibold ">
                           Enter your email address and get our newsletters
                           straight away.
                         </h1>
+                        {/* <div class="mx-14"> */}
                         <input
                           type="email"
                           placeholder="jack@example.com"
                           name="email"
                           autocomplete="email"
-                          class="border border-gray-600 w-1/4 pr-2 pl-2 py-3 mt-2 rounded-md text-gray-800 font-semibold hover:border-gray-700 bg-black"
+                          class="relative border border-gray-600  ml-2 pl-3 py-3  rounded-md text-white-100 font-semibold hover:border-gray-700 bg-black w-48"
                         />{" "}
+                        {/* </div> */}
                         <a
                           class="inline-flex items-center px-14 py-3 mt-2 ml-2 font-medium text-black transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-white"
                           href="/"
