@@ -18,7 +18,7 @@ export default function CarousalImage({ item, idx, size, width,type }) {
         loading="lazy"
         onMouseEnter={() => {
           setHover(true);
-          console.log("hover", item.des);
+          // console.log("hover", item.des);
         }}
         onMouseLeave={() =>
           setTimeout(() => {
@@ -27,7 +27,7 @@ export default function CarousalImage({ item, idx, size, width,type }) {
         }
         onTouchStart={() => {
           setHover(true);
-          console.log("hover", item.des);
+          // console.log("hover", item.des);
         }}
         onTouchEnd={() =>
           setTimeout(() => {

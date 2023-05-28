@@ -242,28 +242,28 @@ export default function Main({
   React.useEffect(() => {
     const timer1 = setTimeout(() => {
       setBg("#41436A");
-    }, 500);
+    }, 250);
     const timer2 = setTimeout(() => {
       setBg("#984063");
-    }, 1000);
-    const timer3 = setTimeout(() => {
-      setBg("#F64668");
-    }, 1500);
-    const timer4 = setTimeout(() => {
-      setBg("#41436A");
-    }, 2000);
+    }, 500);
+    // const timer3 = setTimeout(() => {
+    //   setBg("#F64668");
+    // }, 1500);
+    // const timer4 = setTimeout(() => {
+    //   setBg("#41436A");
+    // }, 2000);
 
     const timer5 = setTimeout(() => {
       if (cursor.current !== null) {
         cursor.current.onmousemove = function (event) {
-          console.log(cursor);
+          // console.log(cursor);
           setMousePosition(event.pageX);
         };
         setBg("#c85241");
         setCur(true);
         settextColor("white");
       }
-    }, 2500);
+    }, 1000);
 
     const timer6 = setTimeout(() => {
       setIsOpen(true);
@@ -271,8 +271,8 @@ export default function Main({
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
-      clearTimeout(timer3);
-      clearTimeout(timer4);
+      // clearTimeout(timer3);
+      // clearTimeout(timer4);
       clearTimeout(timer5);
       clearTimeout(timer6);
     };
@@ -332,11 +332,11 @@ export default function Main({
               setMousePosition(event.touches[0].clientX);
             }}
           >
-            <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
-              <div className="hidden w-screen h-px animate-glow md:block bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+            <div className="flex flex-col items-center   justify-center w-screen h-screen overflow-hidden ">
+              <div className="hidden w-screen h-px animate-glow md:block " />
 
               <h1
-                className="z-10 text-3xl text-center duration-1000 bg-white cursor-default text-edge-outline animate-fade-in font-inter  md:text-6xl  bg-clip-text mb-24 "
+                className="z-10 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl  mb-24  animate-fade-in"
                 style={{ color: textColor }}
               >
                 Building South India's Largest{" "}
@@ -344,12 +344,8 @@ export default function Main({
                   Creator Ecosystem
                 </span>
               </h1>
-              <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-              {/* <div className="my-16 text-center animate-fade-in z-10">
-                <h2 className="text-md text-white-100 mx-10 font-bold">
-                  Creating the largest creator-based community in TamilNadu.
-                </h2>
-              </div> */}
+              <div className="hidden w-screen h-px animate-glow md:block " />
+
               <div
                 className="mx-auto  text-center  leading-relaxed fs521 absolute bottom-0  animate-fade-in-slide"
                 style={{ width: "100vw", height: "40vh" }}
@@ -403,10 +399,10 @@ export default function Main({
             >
               {/* put your hidden elements here */}
               <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
-                <div className="hidden w-screen h-px animate-glow md:block  bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+                <div className="hidden w-screen h-px animate-glow md:block   " />
 
                 <h1
-                  className="z-10 text-3xl mx-auto text-center duration-1000 bg-white cursor-default text-edge-outline animate-fade-in font-inter  md:text-6xl  bg-clip-text mb-24"
+                  className="z-10 text-3xl mx-auto text-center duration-2000 bg-white cursor-default text-edge-outline font-inter  md:text-6xl  bg-clip-text mb-24  animate-fade-in"
                   style={{ color: "white" }}
                 >
                   Building South India's Largest{" "}
@@ -415,7 +411,7 @@ export default function Main({
                   </span>
                 </h1>
                 {/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
-                {/* <div className="my-16 text-center animate-fade-in z-10">
+                {/* <div className="my-16 text-center z-10">
                   <h2
                     className="text-md  mx-10 font-bold "
                     style={{
@@ -436,7 +432,7 @@ export default function Main({
                     setNav={setNav2}
                   />
                 </div>
-                {/* <div className="absolute text-center animate-fade-in z-10">
+                {/* <div className="absolute text-center z-10">
                 <img
                   src={Img2.src}
                   alt=""
