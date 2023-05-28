@@ -153,17 +153,14 @@ export default function Header({
             </div>
           </div>
           <div
-            // className={
-            //   "flex-grow items-center justify-center mr-24" +
-            //   (navbarOpen ? "flex" : "hidden")
-            // }
+            className={" duration-2000 ease-in transition-all  "}
             style={{
-              transition: "500ms ease",
+              // transition: "500ms ease",
               display: navbarOpen ? "block" : "none",
             }}
           >
             {/* <div class="bg-indigo-900 pl-3 md:pl-1 md:bg-transparent right-0 md:right-auto rounded-bl-md md:rounded-none top-0 font-4 pt-12 pb-4 px-2 md:pt-1  flex  flex-col md:flex-row text-left md:items-center md:text-base text-1xl md:justify-center justify-items-start absolute md:top-5 h-screen md:h-auto"> */}
-            <div class="bg-indigo-900 pl-3  right-0  rounded-bl-md  top-0 font-4 pt-12 pb-4 px-2   flex  flex-col  text-left text-1xl  justify-items-start absolute h-screen ">
+            <div class="bg-indigo-900 pl-3  right-0  rounded-bl-2xl rounded-tl-2xl  top-0 font-4 pt-12 pb-4 px-2   flex  flex-col  text-left text-1xl  justify-items-start absolute h-screen ">
               <ul
                 onClick={() => {
                   videoRef.current.scrollIntoView({
@@ -172,7 +169,7 @@ export default function Header({
                   });
                   setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
                 }}
-                class="mr-4 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
+                class="mr-4 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12 md:mt-12"
               >
                 In The Press
               </ul>
@@ -275,7 +272,7 @@ export default function Header({
                   });
                   setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
                 }}
-                class="mr-4 md:ml-4 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
+                class="mr-4  ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
               >
                 Worked Brands
               </ul>
@@ -287,7 +284,7 @@ export default function Header({
                   });
                   setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
                 }}
-                class="mr-4 md:ml-4 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
+                class="mr-4 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04 mb-4 md:mb-12"
               >
                 Brand Story
               </ul>
@@ -387,11 +384,7 @@ export default function Header({
           </div>
         </div>
       </header>
-      <ModalView
-        content={""}
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-      />
+      <ModalView content={""} isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
 }

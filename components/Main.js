@@ -336,10 +336,18 @@ export default function Main({
               <div className="hidden w-screen h-px animate-glow md:block " />
 
               <h1
-                className="z-10 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl  mb-24  animate-fade-in"
+                className="z-10 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl    animate-fade-in"
                 style={{ color: textColor }}
               >
                 Building South India's Largest{" "}
+                {/* <span className="font-satisfy" style={{ color: "#c85341 " }}>
+                  Creator Ecosystem
+                </span> */}
+              </h1>
+              <h1
+                className="z-10 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl  mb-24  animate-fade-in"
+                style={{ color: textColor }}
+              >
                 <span className="font-satisfy" style={{ color: "#c85341 " }}>
                   Creator Ecosystem
                 </span>
@@ -402,11 +410,19 @@ export default function Main({
                 <div className="hidden w-screen h-px animate-glow md:block   " />
 
                 <h1
-                  className="z-10 text-3xl mx-auto text-center duration-2000 bg-white cursor-default text-edge-outline font-inter  md:text-6xl  bg-clip-text mb-24  animate-fade-in"
+                  className="z-10 text-3xl mx-auto text-center duration-2000 bg-white cursor-default text-edge-outline font-inter  md:text-6xl  bg-clip-text  animate-fade-in"
                   style={{ color: "white" }}
                 >
                   Building South India's Largest{" "}
-                  <span className="font-satisfy" style={{ color: "#0c0c0c" }}>
+                  {/* <span className="font-satisfy" style={{ color: "#0c0c0c" }}>
+                    Creator Ecosystem
+                  </span> */}
+                </h1>
+                <h1
+                  className="z-10 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl  mb-24  animate-fade-in"
+                  style={{ color: textColor }}
+                >
+                  <span className="font-satisfy" style={{ color: "#0c0c0c " }}>
                     Creator Ecosystem
                   </span>
                 </h1>

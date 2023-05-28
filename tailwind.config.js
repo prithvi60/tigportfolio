@@ -27,7 +27,7 @@ module.exports = {
         },
       },
       animation: {
-        "fade-in": "fade-in .4s ease-in-out forwards",
+        "fade-in": "fade-in .2s ease-in-out forwards",
         "fade-in-nav": "fade-in 2s ease-in-out forwards",
         "fade-in-slide": "fade-in 5s ease-in-out forwards",
         title: "title 3s ease-out forwards",
