@@ -163,6 +163,30 @@ a {
   padding-left: 14px;
   padding-right: 14px;
 }
+.cut-corner{
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 15%, 85% 0);
+}
+.cut-right {
+  clip-path: polygon(0% 0%, 91% 0, 100% 50%, 92% 100%, 0% 100%);
+}
+.cut-msg {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 93%,
+    80% 93%,
+    78% 100%,
+    69% 93%,
+    0 93%
+  );
+}
+.cut-circle {
+  clip-path: circle(68% at 60% 35%);
+}
+
+.cut-parallel {
+  clip-path: polygon(0% 0, 100% 0%, 97% 100%, 0% 100%);
+}
 /*
 .carousel__slider {
   margin-top: 30px;

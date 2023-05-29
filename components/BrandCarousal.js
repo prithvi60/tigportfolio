@@ -13,8 +13,8 @@ export default function BrandCarousal({ images, rtl, nav, setNav }) {
     slidesToScroll: 1,
     swipeToSlide: true,
     autoplay: true,
-    autoplaySpeed: 1500,
-    pauseOnHover: true,
+    autoplaySpeed: 1000,
+    pauseOnHover: false,
     lazyLoad: true,
     rtl: rtl,
     responsive: [
@@ -44,7 +44,9 @@ export default function BrandCarousal({ images, rtl, nav, setNav }) {
     ],
   };
   return (
-    <Slider {...settings} asNavFor={nav} ref={(slider1) => setNav(slider1)}>
+    <Slider {...settings} 
+    // asNavFor={nav} ref={(slider1) => setNav(slider1)}
+    >
       {images.map((item, idx) => (
         <div
           // class="carousel-img"
