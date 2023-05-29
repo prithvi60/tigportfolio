@@ -534,7 +534,12 @@ export default function Main({
             </div>
           </div>
         </section>
-        <section id="video" ref={videoRef} style={{ background: "#c85241" }} className="cut-msg">
+        <section
+          id="video"
+          ref={videoRef}
+          style={{ background: "#41436A" }}
+          className="cut-msg"
+        >
           {/* <div
             id="cool-wrapper"
             style={{
@@ -547,9 +552,11 @@ export default function Main({
               borderTopRightRadius: "15px",
             }}
           /> */}
-          <div style={{ zIndex: 1, position: "relative" }} className="pb-12 ">
-            <h2 className="pt-24   mb-1 text-2xl font-semibold text-black tracking-tighter text-center  lg:text-7xl md:text-6xl">
-              In The Press
+          <div style={{ zIndex: 1, position: "relative" }} className="pb-14 ">
+            <h2 className="pt-24   mb-1 text-2xl font-semibold text-black tracking-tighter text-center  lg:text-7xl md:text-6xl ">
+              {/* <span className="px-2" style={{ background: "#ffff54" }}> */}
+                In The Press
+              {/* </span> */}
             </h2>
             <br></br>
             {/* <p className="mx-auto text-xl text-center text-white-100 font-normal leading-relaxed fs521 lg:w-2/3">
@@ -693,7 +700,7 @@ export default function Main({
         <section
           id="campaign"
           ref={campaignRef}
-          style={{ background: "#c85241" }}
+          style={{ background: "#984063" }}
           className="cut-corner"
         >
           <div style={{ zIndex: 1, position: "relative" }}>
@@ -927,7 +934,7 @@ export default function Main({
         <section
           id="contact"
           ref={contactRef}
-          style={{ background: "#c85241" }}
+          style={{ background: "#eab446" }}
           className="cut-circle"
         >
           <div style={{ zIndex: 1, position: "relative" }}>

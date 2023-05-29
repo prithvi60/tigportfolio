@@ -186,6 +186,8 @@ a {
 
 .cut-parallel {
   clip-path: polygon(0% 0, 100% 0%, 97% 100%, 0% 100%);
+color:#eab446;
+
 }
 /*
 .carousel__slider {

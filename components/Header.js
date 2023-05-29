@@ -161,8 +161,8 @@ export default function Header({
           >
             {/* <div class="bg-indigo-900 pl-3 md:pl-1 md:bg-transparent right-0 md:right-auto rounded-bl-md md:rounded-none top-0 font-4 pt-12 pb-4 px-2 md:pt-1  flex  flex-col md:flex-row text-left md:items-center md:text-base text-1xl md:justify-center justify-items-start absolute md:top-5 h-screen md:h-auto"> */}
             <div
-              class="bg-indigo-900 pl-3  right-0  rounded-bl-2xl rounded-tl-2xl  top-0 font-4 pt-12 pb-4 px-2   flex  flex-col  text-left text-1xl  justify-items-start absolute h-screen shadow-lg"
-              style={{ zIndex: "100" }}
+              class=" pl-3  right-0  rounded-bl-2xl rounded-tl-2xl  top-0 font-4 pt-12 pb-4 px-2   flex  flex-col  text-left text-1xl  justify-items-start absolute h-screen shadow-lg"
+              style={{ zIndex: "100", background: "#414367" }}
             >
               <ul
                 onClick={() => {
