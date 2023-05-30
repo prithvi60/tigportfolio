@@ -339,16 +339,17 @@ export default function Main({
                 className=" z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-bold font-inter  md:text-6xl    animate-fade-in"
                 style={{ color: textColor }}
               >
-                Building South India's Largest{" "}
-                {/* <span className="font-satisfy" style={{ color: "#d84839 " }}>
-                  Creator Ecosystem
-                </span> */}
+                Building South India's
               </h1>
               <h1
-                className="mb-60 md:mb-24 z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl   animate-fade-in"
+                className="mb-60 md:mb-24 z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl   animate-fade-in font-bold ml-8"
                 style={{ color: textColor }}
               >
-                <span className="font-satisfy" style={{ color: "#d84839 " }}>
+                Largest &nbsp;
+                <span
+                  className="font-satisfy font-medium"
+                  style={{ color: "#d84839 " }}
+                >
                   Creator Ecosystem
                 </span>
               </h1>
@@ -413,16 +414,17 @@ export default function Main({
                   className="z-9 text-3xl mx-auto text-center duration-2000 font-bold bg-white cursor-default text-edge-outline font-inter  md:text-6xl  bg-clip-text  animate-fade-in"
                   style={{ color: "white" }}
                 >
-                  Building South India's Largest{" "}
-                  {/* <span className="font-satisfy" style={{ color: "#0c0c0c" }}>
-                    Creator Ecosystem
-                  </span> */}
+                  Building South India's
                 </h1>
                 <h1
-                  className="z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl  mb-60 md:mb-24  animate-fade-in"
+                  className="z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl  mb-60 md:mb-24  animate-fade-in font-bold ml-8"
                   style={{ color: textColor }}
                 >
-                  <span className="font-satisfy" style={{ color: "#0c0c0c " }}>
+                  Largest &nbsp;
+                  <span
+                    className="font-satisfy font-medium"
+                    style={{ color: "#0c0c0c " }}
+                  >
                     Creator Ecosystem
                   </span>
                 </h1>
@@ -702,7 +704,10 @@ export default function Main({
               }}
             /> */}
             <h2 className="pt-24   mb-12 text-2xl text-black font-semibold  tracking-tighter text-center  lg:text-7xl md:text-6xl">
-              <span className="font-satisfy" style={{color:"#605dc8"}}>Brands</span> we have worked with
+              <span className="font-satisfy" style={{ color: "#605dc8" }}>
+                Brands
+              </span>{" "}
+              we have worked with
             </h2>
             <br></br>
             <div
