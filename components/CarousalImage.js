@@ -37,7 +37,7 @@ export default function CarousalImage({ item, idx, size, width, type }) {
         style={{
           width: "100%",
           maxWidth: width >= 600 ? "400px" : "300px",
-          height: type === "events" && width >= 600 ? "62vh" : "40vh",
+          height: type === "events" && width >= 600 ? "68vh" : "40vh",
           backgroundSize: "cover",
           objectFit: "cover",
           opacity: hover ? 0.3 : 1,

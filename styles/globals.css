@@ -35,7 +35,9 @@ body {
   margin: 0;
   font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #0c0c0c;
+  /* background-color: #0c0c0c; */
+  background-color: #1f2122;
+
   overflow-x: hidden;
   color: #ffffff;
 }
@@ -114,8 +116,11 @@ a {
 }
 
 .clearNav {
-  backdrop-filter: saturate(180%) blur(5px) !important;
-  background-color: rgba(0, 0, 0, 0.7) !important;
+  /* backdrop-filter: saturate(180%) blur(5px) !important; */
+  /* background-color: rgba(0, 0, 0, 0.7) !important; */
+  /* backdrop-filter: saturate(180%) blur(5px) !important; */
+pointer-events:none;
+  background-color: transparent !important;
 }
 
 .fsac4 {
@@ -131,7 +136,7 @@ a {
 }
 
 .ktq4 {
-  background-color: #ba5948;
+  background-color: #d84839;
   color: #000000;
   padding: 2rem;
   border-radius: 15px;
@@ -163,7 +168,7 @@ a {
   padding-left: 14px;
   padding-right: 14px;
 }
-.cut-corner{
+.cut-corner {
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 15%, 85% 0);
 }
 .cut-right {
@@ -186,8 +191,7 @@ a {
 
 .cut-parallel {
   clip-path: polygon(0% 0, 100% 0%, 97% 100%, 0% 100%);
-color:#eab446;
-
+  color: #eab446;
 }
 /*
 .carousel__slider {

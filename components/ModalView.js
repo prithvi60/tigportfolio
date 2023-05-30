@@ -33,7 +33,7 @@ export function ModalView({ isOpen, setIsOpen, content }) {
           {isOpen && (
             <div
               id={"modals"}
-              className="modal fixed w-full h-full top-0 left-0 flex items-center justify-center"
+              className={`modal fixed w-full h-full top-0 left-0 flex items-center justify-center`}
               style={{ zIndex: "999999" }}
             >
               <div
@@ -41,14 +41,19 @@ export function ModalView({ isOpen, setIsOpen, content }) {
                 onClick={toggleModal}
               ></div>
 
-              <div className="modal-container bg-white-200 max-h-max w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+              <div
+                className={`modal-container bg-white-200 max-h-max w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto  ${
+                  content === "" ? "" : "cut-msg py-4 border-x-2 border-black"
+                } `}
+                style={{ background: content === "" ? "" : "#d84839" }}
+              >
                 <div
                   className="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm "
                   onClick={toggleModal}
                   style={{ zIndex: "999999" }}
                 >
                   <svg
-                    className="fill-current text-white"
+                    className="fill-current text-white-100"
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="18"
@@ -63,11 +68,11 @@ export function ModalView({ isOpen, setIsOpen, content }) {
                   <div className="flex justify-between items-center pb-3">
                     {/* <p className="text-2xl font-bold">Simple Modal!</p> */}
                     <div
-                      className="modal-close cursor-pointer z-50"
+                      className="modal-close cursor-pointer z-50 bg-black p-1 rounded"
                       onClick={toggleModal}
                     >
                       <svg
-                        className="fill-current text-black"
+                        className="fill-current text-white-100"
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
                         height="18"
@@ -105,7 +110,7 @@ export function ModalView({ isOpen, setIsOpen, content }) {
                       </div>
                     </div>
                   ) : (
-                    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center  text-black ">
+                    <div class="max-w-6xl mx-auto px-4 pb-6 sm:px-6 text-center  text-white-200 ">
                       {content}
                     </div>
                   )}

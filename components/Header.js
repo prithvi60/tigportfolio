@@ -16,7 +16,12 @@ export default function Header({
       <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in-nav  w-screen">
         <div class="max-w-2xl md:max-w-5xl mx-auto flex flex-wrap p-1 md:p-1  md:flex-row">
           <div className="flex flex-row items-center md:p-3 md:p-1 w-screen">
-            <a href="/">
+            <a
+              href="/"
+              style={{
+                pointerEvents: "all",
+              }}
+            >
               <img
                 src="/favicon.jpg"
                 class=" md:animate-bounce w-8"
@@ -34,6 +39,7 @@ export default function Header({
                 style={{
                   zIndex: "100",
                   background: "#ffffff",
+                  pointerEvents: "all",
                 }}
                 onClick={() => setIsOpen(true)}
               >
@@ -46,6 +52,7 @@ export default function Header({
                 style={{
                   zIndex: "1000",
                   background: "#ffffff",
+                  pointerEvents: "all",
                 }}
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >

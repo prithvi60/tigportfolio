@@ -259,7 +259,7 @@ export default function Main({
           // console.log(cursor);
           setMousePosition(event.pageX);
         };
-        setBg("#c85241");
+        setBg("#d84839");
         setCur(true);
         settextColor("white");
       }
@@ -336,11 +336,11 @@ export default function Main({
               <div className="hidden w-screen h-px animate-glow md:block " />
 
               <h1
-                className=" z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl    animate-fade-in"
+                className=" z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-bold font-inter  md:text-6xl    animate-fade-in"
                 style={{ color: textColor }}
               >
                 Building South India's Largest{" "}
-                {/* <span className="font-satisfy" style={{ color: "#c85341 " }}>
+                {/* <span className="font-satisfy" style={{ color: "#d84839 " }}>
                   Creator Ecosystem
                 </span> */}
               </h1>
@@ -348,7 +348,7 @@ export default function Main({
                 className="mb-60 md:mb-24 z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl   animate-fade-in"
                 style={{ color: textColor }}
               >
-                <span className="font-satisfy" style={{ color: "#c85341 " }}>
+                <span className="font-satisfy" style={{ color: "#d84839 " }}>
                   Creator Ecosystem
                 </span>
               </h1>
@@ -410,7 +410,7 @@ export default function Main({
                 <div className="hidden w-screen h-px animate-glow md:block   " />
 
                 <h1
-                  className="z-9 text-3xl mx-auto text-center duration-2000 bg-white cursor-default text-edge-outline font-inter  md:text-6xl  bg-clip-text  animate-fade-in"
+                  className="z-9 text-3xl mx-auto text-center duration-2000 font-bold bg-white cursor-default text-edge-outline font-inter  md:text-6xl  bg-clip-text  animate-fade-in"
                   style={{ color: "white" }}
                 >
                   Building South India's Largest{" "}
@@ -494,17 +494,13 @@ export default function Main({
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  id="left-arrow"
+                  viewBox="0 0 512 512"
+                  xmlSpace="preserve"
                 >
                   <path
-                    fill="#6563ff"
-                    d="m11.293 7.293-4 4a1.004 1.004 0 0 0 0 1.414l4 4a1 1 0 0 0 1.414-1.414L10.414 13H16a1 1 0 0 0 0-2h-5.586l2.293-2.293a1 1 0 0 0-1.414-1.414Z"
-                  ></path>
-                  <path
-                    fill="#b2b1ff"
-                    d="M2 12A10 10 0 1 0 12 2 10.011 10.011 0 0 0 2 12Zm10.707-4.707a1 1 0 0 1 0 1.414L10.414 11H16a1 1 0 0 1 0 2h-5.586l2.293 2.293a1 1 0 0 1-1.414 1.414l-4-4a1.004 1.004 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0Z"
-                  ></path>
+                    fill="white"
+                    d="m10 256 200 150v-80h156V186H210v-80zM394 186h40v140h-40zM462 186h40v140h-40z"
+                  />
                 </svg>
               </div>
               <div
@@ -518,17 +514,13 @@ export default function Main({
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  id="right-arrow"
+                  viewBox="0 0 512 512"
+                  xmlSpace="preserve"
                 >
                   <path
-                    fill="#6563ff"
-                    d="m12.707 16.707 4-4a1.004 1.004 0 0 0 0-1.414l-4-4a1 1 0 0 0-1.414 1.414L13.586 11H8a1 1 0 0 0 0 2h5.586l-2.293 2.293a1 1 0 0 0 1.414 1.414Z"
-                  ></path>
-                  <path
-                    fill="#b2b1ff"
-                    d="M22 12a10 10 0 1 0-10 10 10.011 10.011 0 0 0 10-10Zm-10.707 4.707a1 1 0 0 1 0-1.414L13.586 13H8a1 1 0 0 1 0-2h5.586l-2.293-2.293a1 1 0 0 1 1.414-1.414l4 4a1.004 1.004 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414 0Z"
-                  ></path>
+                    fill="white"
+                    d="M502 256 302 106v80H146v140h156v80zM78 186h40v140H78zM10 186h40v140H10z"
+                  />
                 </svg>
               </div>
             </div>
@@ -537,7 +529,7 @@ export default function Main({
         <section
           id="video"
           ref={videoRef}
-          style={{ background: "#41436A" }}
+          style={{ background: "#d84839" }}
           className="cut-msg"
         >
           {/* <div
@@ -555,7 +547,7 @@ export default function Main({
           <div style={{ zIndex: 1, position: "relative" }} className="pb-14 ">
             <h2 className="pt-24   mb-1 text-2xl font-semibold text-black tracking-tighter text-center  lg:text-7xl md:text-6xl ">
               {/* <span className="px-2" style={{ background: "#ffff54" }}> */}
-                In The Press
+              In The Press
               {/* </span> */}
             </h2>
             <br></br>
@@ -579,17 +571,13 @@ export default function Main({
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  id="left-arrow"
+                  viewBox="0 0 512 512"
+                  xmlSpace="preserve"
                 >
                   <path
-                    fill="#6563ff"
-                    d="m11.293 7.293-4 4a1.004 1.004 0 0 0 0 1.414l4 4a1 1 0 0 0 1.414-1.414L10.414 13H16a1 1 0 0 0 0-2h-5.586l2.293-2.293a1 1 0 0 0-1.414-1.414Z"
-                  ></path>
-                  <path
-                    fill="#b2b1ff"
-                    d="M2 12A10 10 0 1 0 12 2 10.011 10.011 0 0 0 2 12Zm10.707-4.707a1 1 0 0 1 0 1.414L10.414 11H16a1 1 0 0 1 0 2h-5.586l2.293 2.293a1 1 0 0 1-1.414 1.414l-4-4a1.004 1.004 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0Z"
-                  ></path>
+                    fill="black"
+                    d="m10 256 200 150v-80h156V186H210v-80zM394 186h40v140h-40zM462 186h40v140h-40z"
+                  />
                 </svg>
               </div>
               <div
@@ -603,17 +591,13 @@ export default function Main({
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  id="right-arrow"
+                  viewBox="0 0 512 512"
+                  xmlSpace="preserve"
                 >
                   <path
-                    fill="#6563ff"
-                    d="m12.707 16.707 4-4a1.004 1.004 0 0 0 0-1.414l-4-4a1 1 0 0 0-1.414 1.414L13.586 11H8a1 1 0 0 0 0 2h5.586l-2.293 2.293a1 1 0 0 0 1.414 1.414Z"
-                  ></path>
-                  <path
-                    fill="#b2b1ff"
-                    d="M22 12a10 10 0 1 0-10 10 10.011 10.011 0 0 0 10-10Zm-10.707 4.707a1 1 0 0 1 0-1.414L13.586 13H8a1 1 0 0 1 0-2h5.586l-2.293-2.293a1 1 0 0 1 1.414-1.414l4 4a1.004 1.004 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414 0Z"
-                  ></path>
+                    fill="black"
+                    d="M502 256 302 106v80H146v140h156v80zM78 186h40v140H78zM10 186h40v140H10z"
+                  />
                 </svg>
               </div>
             </div>
@@ -636,7 +620,7 @@ export default function Main({
             /> */}
             <h2
               className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl"
-              style={{ color: "#c85241" }}
+              style={{ color: "#d84839" }}
             >
               What we do
             </h2>
@@ -700,8 +684,8 @@ export default function Main({
         <section
           id="campaign"
           ref={campaignRef}
-          style={{ background: "#984063" }}
-          className="cut-corner"
+          style={{ background: "#ffffff" }}
+          className="cut-corner pb-24 "
         >
           <div style={{ zIndex: 1, position: "relative" }}>
             {/* <div
@@ -721,7 +705,10 @@ export default function Main({
               Brands we have worked with
             </h2>
             <br></br>
-            <div className="mx-auto  text-center  leading-relaxed fs521 pb-24 relative">
+            <div
+              className="mx-auto  text-center  leading-relaxed fs521 relative py-4"
+              style={{ background: "#1f2122" }}
+            >
               <BrandCarousal
                 images={brands2}
                 rtl={false}
@@ -861,7 +848,7 @@ export default function Main({
             /> */}
             <h2
               className="pt-16 md:pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl"
-              style={{ color: "#c85241" }}
+              style={{ color: "#d84839" }}
             >
               Brand Story
             </h2>
@@ -934,7 +921,7 @@ export default function Main({
         <section
           id="contact"
           ref={contactRef}
-          style={{ background: "#eab446" }}
+          style={{ background: "#605dc8" }}
           className="cut-circle"
         >
           <div style={{ zIndex: 1, position: "relative" }}>
@@ -958,10 +945,10 @@ export default function Main({
                 </h1>
                 <div className="flex flex-col md:flex-row justify-center items-center">
                   <div className="flex flex-row md:flex-col justify-center pb-2 md:mr-4">
-                    <h2 class="md:text-4xl text-lg font-bold text-white-200  mr-4 ">
+                    <h2 class="md:text-5xl text-lg font-bold text-white-200 mr-4 ">
                       Lets Connect!
                     </h2>
-                    <div className="md:pt-12 text-white-200 text-xs md:text-md">
+                    <div className="md:pt-12 text-white-200 font-bold text-xs md:text-md">
                       The Internet Generation
                       <br />
                       27/11 Sounderajan Street
