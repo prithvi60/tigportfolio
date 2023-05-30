@@ -702,7 +702,7 @@ export default function Main({
               }}
             /> */}
             <h2 className="pt-24   mb-12 text-2xl text-black font-semibold  tracking-tighter text-center  lg:text-7xl md:text-6xl">
-              Brands we have worked with
+              <span className="font-satisfy" style={{color:"#605dc8"}}>Brands</span> we have worked with
             </h2>
             <br></br>
             <div
