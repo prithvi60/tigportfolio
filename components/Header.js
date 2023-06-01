@@ -7,6 +7,7 @@ export default function Header({
   campaignRef,
   contactRef,
   storyRef,
+  serviceRef,
 }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
@@ -171,30 +172,18 @@ export default function Header({
           >
             {/* <div class="bg-indigo-900 pl-3 md:pl-1 md:bg-transparent right-0 md:right-auto rounded-bl-md md:rounded-none top-0 font-4 pt-12 pb-4 px-2 md:pt-1  flex  flex-col md:flex-row text-left md:items-center md:text-base text-1xl md:justify-center justify-items-start absolute md:top-5 h-screen md:h-auto"> */}
             <div
-              class=" pl-3  right-0  rounded-bl-2xl rounded-tl-2xl  top-0 font-4 pt-12 pb-4 px-2   flex  flex-col  text-left text-1xl  justify-items-start absolute h-screen shadow-lg text-black"
+              class="pl-3  right-0  rounded-bl-2xl rounded-tl-2xl  top-0 font-4 pt-16 pb-4 px-2   flex  flex-col  text-left text-1xl  justify-items-start absolute h-screen shadow-lg text-black"
               style={{
                 zIndex: "100",
                 background: "#a8de45",
                 pointerEvents: "all",
               }}
             >
-              <ul
-                onClick={() => {
-                  videoRef.current.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center",
-                  });
-                  setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
-                }}
-                class="mr-4 pr-2 cursor-pointer text-black  hover:text-red-800 font-semibold tr04 mb-4 md:mb-12 md:mt-12"
-              >
-                In The Press
-              </ul>
               <div className="relative">
                 <button
                   type="button"
                   className="
-                   group rounded-md text-black  hover:text-red-800 font-semibold inline-flex items-center text-base  focus:outline-none md:pb-8 mb-4 md:mb-12'
+                   group rounded-md text-black  hover:text-purple-800  font-semibold inline-flex items-center text-base  focus:outline-none md:pb-8 mb-4 '
                   "
                   // onMouseEnter={() => (setFlyer(!flyer), setFlyerTwo(false))}
                 >
@@ -283,13 +272,38 @@ export default function Header({
               </div>
               <ul
                 onClick={() => {
+                  videoRef.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                  setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
+                }}
+                class="mr-4 pr-2 cursor-pointer text-black  hover:text-purple-800 font-semibold tr04"
+              >
+                In The Press
+              </ul>
+
+              <ul
+                onClick={() => {
+                  serviceRef.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                  setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
+                }}
+                class="mr-4 pr-2 cursor-pointer text-black  hover:text-purple-800  font-semibold tr04 mb-4 md:mb-12 md:mt-12"
+              >
+                What we do
+              </ul>
+              <ul
+                onClick={() => {
                   campaignRef.current.scrollIntoView({
                     behavior: "smooth",
                     block: "center",
                   });
                   setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
                 }}
-                class="mr-4  ml-0 cursor-pointer text-black  hover:text-red-800 font-semibold tr04 mb-4 md:mb-12"
+                class="mr-4  ml-0 cursor-pointer text-black  hover:text-purple-800  font-semibold tr04 mb-4 md:mb-12"
               >
                 Worked Brands
               </ul>
@@ -301,7 +315,7 @@ export default function Header({
                   });
                   setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
                 }}
-                class="mr-4 ml-0 cursor-pointer text-black  hover:text-red-800 font-semibold tr04 mb-4 md:mb-12"
+                class="mr-4 ml-0 cursor-pointer text-black  hover:text-purple-800  font-semibold tr04 mb-4 md:mb-12"
               >
                 Brand Story
               </ul>
@@ -313,7 +327,7 @@ export default function Header({
                   });
                   setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
                 }}
-                class="mr-4 cursor-pointer text-black  hover:text-red-800 font-semibold tr04 mb-4 md:mb-12"
+                class="mr-4 cursor-pointer text-black  hover:text-purple-800  font-semibold tr04 mb-4 md:mb-12"
               >
                 Contact
               </ul>

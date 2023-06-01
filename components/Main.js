@@ -256,6 +256,7 @@ export default function Main({
   campaignRef,
   contactRef,
   storyRef,
+  serviceRef,
 }) {
   const [MousePosition, setMousePosition] = React.useState(200);
   const [colorbg, setBg] = React.useState("transparent");
@@ -412,6 +413,7 @@ export default function Main({
 
             style={{
               background: "#1f2122",
+              backgroundImage:"url(/images/mainbg.svg)",
               borderBottomLeftRadius: "15px",
               width: MousePosition,
               position: "absolute",
@@ -490,7 +492,13 @@ export default function Main({
             </div>
           </div>
         </section>
-        <section id="event" ref={eventRef}>
+        <section
+          id="event"
+          ref={eventRef}
+          style={{
+            backgroundImage: "url(/images/bg.svg)",
+          }}
+        >
           <div style={{ zIndex: 1, position: "relative" }}>
             {/* <div
               id="cool-wrapper"
@@ -637,7 +645,13 @@ export default function Main({
             </div>
           </div>
         </section>
-        <section id="campaign" ref={campaignRef}>
+        <section
+          id="campaign"
+          ref={serviceRef}
+          style={{
+            backgroundImage: "url(/images/bg.svg)",
+          }}
+        >
           <div style={{ zIndex: 1, position: "relative" }}>
             {/* <div
               id="cool-wrapper"
@@ -747,7 +761,11 @@ export default function Main({
             <br></br>
             <div
               className="mx-auto  text-center  leading-relaxed fs521 relative py-4"
-              style={{ background: "#1f2122" }}
+              style={{
+                background: "#1f2122",
+
+                backgroundImage: "url(/images/bg.svg)",
+              }}
             >
               <BrandCarousal
                 images={brands2}
@@ -871,7 +889,13 @@ export default function Main({
           </div> */}
           </div>
         </section>
-        <section id="story" ref={storyRef}>
+        <section
+          id="story"
+          ref={storyRef}
+          style={{
+            backgroundImage: "url(/images/bg.svg)",
+          }}
+        >
           <div style={{ zIndex: 1, position: "relative" }}>
             {/* <div
               id="cool-wrapper"
@@ -963,7 +987,6 @@ export default function Main({
           ref={contactRef}
           // style={{ background: "#605dc8" }}
           style={{ background: "#ff5f1f" }}
-
           className="cut-circle"
         >
           <div style={{ zIndex: 1, position: "relative" }}>
@@ -1000,6 +1023,26 @@ export default function Main({
                       contact@theintgen.com
                       <br />
                       Tel: 9940237330
+                    </div>
+                    <div class="md:text-xl text-md font-bold text-white-200 mt-4 flex flex-row justify-center gap-2 items-center">
+                      <a
+                        href="https://www.instagram.com/theintgen/?hl=en"
+                        target="blank"
+                      >
+                        <img src="/images/insta.svg" alt="insta logo" />
+                      </a>
+                      <a
+                        href="https://www.youtube.com/channel/UCVk9sWJLFs3xTEBRtLTVXkQ/search"
+                        target="blank"
+                      >
+                        <img src="/images/youtube.svg" alt="youtube logo" />
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/company/theintgen?originalSubdomain=in"
+                        target="blank"
+                      >
+                        <img src="/images/linkedin.svg" alt="linkedin logo" />
+                      </a>
                     </div>
                   </div>
                   <div className="md:pt-8 mx-auto ">

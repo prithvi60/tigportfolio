@@ -11,8 +11,9 @@ export default function Home() {
   const campaignRef = useRef(null);
   const storyRef = useRef(null);
   const contactRef = useRef(null);
+  const serviceRef = useRef(null);
 
-  return ( 
+  return (
     <div className="text-black font-inter">
       <NextSeo
         title="TIG"
@@ -32,6 +33,7 @@ export default function Home() {
         contactRef={contactRef}
         campaignRef={campaignRef}
         storyRef={storyRef}
+        serviceRef={serviceRef}
       />
       <Main
         videoRef={videoRef}
@@ -39,6 +41,7 @@ export default function Home() {
         contactRef={contactRef}
         campaignRef={campaignRef}
         storyRef={storyRef}
+        serviceRef={serviceRef}
       />
       {/* <Footer />   */}
     </div>

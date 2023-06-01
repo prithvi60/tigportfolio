@@ -94,9 +94,9 @@ export default function ContactForm() {
       </div>
       <div class="w-full ">
         <button
-          class="shadow hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white-100 font-bold py-2 px-4 rounded"
+          class="shadow hover:bg-red-600 bg-purple-500 focus:shadow-outline focus:outline-none text-white-100 font-bold py-2 px-4 rounded"
           type="button"
-          style={{ background: "#41436A" }}
+          // style={{ background: "#41436A" }}
         >
           Submit
         </button>

@@ -15,7 +15,7 @@ export default function Carousal({ images, size, type }) {
     slidesToShow: 3,
     slidesToScroll: 3,
     swipeToSlide: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
     lazyLoad: true,
