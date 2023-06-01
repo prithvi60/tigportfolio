@@ -12,7 +12,7 @@ export default function Carousal({ images, size, type }) {
     // centerPadding: "60px",
     dots: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 3,
     swipeToSlide: true,
     autoplay: true,
