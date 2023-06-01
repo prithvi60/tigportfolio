@@ -43,9 +43,15 @@ export default function BrandCarousal({ images, rtl, nav, setNav }) {
       },
     ],
   };
+  const [width, setWidth] = React.useState(null);
+  React.useEffect(() => {
+    // window is accessible here.
+    setWidth(window.innerWidth);
+  }, []);
   return (
-    <Slider {...settings} 
-    // asNavFor={nav} ref={(slider1) => setNav(slider1)}
+    <Slider
+      {...settings}
+      // asNavFor={nav} ref={(slider1) => setNav(slider1)}
     >
       {images.map((item, idx) => (
         <div
@@ -58,8 +64,8 @@ export default function BrandCarousal({ images, rtl, nav, setNav }) {
             loading="lazy"
             style={{
               //   width: "100%",
-              height: "100px",
-              width: "100px",
+              height: width >= 600 ? "100px" : "50px",
+              width: width >= 600 ? "100px" : "50px",
               backgroundSize: "100%",
               margin: "0 2%",
               aspectRatio: "2/1",

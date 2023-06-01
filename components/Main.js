@@ -152,75 +152,102 @@ const press = [
   {
     pic: Press1,
     des: "Our Webseries highlighted on the first page of Chennai times",
+    title: "Title",
   },
   {
     pic: Press2,
     des: "Our video production content featured in The Deccan Chronicle",
+    title: "Title",
   },
   {
     pic: Press3,
     des: "Our Vote Podu campaign in association with Dunzo as featured in The Hindu",
+    title: "Title",
   },
   {
     pic: Press4,
     des: "TIGITAL's work for the Enforcement Bureau featured in the Chennai Express",
+    title: "Title",
   },
-  { pic: Press5, des: "TIGOM, our Open Mic event featured in Metroplus" },
+  {
+    pic: Press5,
+    des: "TIGOM, our Open Mic event featured in Metroplus",
+    title: "Title",
+  },
   {
     pic: Press6,
     des: "Singalaalaah an event by TIG at Elliot's Beach featured on The Hindu",
+    title: "Title",
   },
-  { pic: Press7, des: "TIGOM, our Open Mic event featured in Chennai Times" },
-  { pic: Press8, des: "" },
+  {
+    pic: Press7,
+    des: "TIGOM, our Open Mic event featured in Chennai Times",
+    title: "Title",
+  },
+  { pic: Press8, des: "", title: "Title" },
 ];
 const curated = [
   {
     pic: Curated1,
     des: "TIG partnered with LiveAlive in marketing Pradeep Kumar‘s concert at Music Academy ",
+    title: "Title",
   },
   {
     pic: Curated2,
     des: "Chennai day‘22 was hosted at the Besant Nagar Beach as a part of Government of TamilNadu's Chennai Day Celebrations. TIG provided artists for the event and programmed the entire two days on stage. ",
+    title: "Title",
   },
   {
     pic: Curated3,
     des: "NIBCID & TNGOV jointly organized the 'World's Largest Pledge' against drugs at Kalaivanar Arangam, Chennai.  TIG was associated in this events for videography, photography and digital presence.",
+
+    title: "Title",
   },
   {
     pic: Curated4,
     des: "TIG hosted and provided artists for the Loka fest that took place in Auroville in 2021. TIG was a partner for both the versions of the hugely succesful fest in 21 and 19",
+    title: "Title",
   },
   {
     pic: Curated5,
+
     des: "We took over the Mainstage at the outer courtyard of Phoenix Marketcity over their Madras Week celebrations and organised an entire event for them. ",
+    title: "Title",
   },
   {
     pic: Curated6,
     des: "We strongly believe in the fact that art needs an audience’. With that being our guiding force, we have hosted 31 open mics across Chennai to let artists take their art to the masses.We hosted TIGOM PRO ACTS as a part of the holiday season at The Outer Courtyard, The Phoenix Market City, Velacherry.",
+    title: "Title",
   },
   {
     pic: Curated7,
     des: "TIG is a space where we empower artists to showcase their talents and skills. Started humbly in our OG MottaMaadi, we have hosted 31 editions of TIGOM and two special pro editions to support independent artists in their artistic journey.",
+    title: "Title",
   },
   {
     pic: Curated8,
     des: "We host 2 kinds of cyphers- for dance and for rap & beatbox at our OG Mottamaadi. Cyphers are dance offs and rap battles. A great opportunity for freestyle artists to network and present their art to their audience.",
+    title: "Title",
   },
   {
     pic: Curated9,
     des: "The jam session is an opportunity for people to get in touch with their musical friends and make new music together. Every Friday night at 5:30, we'll be gathering at the OG MottaMaadi, where anyone can come and play music with other musicians.",
+    title: "Title",
   },
   {
     pic: Curated10,
     des: "Wednesdays at Leather Bar is an amazing Karaoke Night powered by TIG.",
+    title: "Title",
   },
   {
     pic: Curated11,
     des: "We were associated with SDAT & NIBCID for the setting up of a live stall for Drive against Drugs. Conducted Contests, Awareness Campaigns, Video Coverage and Promotions at the Women's Tennis Open, SDAT, Nungambakkam",
+    title: "Title",
   },
   {
     pic: Curated12,
     des: "An initiative by the Government of Tamil Nadu to celebrate the women and launch of emergency helpline for women - 182. Team TIG was associated with TNGOV for photography, videography,artist and event management",
+    title: "Title",
   },
 ];
 export default function Main({
@@ -323,6 +350,7 @@ export default function Main({
               bottom: "0",
               right: "0",
               height: "100vh",
+              background: colorbg,
             }}
             ref={cursor}
             onTouchStart={(event) => {
@@ -336,19 +364,19 @@ export default function Main({
               <div className="hidden w-screen h-px animate-glow md:block " />
 
               <h1
-                className=" z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-bold font-inter  md:text-6xl    animate-fade-in"
+                className=" z-9 text-4xl w-screen text-center duration-2000 bg-white cursor-default  font-bold font-inter  md:text-6xl    animate-fade-in"
                 style={{ color: textColor }}
               >
                 Building South India's
               </h1>
               <h1
-                className="mb-60 md:mb-24 z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl   animate-fade-in font-bold ml-8"
+                className="mb-60 md:mb-24 z-9 text-4xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl   animate-fade-in font-bold ml-8"
                 style={{ color: textColor }}
               >
                 Largest &nbsp;
                 <span
-                  className="font-satisfy font-medium"
-                  style={{ color: "#d84839 " }}
+                  className="font-satisfy font-medium text-5xl md:text-6xl "
+                  style={{ color: "#0c0c0c " }}
                 >
                   Creator Ecosystem
                 </span>
@@ -383,7 +411,7 @@ export default function Main({
             // ref={cursor}
 
             style={{
-              background: colorbg,
+              background: "#1f2122",
               borderBottomLeftRadius: "15px",
               width: MousePosition,
               position: "absolute",
@@ -411,19 +439,20 @@ export default function Main({
                 <div className="hidden w-screen h-px animate-glow md:block   " />
 
                 <h1
-                  className="z-9 text-3xl mx-auto text-center duration-2000 font-bold bg-white cursor-default text-edge-outline font-inter  md:text-6xl  bg-clip-text  animate-fade-in"
+                  className="z-9 text-4xl mx-auto text-center duration-2000 font-bold bg-white cursor-default text-edge-outline font-inter  md:text-6xl  bg-clip-text  animate-fade-in"
                   style={{ color: "white" }}
                 >
                   Building South India's
                 </h1>
                 <h1
-                  className="z-9 text-3xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl  mb-60 md:mb-24  animate-fade-in font-bold ml-8"
+                  className="z-9 text-4xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl  mb-60 md:mb-24  animate-fade-in font-bold ml-8"
                   style={{ color: textColor }}
                 >
                   Largest &nbsp;
                   <span
-                    className="font-satisfy font-medium"
-                    style={{ color: "#0c0c0c " }}
+                    className="font-satisfy font-medium text-5xl md:text-6xl"
+                    // style={{ color: "#0c0c0c " }}
+                    style={{ color: "#d84839 " }}
                   >
                     Creator Ecosystem
                   </span>
@@ -478,14 +507,17 @@ export default function Main({
             /> */}
             <h2 className="pt-24 mb-4 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl">
               Elevating Artistic{" "}
-              <span className="font-satisfy" style={{ color: "yellow" }}>
+              <span
+                className="font-satisfy text-5xl md:text-8xl"
+                style={{ color: "yellow" }}
+              >
                 Experiences
               </span>
             </h2>
 
             <div className="mx-auto  text-center  leading-relaxed fs521 relative mb-12">
               <Carousal images={curated} type={"events"} />
-              <div
+              {/* <div
                 style={{
                   position: "absolute",
                   left: "0",
@@ -524,7 +556,7 @@ export default function Main({
                     d="M502 256 302 106v80H146v140h156v80zM78 186h40v140H78zM10 186h40v140H10z"
                   />
                 </svg>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -562,7 +594,7 @@ export default function Main({
             {/* <div className="flex flex-column justify-items-center"> */}
             <div className="mx-auto  text-center  leading-relaxed fs521 relative mb-18">
               <Carousal images={press} />
-              <div
+              {/* <div
                 style={{
                   position: "absolute",
                   left: "0",
@@ -601,7 +633,7 @@ export default function Main({
                     d="M502 256 302 106v80H146v140h156v80zM78 186h40v140H78zM10 186h40v140H10z"
                   />
                 </svg>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -621,14 +653,14 @@ export default function Main({
               }}
             /> */}
             <h2
-              className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl"
+              className="pt-24   mb-1 text-2xl font-semibold text-white-100 tracking-tighter text-center  lg:text-7xl md:text-6xl pb-8"
               style={{ color: "#d84839" }}
             >
               What we do
             </h2>
             <br></br>
             <div
-              className="mx-auto  text-center  leading-relaxed fs521 pb-24 relative"
+              className="mx-auto  text-center  leading-relaxed fs521 pb-28 relative"
               style={{ width: "100vw", height: "70vh" }}
             >
               <ModalCarousal images={services} size={"100px"} />
@@ -704,7 +736,10 @@ export default function Main({
               }}
             /> */}
             <h2 className="pt-24   mb-12 text-2xl text-black font-semibold  tracking-tighter text-center  lg:text-7xl md:text-6xl">
-              <span className="font-satisfy" style={{ color: "#605dc8" }}>
+              <span
+                className="font-satisfy text-5xl md:text-8xl"
+                style={{ color: "#605dc8" }}
+              >
                 Brands
               </span>{" "}
               we have worked with
@@ -926,7 +961,9 @@ export default function Main({
         <section
           id="contact"
           ref={contactRef}
-          style={{ background: "#605dc8" }}
+          // style={{ background: "#605dc8" }}
+          style={{ background: "#ff5f1f" }}
+
           className="cut-circle"
         >
           <div style={{ zIndex: 1, position: "relative" }}>

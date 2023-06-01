@@ -15,43 +15,46 @@ export default function Header({
     <>
       <header class="fixed top-0 w-full clearNav z-50 bg-white  animate-fade-in-nav  w-screen">
         <div class="max-w-2xl md:max-w-5xl mx-auto flex flex-wrap p-1 md:p-1  md:flex-row">
-          <div className="flex flex-row items-center md:p-3 md:p-1 w-screen">
-            <a
-              href="/"
-              style={{
-                pointerEvents: "all",
-              }}
-            >
-              <img
-                src="/favicon.jpg"
-                class=" md:animate-bounce w-8"
-                loading="lazy"
-              />
-            </a>
-            <h2 className="text-white-100 font-bold ml-2 hidden md:flex">
-              The Internet Generation
-            </h2>
-            <div className="absolute right-2">
+          <div className="flex flex-row   w-screen justify-start">
+            <div className="flex flex-row absolute left-2 md:left-8 top-4">
+              <a
+                href="/"
+                style={{
+                  pointerEvents: "all",
+                }}
+              >
+                <img
+                  src="/favicon.jpg"
+                  class=" md:animate-bounce w-8"
+                  loading="lazy"
+                />
+              </a>
+
+              <h2 className="text-white-100 font-bold ml-2 hidden md:flex">
+                The Internet Generation
+              </h2>
+            </div>
+            <div className="absolute  right-2 md:right-8 top-4">
               <button
-                className="text-black  cursor-pointer leading-none px-4 py-2 rounded-full  mr-4 font-bold"
+                className="text-white-100  cursor-pointer leading-none px-4 py-2 rounded-full  mr-4 font-bold text-sm md:text-md"
                 type="button"
                 aria-label="button"
                 style={{
                   zIndex: "100",
-                  background: "#ffffff",
+                  background: "#d2876a",
                   pointerEvents: "all",
                 }}
                 onClick={() => setIsOpen(true)}
               >
-                Join the revolution
+                Join The Revolution
               </button>
               <button
-                className="text-black  cursor-pointer leading-none px-4 py-2 rounded-full  outline-none focus:outline-none content-end justify-end relative font-bold"
+                className="text-white-100  cursor-pointer leading-none px-4 py-2 rounded-full  outline-none focus:outline-none content-end justify-end relative font-bold text-sm md:text-md"
                 type="button"
                 aria-label="button"
                 style={{
                   zIndex: "1000",
-                  background: "#ffffff",
+                  background: "#d2876a",
                   pointerEvents: "all",
                 }}
                 onClick={() => setNavbarOpen(!navbarOpen)}
@@ -155,7 +158,7 @@ export default function Header({
                 </g>
               </g>
             </svg> */}
-                menu
+                Menu
               </button>
             </div>
           </div>
@@ -179,7 +182,7 @@ export default function Header({
                 onClick={() => {
                   videoRef.current.scrollIntoView({
                     behavior: "smooth",
-                    block: "start",
+                    block: "center",
                   });
                   setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
                 }}
@@ -200,7 +203,7 @@ export default function Header({
                     onClick={() => {
                       eventRef.current.scrollIntoView({
                         behavior: "smooth",
-                        block: "start",
+                        block: "center",
                       });
                       setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
                     }}
@@ -282,7 +285,7 @@ export default function Header({
                 onClick={() => {
                   campaignRef.current.scrollIntoView({
                     behavior: "smooth",
-                    block: "start",
+                    block: "center",
                   });
                   setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
                 }}
@@ -294,7 +297,7 @@ export default function Header({
                 onClick={() => {
                   storyRef.current.scrollIntoView({
                     behavior: "smooth",
-                    block: "start",
+                    block: "center",
                   });
                   setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
                 }}
@@ -306,7 +309,7 @@ export default function Header({
                 onClick={() => {
                   contactRef.current.scrollIntoView({
                     behavior: "smooth",
-                    block: "start",
+                    block: "center",
                   });
                   setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
                 }}

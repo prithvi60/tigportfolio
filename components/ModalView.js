@@ -64,11 +64,11 @@ export function ModalView({ isOpen, setIsOpen, content }) {
                   <span className="text-sm">(Esc)</span>
                 </div>
 
-                <div className="modal-content py-4 text-left px-6 max-h-max">
+                <div className="modal-content py-4 text-left px-6 max-h-max relative">
                   <div className="flex justify-between items-center pb-3">
                     {/* <p className="text-2xl font-bold">Simple Modal!</p> */}
                     <div
-                      className="modal-close cursor-pointer z-50 bg-black p-1 rounded"
+                      className="modal-close cursor-pointer z-50 bg-black p-1 rounded absolute right-8"
                       onClick={toggleModal}
                     >
                       <svg
@@ -110,7 +110,7 @@ export function ModalView({ isOpen, setIsOpen, content }) {
                       </div>
                     </div>
                   ) : (
-                    <div class="max-w-6xl mx-auto px-4 pb-6 sm:px-6 text-center  text-white-200 ">
+                    <div class="max-w-6xl mx-auto px-4 pb-6 sm:px-6 text-left  text-white-200 ">
                       {content}
                     </div>
                   )}

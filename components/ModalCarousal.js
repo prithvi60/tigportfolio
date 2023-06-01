@@ -49,11 +49,10 @@ export default function ModalCarousal({ images, size }) {
   const [width, setWidth] = React.useState(null);
   React.useEffect(() => {
     // window is accessible here.
-    setWidth(window.innerHeight);
+    setWidth(window.innerWidth);
   }, []);
   const [content, setcontent] = React.useState("");
   const [isOpen, setIsOpen] = React.useState(false);
-
   return (
     <>
       <Slider {...settings}>
@@ -83,11 +82,10 @@ export default function ModalCarousal({ images, size }) {
               style={{
                 width: "100%",
                 maxWidth: width >= 600 ? "400px" : "300px",
-                height: width >= 600 ? "62vh" : "40vh",
+                height: width >= 600 ? "80vh" : "54vh",
                 padding: "4px 8px",
-
-                paddingBottom: "16px",
-                margin: "0 8px",
+                paddingBottom: width >= 600 ?"120px":"16px",
+                margin: "0 2px",
                 cursor: "pointer",
                 position: "relative",
                 // background: "red",
@@ -95,7 +93,13 @@ export default function ModalCarousal({ images, size }) {
             >
               <video
                 id="video"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                borderRadius:"10%"
+
+                }}
                 autoPlay={true}
                 loop={true}
               >
