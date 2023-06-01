@@ -365,18 +365,18 @@ export default function Main({
               <div className="hidden w-screen h-px animate-glow md:block " />
 
               <h1
-                className=" z-9 text-4xl w-screen text-center duration-2000 bg-white cursor-default  font-bold font-inter  md:text-6xl    animate-fade-in"
+                className=" z-9 text-2xl w-screen text-center duration-2000 bg-white cursor-default  font-bold font-inter  md:text-6xl    animate-fade-in"
                 style={{ color: textColor }}
               >
                 Building South India's
               </h1>
               <h1
-                className="mb-60 md:mb-24 z-9 text-4xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl   animate-fade-in font-bold ml-8"
+                className="mb-60 md:mb-24 z-9 text-2xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl   animate-fade-in font-bold md:ml-8"
                 style={{ color: textColor }}
               >
                 Largest &nbsp;
                 <span
-                  className="font-satisfy font-medium text-5xl md:text-6xl "
+                  className="font-satisfy font-medium text-4xl md:text-6xl"
                   style={{ color: "#0c0c0c " }}
                 >
                   Creator Ecosystem
@@ -413,7 +413,7 @@ export default function Main({
 
             style={{
               background: "#1f2122",
-              backgroundImage:"url(/images/mainbg.svg)",
+              backgroundImage: "url(/images/mainbg.svg)",
               borderBottomLeftRadius: "15px",
               width: MousePosition,
               position: "absolute",
@@ -441,18 +441,18 @@ export default function Main({
                 <div className="hidden w-screen h-px animate-glow md:block   " />
 
                 <h1
-                  className="z-9 text-4xl mx-auto text-center duration-2000 font-bold bg-white cursor-default text-edge-outline font-inter  md:text-6xl  bg-clip-text  animate-fade-in"
+                  className="z-9 text-2xl mx-auto text-center duration-2000 font-bold bg-white cursor-default text-edge-outline font-inter  md:text-6xl  bg-clip-text  animate-fade-in"
                   style={{ color: "white" }}
                 >
                   Building South India's
                 </h1>
                 <h1
-                  className="z-9 text-4xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl  mb-60 md:mb-24  animate-fade-in font-bold ml-8"
+                  className="z-9 text-2xl w-screen text-center duration-2000 bg-white cursor-default  font-inter  md:text-6xl  mb-60 md:mb-24  animate-fade-in font-bold md:ml-8"
                   style={{ color: textColor }}
                 >
                   Largest &nbsp;
                   <span
-                    className="font-satisfy font-medium text-5xl md:text-6xl"
+                    className="font-satisfy font-medium text-4xl md:text-6xl"
                     // style={{ color: "#0c0c0c " }}
                     style={{ color: "#d84839 " }}
                   >
@@ -1009,42 +1009,45 @@ export default function Main({
                   Contact Us
                 </h1>
                 <div className="flex flex-col md:flex-row justify-center items-center">
-                  <div className="flex flex-row md:flex-col justify-center pb-2 md:mr-4">
-                    <h2 class="md:text-5xl text-lg font-bold text-white-200 mr-4 ">
+                  <div className="flex flex-row md:flex-col justify-center pb-2 md:mr-4  ">
+                    <h2 class="md:text-5xl text-2xl font-bold text-white-200 mr-4 ">
                       Lets Connect!
                     </h2>
-                    <div className="md:pt-12 text-white-200 font-bold text-xs md:text-md">
-                      The Internet Generation
-                      <br />
-                      27/11 Sounderajan Street
-                      <br />
-                      Tnagar, Chennai - 17
-                      <br />
-                      contact@theintgen.com
-                      <br />
-                      Tel: 9940237330
-                    </div>
-                    <div class="md:text-xl text-md font-bold text-white-200 mt-4 flex flex-row justify-center gap-2 items-center">
-                      <a
-                        href="https://www.instagram.com/theintgen/?hl=en"
-                        target="blank"
-                      >
-                        <img src="/images/insta.svg" alt="insta logo" />
-                      </a>
-                      <a
-                        href="https://www.youtube.com/channel/UCVk9sWJLFs3xTEBRtLTVXkQ/search"
-                        target="blank"
-                      >
-                        <img src="/images/youtube.svg" alt="youtube logo" />
-                      </a>
-                      <a
-                        href="https://www.linkedin.com/company/theintgen?originalSubdomain=in"
-                        target="blank"
-                      >
-                        <img src="/images/linkedin.svg" alt="linkedin logo" />
-                      </a>
+                    <div className="flex flex-col pb-2">
+                      <div className="md:pt-12 text-white-200 font-bold text-xs md:text-md">
+                        The Internet Generation
+                        <br />
+                        27/11 Sounderajan Street
+                        <br />
+                        Tnagar, Chennai - 17
+                        <br />
+                        contact@theintgen.com
+                        <br />
+                        Tel: 9940237330
+                      </div>
+                      <div class="md:text-xl text-md font-bold text-white-200 mt-4 flex flex-row justify-center gap-2 items-center">
+                        <a
+                          href="https://www.instagram.com/theintgen/?hl=en"
+                          target="blank"
+                        >
+                          <img src="/images/insta.svg" alt="insta logo" />
+                        </a>
+                        <a
+                          href="https://www.youtube.com/channel/UCVk9sWJLFs3xTEBRtLTVXkQ/search"
+                          target="blank"
+                        >
+                          <img src="/images/youtube.svg" alt="youtube logo" />
+                        </a>
+                        <a
+                          href="https://www.linkedin.com/company/theintgen?originalSubdomain=in"
+                          target="blank"
+                        >
+                          <img src="/images/linkedin.svg" alt="linkedin logo" />
+                        </a>
+                      </div>
                     </div>
                   </div>
+
                   <div className="md:pt-8 mx-auto ">
                     <ContactForm />
                   </div>
