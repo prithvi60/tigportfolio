@@ -13,7 +13,7 @@ export default function Carousal({ images, size, type }) {
     dots: false,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 3,
+    slidesToScroll: 2,
     swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 2000,

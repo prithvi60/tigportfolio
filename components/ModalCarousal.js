@@ -81,11 +81,10 @@ export default function ModalCarousal({ images, size }) {
             <div
               style={{
                 width: "100%",
-                maxWidth: width >= 600 ? "400px" : "300px",
+                maxWidth: width >= 600 ? "360px" : "300px",
                 height: width >= 600 ? "80vh" : "54vh",
                 padding: "4px 8px",
                 paddingBottom: width >= 600 ?"120px":"16px",
-                margin: "0 2px",
                 cursor: "pointer",
                 position: "relative",
                 // background: "red",

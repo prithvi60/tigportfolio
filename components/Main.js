@@ -496,7 +496,7 @@ export default function Main({
           id="event"
           ref={eventRef}
           style={{
-            backgroundImage: "url(/images/bg.svg)",
+            // backgroundImage: "url(/images/bg.svg)",
           }}
         >
           <div style={{ zIndex: 1, position: "relative" }}>
@@ -649,7 +649,7 @@ export default function Main({
           id="campaign"
           ref={serviceRef}
           style={{
-            backgroundImage: "url(/images/bg.svg)",
+            // backgroundImage: "url(/images/bg.svg)",
           }}
         >
           <div style={{ zIndex: 1, position: "relative" }}>
@@ -732,7 +732,7 @@ export default function Main({
         <section
           id="campaign"
           ref={campaignRef}
-          style={{ background: "#ffffff" }}
+          style={{ background: "#d84839" }}
           className="cut-corner pb-24 "
         >
           <div style={{ zIndex: 1, position: "relative" }}>
@@ -752,7 +752,7 @@ export default function Main({
             <h2 className="pt-24   mb-12 text-2xl text-black font-semibold  tracking-tighter text-center  lg:text-7xl md:text-6xl">
               <span
                 className="font-satisfy text-5xl md:text-8xl"
-                style={{ color: "#605dc8" }}
+                style={{ color: "#a8de45" }}
               >
                 Brands
               </span>{" "}
@@ -764,7 +764,7 @@ export default function Main({
               style={{
                 background: "#1f2122",
 
-                backgroundImage: "url(/images/bg.svg)",
+                // backgroundImage: "url(/images/bg.svg)",
               }}
             >
               <BrandCarousal
@@ -893,7 +893,7 @@ export default function Main({
           id="story"
           ref={storyRef}
           style={{
-            backgroundImage: "url(/images/bg.svg)",
+            // backgroundImage: "url(/images/bg.svg)",
           }}
         >
           <div style={{ zIndex: 1, position: "relative" }}>
@@ -986,7 +986,7 @@ export default function Main({
           id="contact"
           ref={contactRef}
           // style={{ background: "#605dc8" }}
-          style={{ background: "#ff5f1f" }}
+          style={{ background: "#d84839" }}
           className="cut-circle"
         >
           <div style={{ zIndex: 1, position: "relative" }}>

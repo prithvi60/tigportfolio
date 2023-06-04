@@ -10,7 +10,7 @@ export default function CarousalImage({ item, idx, size, width, type }) {
     <>
       <div
         // class="carousel-img"
-        style={{ borderRadius: "20px", position: "relative", margin: "0 2px",width:"fit-content" }}
+        style={{ borderRadius: "20px", position: "relative" }}
         key={idx}
         onClick={() => {
           setcontent(item.des || "no description");
@@ -44,14 +44,16 @@ export default function CarousalImage({ item, idx, size, width, type }) {
           loading="lazy"
           style={{
             // width: "100%",
-            maxWidth: width >= 600 ? "400px" : "300px",
+            maxWidth: width >= 600 ? "350px" : "300px",
             height: width >= 600 ? "78vh" : "48vh",
             backgroundSize: "cover",
             objectFit: "cover",
             opacity: hover ? 0.3 : 1,
-            borderRadius: "10%",
-            padding: "4px 8px",
+            borderRadius: "60px",
+            padding: "4px 20px",
             aspectRatio: "16/9",
+            marginLeft: "2px",
+            marginRight: "10px",
           }}
           src={item.pic.src}
         ></img>

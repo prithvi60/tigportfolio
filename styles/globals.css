@@ -51,8 +51,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+  background-color: #605dc8;
+  outline: 1.5px solid #605dc8;
 }
 a {
   color: inherit;

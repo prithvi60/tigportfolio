@@ -37,12 +37,12 @@ export default function Header({
             </div>
             <div className="absolute  right-2 md:right-8 top-4">
               <button
-                className="text-white-100  cursor-pointer leading-none px-4 py-2 rounded-full  mr-4 font-bold text-sm md:text-md"
+                className="text-black cursor-pointer leading-none px-4 py-2 rounded-full  mr-4 font-bold text-sm md:text-md"
                 type="button"
                 aria-label="button"
                 style={{
                   zIndex: "100",
-                  background: "#d2876a",
+                  background: "#ffffff",
                   pointerEvents: "all",
                 }}
                 onClick={() => setIsOpen(true)}
@@ -50,12 +50,12 @@ export default function Header({
                 Join The Revolution
               </button>
               <button
-                className="text-white-100  cursor-pointer leading-none px-4 py-2 rounded-full  outline-none focus:outline-none content-end justify-end relative font-bold text-sm md:text-md"
+                className="text-black cursor-pointer leading-none px-4 py-2 rounded-full  outline-none focus:outline-none content-end justify-end relative font-bold text-sm md:text-md"
                 type="button"
                 aria-label="button"
                 style={{
                   zIndex: "1000",
-                  background: "#d2876a",
+                  background: "#ffffff",
                   pointerEvents: "all",
                 }}
                 onClick={() => setNavbarOpen(!navbarOpen)}
