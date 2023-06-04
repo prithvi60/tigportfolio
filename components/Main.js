@@ -70,7 +70,7 @@ import Brand27 from "../img/brands/27.png";
 import Brand28 from "../img/brands/28.png";
 import Brand29 from "../img/brands/29.png";
 import Brand30 from "../img/brands/30.png";
-import Brand31 from "../img/brands/31.jpg";
+import Brand31 from "../img/brands/31.png";
 import Brand32 from "../img/brands/32.png";
 import BrandCarousal from "./BrandCarousal";
 // Services

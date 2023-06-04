@@ -44,7 +44,7 @@ export default function CarousalImage({ item, idx, size, width, type }) {
           loading="lazy"
           style={{
             // width: "100%",
-            maxWidth: width >= 600 ? "350px" : "300px",
+            maxWidth: width >= 600 ? "350px" : "285px",
             height: width >= 600 ? "78vh" : "48vh",
             backgroundSize: "cover",
             objectFit: "cover",

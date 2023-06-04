@@ -65,7 +65,7 @@ export function ModalView({ isOpen, setIsOpen, content }) {
                 </div>
 
                 <div className="modal-content py-4 text-left px-6 max-h-max relative ">
-                  <div className=" border rounded-sm">
+                  <div className=" border rounded-sm" style={{borderColor:"#ffffff"}}>
                     <div className="flex justify-between items-center pb-3">
                       {/* <p className="text-2xl font-bold">Simple Modal!</p> */}
                       <div

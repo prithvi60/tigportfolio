@@ -64,8 +64,8 @@ export default function BrandCarousal({ images, rtl, nav, setNav }) {
             loading="lazy"
             style={{
               //   width: "100%",
-              height: width >= 600 ? "100px" : "50px",
-              width: width >= 600 ? "100px" : "50px",
+              height: width >= 600 ? "160px" : "50px",
+              width: width >= 600 ? "160px" : "50px",
               backgroundSize: "100%",
               margin: "0 2%",
               aspectRatio: "2/1",

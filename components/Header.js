@@ -278,7 +278,7 @@ export default function Header({
                   });
                   setTimeout(() => setNavbarOpen(!navbarOpen), [1000]);
                 }}
-                class="mr-4 pr-2 cursor-pointer text-black  hover:text-purple-800 font-semibold tr04"
+                class="mr-4 pr-2 cursor-pointer text-black  hover:text-purple-800 font-semibold tr04 mb-4"
               >
                 In The Press
               </ul>
