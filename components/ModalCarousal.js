@@ -64,7 +64,7 @@ export default function ModalCarousal({ images }) {
                 id="video"
                 style={{
                   // width: "100%",
-                  maxWidth: width >= 600 ? "308px" : "285px",
+                  maxWidth: width >= 600 ? "308px" : "245px",
                   height: width >= 600 ? "80vh" : "48vh",
                   objectFit: "cover",
                   borderRadius: "60px",
