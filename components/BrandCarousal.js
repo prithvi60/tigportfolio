@@ -56,17 +56,18 @@ export default function BrandCarousal({ images, rtl, nav, setNav }) {
       {images.map((item, idx) => (
         <div
           // class="carousel-img"
-          style={{ padding: "0px 20px" }}
+          style={{ padding: "10px 20px" }}
           key={idx}
         >
           <img
-            className=""
+            className="rounded-full"
             loading="lazy"
             style={{
               //   width: "100%",
-              height: width >= 600 ? "160px" : "90px",
-              width: width >= 600 ? "160px" : "90px",
+              height: width >= 600 ? "200px" : "90px",
+              width: width >= 600 ? "200px" : "90px",
               backgroundSize: "100%",
+              background:"#ffffff12",
               margin: "0 2%",
               aspectRatio: "2/1",
             }}

@@ -111,7 +111,7 @@ export function ModalView({ isOpen, setIsOpen, content }) {
                         </div>
                       </div>
                     ) : (
-                      <div class="max-w-6xl mx-auto px-4 pb-6 sm:px-6 text-left  text-white-200">
+                      <div class="max-w-6xl mx-auto px-4 pb-6 sm:px-6 text-justify  text-white-200">
                         {content}
                       </div>
                     )}

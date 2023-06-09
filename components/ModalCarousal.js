@@ -2,18 +2,18 @@ import React from "react";
 import Slider from "react-slick";
 import { ModalView } from "./ModalView";
 
-export default function ModalCarousal({ images, size }) {
+export default function ModalCarousal({ images }) {
   var settings = {
     className: "center",
     accessibility: true,
     // arrows:true,
-    centerMode: true,
+    centerMode: false,
     infinite: true,
-    centerPadding: "60px",
+    // centerPadding: "60px",
     dots: false,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 2,
     swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -22,19 +22,11 @@ export default function ModalCarousal({ images, size }) {
     lazyLoad: true,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode:true
         },
       },
       {
@@ -42,6 +34,8 @@ export default function ModalCarousal({ images, size }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode:true
+
         },
       },
     ],
@@ -58,46 +52,26 @@ export default function ModalCarousal({ images, size }) {
       <Slider {...settings}>
         {images.map((item, idx) => (
           <div
-            style={{ borderRadius: "20px", width: "100%" }}
             key={idx}
+            style={{ borderRadius: "20px", position: "relative" }}
             onClick={() => {
               setcontent(item.content || "no description");
               setIsOpen(true);
             }}
           >
-            {/* <img
-              className=""
-              loading="lazy"
-              style={{
-                width: size ? size : "100%",
-                height: size ? size : width <= 600 ? "40vh" : "60vh",
-                backgroundSize: "cover",
-                objectFit: "cover",
-                // borderRadius: "15px",
-                aspectRatio: "16/9",
-              }}
-              src={item.pic.src}
-            ></img> */}
-            <div
-              style={{
-                width: "100%",
-                maxWidth: width >= 600 ? "360px" : "300px",
-                height: width >= 600 ? "80vh" : "54vh",
-                padding: "4px 8px",
-                paddingBottom: width >= 600 ?"120px":"16px",
-                cursor: "pointer",
-                position: "relative",
-                // background: "red",
-              }}
-            >
+            <div className="relative">
               <video
                 id="video"
                 style={{
-                  width: "100%",
-                  height: "100%",
+                  // width: "100%",
+                  maxWidth: width >= 600 ? "308px" : "285px",
+                  height: width >= 600 ? "80vh" : "48vh",
                   objectFit: "cover",
-                borderRadius:"10%"
-
+                  borderRadius: "60px",
+                  padding: "4px 2px",
+                  aspectRatio: "16/9",
+                  marginLeft: "2px",
+                  // marginRight: "10px",
                 }}
                 autoPlay={true}
                 loop={true}

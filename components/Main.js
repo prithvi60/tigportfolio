@@ -331,6 +331,7 @@ export default function Main({
               left: MousePosition - 15,
               // color: "red",
               zIndex: "10",
+              pointerEvents: "none",
             }}
             // className="md:invisible"
           >
@@ -376,8 +377,8 @@ export default function Main({
               >
                 Largest &nbsp;
                 <span
-                  className="font-satisfy font-medium text-4xl md:text-6xl"
-                  style={{ color: "#0c0c0c " }}
+                  className="font-peg font-semi-bold text-4xl md:text-7xl"
+                  style={{ color: "#0c0c0c" }}
                 >
                   Creator Ecosystem
                 </span>
@@ -452,7 +453,7 @@ export default function Main({
                 >
                   Largest &nbsp;
                   <span
-                    className="font-satisfy font-medium text-4xl md:text-6xl"
+                    className="font-peg font-semi-bold text-4xl md:text-7xl"
                     // style={{ color: "#0c0c0c " }}
                     style={{ color: "#d84839 " }}
                   >
@@ -495,9 +496,11 @@ export default function Main({
         <section
           id="event"
           ref={eventRef}
-          style={{
-            // backgroundImage: "url(/images/bg.svg)",
-          }}
+          style={
+            {
+              // backgroundImage: "url(/images/bg.svg)",
+            }
+          }
         >
           <div style={{ zIndex: 1, position: "relative" }}>
             {/* <div
@@ -600,7 +603,7 @@ export default function Main({
             constant.
           </p> */}
             {/* <div className="flex flex-column justify-items-center"> */}
-            <div className="mx-auto  text-center  leading-relaxed fs521 relative mb-18">
+            <div className="mx-auto  text-center  leading-relaxed fs521 relative mb-20">
               <Carousal images={press} />
               {/* <div
                 style={{
@@ -648,9 +651,11 @@ export default function Main({
         <section
           id="campaign"
           ref={serviceRef}
-          style={{
-            // backgroundImage: "url(/images/bg.svg)",
-          }}
+          style={
+            {
+              // backgroundImage: "url(/images/bg.svg)",
+            }
+          }
         >
           <div style={{ zIndex: 1, position: "relative" }}>
             {/* <div
@@ -673,11 +678,8 @@ export default function Main({
               What we do
             </h2>
             <br></br>
-            <div
-              className="mx-auto  text-center  leading-relaxed fs521 pb-28 relative"
-              style={{ width: "100vw", height: "70vh" }}
-            >
-              <ModalCarousal images={services} size={"100px"} />
+            <div className="mx-auto  text-center  leading-relaxed fs521 relative mb-12">
+              <ModalCarousal images={services} />
               {/* <div
                 style={{
                   position: "absolute",
@@ -892,9 +894,11 @@ export default function Main({
         <section
           id="story"
           ref={storyRef}
-          style={{
-            // backgroundImage: "url(/images/bg.svg)",
-          }}
+          style={
+            {
+              // backgroundImage: "url(/images/bg.svg)",
+            }
+          }
         >
           <div style={{ zIndex: 1, position: "relative" }}>
             {/* <div
@@ -917,7 +921,7 @@ export default function Main({
               Brand Story
             </h2>
             <br></br>
-            <p className=" text-xs md:text-md mx-auto text-sm text-center text-white-100  leading-relaxed lg:w-2/3">
+            <p className="md:text-md mx-auto text-sm text-justify text-white-100  leading-relaxed lg:w-2/3 px-8 mb-2">
               We started off with a humble YouTube channel which ushered in a
               new generation of disruptive thinking: Paracetamol Paniyaram. We
               ventured further in our dreams of quality content production by

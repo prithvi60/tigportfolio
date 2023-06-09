@@ -17,8 +17,8 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Eczar:wght@700&family=IM+Fell+French+Canon&display=swap"); */
 
 @font-face {
-  font-family: "Ultra";
-  src: url("/font/Ultra-Regular.ttf");
+  font-family: "Peg";
+  src: url("/font/Allura-Regular.ttf");
 }
 @font-face {
   font-family: "Secular";
@@ -119,7 +119,7 @@ a {
   /* backdrop-filter: saturate(180%) blur(5px) !important; */
   /* background-color: rgba(0, 0, 0, 0.7) !important; */
   /* backdrop-filter: saturate(180%) blur(5px) !important; */
-pointer-events:none;
+  pointer-events: none;
   background-color: transparent !important;
 }
 

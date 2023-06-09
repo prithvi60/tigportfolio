@@ -7,6 +7,7 @@ module.exports = {
       secular: ["Secular", "sans-serif"],
       satisfy: ["Satisfy", "sans-serif"],
       inter: ["Inter", "sans-serif"],
+      peg: ["Peg", "mono"],
     },
     extend: {
       colors: {
